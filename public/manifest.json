@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Xammer",
+  "name": "Xammer — Cloud Managed Services & IT Consulting",
+  "description": "India's trusted cloud managed services company. AWS, Azure, Google Cloud, DevOps, and digital transformation. Delhi-based with 10+ years of experience.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +19,11 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0D1117",
+  "background_color": "#0D1117",
+  "orientation": "portrait-primary",
+  "categories": ["business", "technology"],
+  "lang": "en-IN"
 }

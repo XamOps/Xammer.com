@@ -1,0 +1,55 @@
+:root {
+  /* Backgrounds */
+  --bg-primary: #0D1117;
+  --bg-card: #161B22;
+  --bg-lifted: #1F2833;
+  --bg-overlay: rgba(13, 17, 23, 0.85);
+
+  /* Accent colors */
+  --violet: #BB86FC;
+  --blue: #58A6FF;
+  --teal: #03DAC6;
+  --cyan: #66FCF1;
+  --green: #3FB950;
+
+  /* Text */
+  --text-primary: #E0E0E0;
+  --text-secondary: #C9D1D9;
+  --text-muted: #8B949E;
+
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(255, 255, 255, 0.12);
+  --border-glow: rgba(88, 166, 255, 0.3);
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #0D1117 0%, #0d1e33 40%, #130d2e 100%);
+  --gradient-violet: linear-gradient(135deg, #BB86FC, #58A6FF);
+  --gradient-teal: linear-gradient(135deg, #03DAC6, #66FCF1);
+  --gradient-card: linear-gradient(135deg, rgba(31,40,51,0.9), rgba(22,27,34,0.95));
+
+  /* Shadows / Glows */
+  --glow-violet: 0 0 20px rgba(187, 134, 252, 0.35), 0 0 60px rgba(187, 134, 252, 0.15);
+  --glow-blue: 0 0 20px rgba(88, 166, 255, 0.35), 0 0 60px rgba(88, 166, 255, 0.15);
+  --glow-teal: 0 0 20px rgba(3, 218, 198, 0.35), 0 0 60px rgba(3, 218, 198, 0.15);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lifted: 0 8px 40px rgba(0, 0, 0, 0.6);
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing */
+  --section-py: 96px;
+  --container-max: 1200px;
+
+  /* Transitions */
+  --transition: 0.25s ease;
+  --transition-slow: 0.4s ease;
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+}

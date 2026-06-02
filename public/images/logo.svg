@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" fill="none">
+  <defs>
+    <linearGradient id="xg" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#BB86FC"/>
+      <stop offset="55%" stop-color="#7BA7FF"/>
+      <stop offset="100%" stop-color="#58A6FF"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Hexagon bg fill -->
+  <polygon points="28,2 51,15 51,41 28,54 5,41 5,15"
+    fill="url(#xg)" opacity="0.13"/>
+
+  <!-- Hexagon border -->
+  <polygon points="28,2 51,15 51,41 28,54 5,41 5,15"
+    stroke="url(#xg)" stroke-width="1.6" fill="none" opacity="0.65"/>
+
+  <!-- Corner circuit nodes -->
+  <circle cx="28" cy="2"  r="2" fill="#BB86FC" opacity="0.9"/>
+  <circle cx="51" cy="15" r="2" fill="#8FA8FC" opacity="0.9"/>
+  <circle cx="51" cy="41" r="2" fill="#58A6FF" opacity="0.9"/>
+  <circle cx="28" cy="54" r="2" fill="#58A6FF" opacity="0.9"/>
+  <circle cx="5"  cy="41" r="2" fill="#58A6FF" opacity="0.9"/>
+  <circle cx="5"  cy="15" r="2" fill="#8FA8FC" opacity="0.9"/>
+
+  <!-- Inner hex ring -->
+  <polygon points="28,8 45,18 45,38 28,48 11,38 11,18"
+    stroke="url(#xg)" stroke-width="0.6" fill="none" opacity="0.25"/>
+
+  <!-- X strokes with glow -->
+  <path d="M18 17 L38 39" stroke="url(#xg)" stroke-width="5.5"
+    stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M38 17 L18 39" stroke="url(#xg)" stroke-width="5.5"
+    stroke-linecap="round" filter="url(#glow)"/>
+
+  <!-- Center diamond highlight -->
+  <circle cx="28" cy="28" r="3" fill="url(#xg)" opacity="0.6"/>
+</svg>

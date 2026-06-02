@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="fg" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#BB86FC"/>
+      <stop offset="100%" stop-color="#58A6FF"/>
+    </linearGradient>
+  </defs>
+  <!-- Dark rounded square bg -->
+  <rect width="32" height="32" rx="8" fill="#0D1117"/>
+  <!-- Hex outline -->
+  <polygon points="16,2 28,9 28,23 16,30 4,23 4,9"
+    stroke="url(#fg)" stroke-width="1.2" fill="url(#fg)" fill-opacity="0.1"/>
+  <!-- X mark -->
+  <path d="M10 10 L22 22" stroke="url(#fg)" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M22 10 L10 22" stroke="url(#fg)" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

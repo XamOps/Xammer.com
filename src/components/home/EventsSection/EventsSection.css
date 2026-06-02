@@ -1,0 +1,118 @@
+.events {
+  padding: var(--section-py) 0;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.events__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.events__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.event-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(88, 166, 255, 0.25);
+  box-shadow: var(--glow-blue);
+}
+
+.event-card__thumb {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  background: var(--bg-lifted);
+  position: relative;
+  overflow: hidden;
+}
+
+.event-card__thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(88, 166, 255, 0.08), rgba(187, 134, 252, 0.08));
+}
+
+.event-card__type {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.event-card__body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.event-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.event-card__date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.event-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.event-card__desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  flex-grow: 1;
+}
+
+.event-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+  margin-top: 8px;
+  transition: gap var(--transition);
+}
+
+.event-card__link:hover { gap: 10px; }
+
+@media (max-width: 1024px) {
+  .events__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .events__grid { grid-template-columns: 1fr; }
+  .events__head { flex-direction: column; align-items: flex-start; }
+}
