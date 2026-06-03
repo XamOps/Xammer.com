@@ -4,38 +4,38 @@ import './EventsSection.css';
 
 const events = [
   {
-    emoji: '🎙️',
+    img: '/images/event-img1.jpeg',
     type: 'Webinar',
     typeColor: 'violet',
     date: 'June 18, 2025',
     title: 'Cloud Cost Optimisation Masterclass: Cut Your AWS Bill by 40%',
     desc: 'Join our lead AWS Solutions Architect for a live deep-dive into Reserved Instances, Savings Plans, rightsizing, and Spot strategies that have saved our clients crores.',
-    href: '/events/cloud-cost-optimisation-webinar',
+    href: '/events',
   },
   {
-    emoji: '🏆',
+    img: '/images/event-img2.jpeg',
     type: 'Case Study',
     typeColor: 'green',
     date: 'May 30, 2025',
     title: 'How a Delhi NBFC Cut Cloud Costs 38% and Passed RBI Audit in 60 Days',
     desc: 'A behind-the-scenes look at how we helped a major Delhi-based NBFC migrate to AWS, optimise spend, and achieve RBI cloud compliance framework compliance within two months.',
-    href: '/case-studies/nbfc-aws-migration',
+    href: '/case-studies',
   },
   {
-    emoji: '🧑‍💻',
+    img: '/images/event-img3.jpeg',
     type: 'Workshop',
     typeColor: 'blue',
     date: 'July 5, 2025',
     title: 'Hands-On Kubernetes for DevOps Teams: EKS in Production',
     desc: 'A full-day in-person workshop in Delhi for DevOps engineers and platform leads — covering EKS cluster setup, Helm chart management, auto-scaling, and observability with Datadog.',
-    href: '/events/kubernetes-workshop-delhi',
+    href: '/events',
   },
 ];
 
 const colorMap = {
   violet: 'badge-violet',
-  green: 'badge-green',
-  blue: 'badge-blue',
+  green:  'badge-green',
+  blue:   'badge-blue',
 };
 
 const EventsSection = () => (
@@ -56,13 +56,23 @@ const EventsSection = () => (
       <div className="events__grid">
         {events.map((ev, i) => (
           <article className="event-card" key={i} aria-label={ev.title}>
+
+            {/* ── Image thumbnail with clip mask ── */}
             <div className="event-card__thumb">
-              <div className="event-card__thumb-overlay" />
-              {ev.emoji}
+              <img
+                src={ev.img}
+                alt={ev.title}
+                className="event-card__img"
+                loading="lazy"
+              />
+              {/* gradient scrim so text/badge stays readable */}
+              <div className="event-card__scrim" />
+              {/* type badge — top-left */}
               <div className="event-card__type">
                 <span className={`badge ${colorMap[ev.typeColor]}`}>{ev.type}</span>
               </div>
             </div>
+
             <div className="event-card__body">
               <div className="event-card__meta">
                 <div className="event-card__date">
