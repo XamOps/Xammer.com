@@ -4,12 +4,8 @@ const ThemeContext = createContext({ theme: 'dark', toggle: () => {} });
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    // 1. Stored preference wins
-    const stored = localStorage.getItem('xammer-theme');
-    if (stored) return stored;
-    // 2. Respect OS preference
-    if (window.matchMedia('(prefers-color-scheme: light)').matches) return 'light';
-    return 'dark';
+    // Use stored user preference, otherwise always default to dark
+    return localStorage.getItem('xammer-theme') || 'dark';
   });
 
   useEffect(() => {

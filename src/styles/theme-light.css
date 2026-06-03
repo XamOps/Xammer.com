@@ -9,6 +9,19 @@ html {
   transition: background-color 0.35s ease, color 0.35s ease;
 }
 
+/* ── Logo — invert white logo to dark in light mode ──────── */
+[data-theme="light"] .navbar__logo-img {
+  filter: brightness(0) saturate(100%);   /* white → black */
+  transition: filter var(--transition);
+}
+[data-theme="light"] .navbar__logo:hover .navbar__logo-img {
+  filter: brightness(0) saturate(100%);   /* keep black, no violet glow */
+}
+
+[data-theme="light"] .footer__logo-img {
+  filter: brightness(0) saturate(100%);
+}
+
 /* ── Body ─────────────────────────────────────────────────── */
 [data-theme="light"] body {
   background-color: var(--bg-primary);
