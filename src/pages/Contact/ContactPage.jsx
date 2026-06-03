@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import SEO from '../../components/common/SEO';
 import PageHero from '../../components/common/PageHero';
 import './ContactPage.css';

@@ -1,4 +1,4 @@
-import { GitBranch, Server, Shield, Zap, Eye, RefreshCw, Settings, Lock, Cloud, CheckCircle } from 'lucide-react';
+import { GitBranch, Server, Shield, Zap, Eye, RefreshCw, Settings, Cloud } from 'lucide-react';
 import SEO from '../../components/common/SEO';
 import ServiceHero from '../../components/services/ServiceHero';
 import ServiceBenefits from '../../components/services/ServiceBenefits';

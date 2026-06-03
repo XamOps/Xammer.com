@@ -1,7 +1,7 @@
 import {
-  Cloud, Shield, DollarSign, Globe, Zap, Lock,
+  Cloud, Shield, DollarSign, Globe, Zap,
   Settings, Database, Server, Eye, RefreshCw, Terminal,
-  TrendingDown, Users, Clock, CheckCircle,
+  TrendingDown, Clock, CheckCircle,
 } from 'lucide-react';
 import SEO from '../../components/common/SEO';
 import ServiceHero from '../../components/services/ServiceHero';

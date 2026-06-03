@@ -1,6 +1,6 @@
 import {
   Cloud, Shield, Database, Server, Zap, Globe,
-  TrendingDown, Lock, Settings, Eye, Users, RefreshCw,
+  TrendingDown, Settings, Eye, RefreshCw,
 } from 'lucide-react';
 import SEO from '../../components/common/SEO';
 import ServiceHero from '../../components/services/ServiceHero';

@@ -1,4 +1,4 @@
-import { Award, Users, Globe, Shield, Zap, TrendingDown, Heart, Target, CheckCircle } from 'lucide-react';
+import { Users, Globe, Shield, Zap, TrendingDown, Heart, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/common/SEO';
 import PageHero from '../../components/common/PageHero';

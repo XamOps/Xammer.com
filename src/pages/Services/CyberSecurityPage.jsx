@@ -1,6 +1,6 @@
 import {
   Shield, Lock, Eye, AlertTriangle, Database,
-  Server, Search, RefreshCw, CheckCircle, Zap, Globe, Users,
+  Search, RefreshCw, CheckCircle, Zap, Globe,
 } from 'lucide-react';
 import SEO from '../../components/common/SEO';
 import ServiceHero from '../../components/services/ServiceHero';

@@ -1,5 +1,5 @@
 import {
-  Zap, Globe, Database, Settings, Cloud, Shield,
+  Globe, Database, Settings, Cloud, Shield,
   TrendingUp, Users, RefreshCw, BarChart2, Cpu, Eye,
 } from 'lucide-react';
 import SEO from '../../components/common/SEO';
