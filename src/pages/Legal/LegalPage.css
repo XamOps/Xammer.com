@@ -1,0 +1,7 @@
+.legal__wrap { max-width: 800px; margin: 0 auto; padding: 48px; }
+.legal__intro { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--border-subtle); }
+.legal__section { margin-bottom: 36px; padding-bottom: 36px; border-bottom: 1px solid var(--border-subtle); }
+.legal__section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.legal__section-title { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 12px; }
+.legal__section-body { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; }
+@media (max-width: 640px) { .legal__wrap { padding: 28px 20px; } }

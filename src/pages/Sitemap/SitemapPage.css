@@ -1,0 +1,8 @@
+.sitemap__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.sitemap__group { padding: 28px; }
+.sitemap__heading { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--cyan); margin-bottom: 16px; }
+.sitemap__list { display: flex; flex-direction: column; gap: 10px; }
+.sitemap__link { font-size: 0.9rem; color: var(--text-muted); transition: color var(--transition); }
+.sitemap__link:hover { color: var(--blue); }
+@media (max-width: 768px) { .sitemap__grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 480px) { .sitemap__grid { grid-template-columns: 1fr; } }

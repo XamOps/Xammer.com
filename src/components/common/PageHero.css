@@ -1,0 +1,72 @@
+.ph {
+  position: relative;
+  padding: 80px 0 64px;
+  overflow: hidden;
+  background: var(--gradient-hero);
+  text-align: center;
+}
+.ph__grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+.ph__radial {
+  position: absolute;
+  width: 700px; height: 400px;
+  top: -120px; left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.14;
+  pointer-events: none;
+}
+.ph--violet .ph__radial { background: var(--violet); }
+.ph--blue   .ph__radial { background: var(--blue); }
+.ph--teal   .ph__radial { background: var(--teal); }
+.ph--green  .ph__radial { background: var(--green); }
+.ph--orange .ph__radial { background: #FF9900; }
+.ph--red    .ph__radial { background: #FF4B4B; }
+
+.ph__inner { position: relative; z-index: 1; animation: fadeInUp 0.7s ease forwards; }
+
+.ph__badge {
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.ph__dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.ph__title {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+.ph__hl { display: inline; }
+.ph__hl--violet { background: var(--gradient-violet); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.ph__hl--blue   { background: linear-gradient(135deg,#58A6FF,#66FCF1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.ph__hl--teal   { background: var(--gradient-teal); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.ph__hl--green  { background: linear-gradient(135deg,#3FB950,#03DAC6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.ph__hl--orange { background: linear-gradient(135deg,#FF9900,#FFD700); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+.ph__sub {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 680px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .ph { padding: 60px 0 48px; }
+  .ph__title { font-size: 1.9rem; }
+}
