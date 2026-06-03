@@ -1,3 +1,6 @@
+/* ═══════════════════════════════════════════════════════════
+   DESIGN TOKENS  —  Dark theme (default)
+   ═══════════════════════════════════════════════════════════ */
 :root {
   /* Backgrounds */
   --bg-primary: #0D1117;
@@ -30,9 +33,9 @@
 
   /* Shadows / Glows */
   --glow-violet: 0 0 20px rgba(187, 134, 252, 0.35), 0 0 60px rgba(187, 134, 252, 0.15);
-  --glow-blue: 0 0 20px rgba(88, 166, 255, 0.35), 0 0 60px rgba(88, 166, 255, 0.15);
-  --glow-teal: 0 0 20px rgba(3, 218, 198, 0.35), 0 0 60px rgba(3, 218, 198, 0.15);
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --glow-blue:   0 0 20px rgba(88, 166, 255, 0.35),  0 0 60px rgba(88, 166, 255, 0.15);
+  --glow-teal:   0 0 20px rgba(3, 218, 198, 0.35),   0 0 60px rgba(3, 218, 198, 0.15);
+  --shadow-card:   0 4px 24px rgba(0, 0, 0, 0.4);
   --shadow-lifted: 0 8px 40px rgba(0, 0, 0, 0.6);
 
   /* Typography */
@@ -52,4 +55,45 @@
   --radius-md: 12px;
   --radius-lg: 20px;
   --radius-xl: 28px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   LIGHT THEME  —  applied when html[data-theme="light"]
+   ═══════════════════════════════════════════════════════════ */
+[data-theme="light"] {
+  /* Backgrounds */
+  --bg-primary: #F4F6FA;
+  --bg-card: #FFFFFF;
+  --bg-lifted: #EBEEf7;
+  --bg-overlay: rgba(244, 246, 250, 0.95);
+
+  /* Accent colors — same, look great on both */
+  --violet: #8B5CF6;
+  --blue:   #2563EB;
+  --teal:   #0D9488;
+  --cyan:   #06B6D4;
+  --green:  #16A34A;
+
+  /* Text */
+  --text-primary:   #0D1117;
+  --text-secondary: #24292F;
+  --text-muted:     #6E7781;
+
+  /* Borders */
+  --border-subtle: rgba(0, 0, 0, 0.07);
+  --border-card:   rgba(0, 0, 0, 0.10);
+  --border-glow:   rgba(37, 99, 235, 0.25);
+
+  /* Gradients */
+  --gradient-hero:   linear-gradient(135deg, #F4F6FA 0%, #EBF0FF 40%, #F3EEFF 100%);
+  --gradient-violet: linear-gradient(135deg, #8B5CF6, #2563EB);
+  --gradient-teal:   linear-gradient(135deg, #0D9488, #06B6D4);
+  --gradient-card:   linear-gradient(135deg, rgba(255,255,255,0.98), rgba(244,246,250,0.99));
+
+  /* Shadows / Glows */
+  --glow-violet: 0 0 20px rgba(139,92,246,0.20), 0 0 60px rgba(139,92,246,0.08);
+  --glow-blue:   0 0 20px rgba(37,99,235,0.20),  0 0 60px rgba(37,99,235,0.08);
+  --glow-teal:   0 0 20px rgba(13,148,136,0.20), 0 0 60px rgba(13,148,136,0.08);
+  --shadow-card:   0 2px 16px rgba(0, 0, 0, 0.07);
+  --shadow-lifted: 0 8px 32px rgba(0, 0, 0, 0.11);
 }

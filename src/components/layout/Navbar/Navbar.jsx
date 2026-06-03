@@ -2,8 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   ChevronDown, Cloud, Shield, Database,
-  ArrowRight, Server, Globe, Zap
+  ArrowRight, Server, Globe, Zap, Sun, Moon,
 } from 'lucide-react';
+import { useTheme } from '../../../context/ThemeContext';
 import './Navbar.css';
 
 const cloudProviders = [
@@ -30,6 +31,7 @@ const Navbar = () => {
   const [mobileInfraOpen, setMobileInfraOpen] = useState(false);
   const location = useLocation();
   const navRef   = useRef(null);
+  const { theme, toggle: toggleTheme } = useTheme();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -111,11 +113,22 @@ const Navbar = () => {
             </Link>
           </nav>
 
-          {/* Right: CTA + hamburger */}
+          {/* Right: CTA + theme toggle + hamburger */}
           <div className="navbar__right">
             <Link to="/contact" className="navbar__cta">
               Get Free Audit <ArrowRight size={14} />
             </Link>
+
+            {/* Theme toggle */}
+            <button
+              className="theme-toggle"
+              onClick={toggleTheme}
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+            >
+              {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+            </button>
+
             <button
               className={`navbar__hamburger${mobileOpen ? ' navbar__hamburger--open' : ''}`}
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -173,6 +186,11 @@ const Navbar = () => {
             <Link to="/contact" className="btn-primary navbar__mobile-cta">
               Get a Free Cloud Audit <ArrowRight size={14} />
             </Link>
+            <button className="theme-toggle navbar__mobile-theme" onClick={toggleTheme}>
+              {theme === 'dark'
+                ? <><Sun size={15} /> Switch to Light Mode</>
+                : <><Moon size={15} /> Switch to Dark Mode</>}
+            </button>
           </div>
         </div>
       </nav>

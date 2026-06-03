@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/layout/Navbar/Navbar';
 import Footer from './components/layout/Footer/Footer';
 
@@ -45,6 +46,7 @@ const NotFound = () => (
 function App() {
   return (
     <HelmetProvider>
+      <ThemeProvider>
       <Router>
         <Navbar />
         <Routes>
@@ -83,6 +85,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
+      </ThemeProvider>
     </HelmetProvider>
   );
 }
