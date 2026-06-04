@@ -3,7 +3,7 @@ import HeroSection from '../../components/home/HeroSection/HeroSection';
 import StatsBar from '../../components/home/StatsBar/StatsBar';
 import USPSection from '../../components/home/USPSection/USPSection';
 import WhatWeOffer from '../../components/home/WhatWeOffer/WhatWeOffer';
-import FounderMessage from '../../components/home/FounderMessage/FounderMessage';
+// import FounderMessage from '../../components/home/FounderMessage/FounderMessage';
 import PartnerLogos from '../../components/home/PartnerLogos/PartnerLogos';
 import EventsSection from '../../components/home/EventsSection/EventsSection';
 import CustomerExperience from '../../components/home/CustomerExperience/CustomerExperience';
