@@ -36,7 +36,6 @@ const WhatsAppButton = () => (
       />
     </svg>
 
-    <span className="whatsapp-btn__label">+91 87692 54249</span>
   </a>
 );
 
