@@ -32,6 +32,7 @@ import PrivacyPolicyPage        from './pages/Legal/PrivacyPolicyPage';
 import TermsPage                from './pages/Legal/TermsPage';
 import SitemapPage              from './pages/Sitemap/SitemapPage';
 
+import WhatsAppButton from './components/common/WhatsAppButton';
 import './styles/global.css';
 
 const NotFound = () => (
@@ -84,6 +85,7 @@ function App() {
           <Route path="*"                              element={<NotFound />} />
         </Routes>
         <Footer />
+        <WhatsAppButton />
       </Router>
       </ThemeProvider>
     </HelmetProvider>
