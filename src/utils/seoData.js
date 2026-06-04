@@ -44,9 +44,9 @@ export const organizationSchema = {
   ],
   email: 'operations@xammer.in',
   sameAs: [
-    'https://www.linkedin.com/company/xammer',
-    'https://twitter.com/xammer_in',
-    'https://www.facebook.com/xammer.in',
+    'https://x.com/XammerUni',
+    'https://www.linkedin.com/company/xammer/',
+    'https://www.instagram.com/xammeruni',
   ],
   numberOfEmployees: {
     '@type': 'QuantitativeValue',

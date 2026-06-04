@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import {
   Phone, Mail, MapPin, ArrowRight, Send
 } from 'lucide-react';
-import { LinkedinIcon, TwitterIcon, FacebookIcon, YoutubeIcon } from '../../common/SocialIcons';
+import { LinkedinIcon, TwitterIcon, InstagramIcon } from '../../common/SocialIcons';
 import './Footer.css';
 
 const serviceLinks = [
@@ -52,17 +52,14 @@ const Footer = () => {
               99.9% uptime SLA and a 30–40% cost reduction guarantee.
             </p>
             <div className="footer__socials">
-              <a href="https://www.linkedin.com/company/xammer" target="_blank" rel="noopener noreferrer" className="footer__social" aria-label="LinkedIn">
-                <LinkedinIcon size={15} />
-              </a>
-              <a href="https://twitter.com/xammer_in" target="_blank" rel="noopener noreferrer" className="footer__social" aria-label="Twitter">
+              <a href="https://x.com/XammerUni" target="_blank" rel="noopener noreferrer" className="footer__social" aria-label="X (Twitter)">
                 <TwitterIcon size={15} />
               </a>
-              <a href="https://www.facebook.com/xammer.in" target="_blank" rel="noopener noreferrer" className="footer__social" aria-label="Facebook">
-                <FacebookIcon size={15} />
+              <a href="https://www.linkedin.com/company/xammer/" target="_blank" rel="noopener noreferrer" className="footer__social" aria-label="LinkedIn">
+                <LinkedinIcon size={15} />
               </a>
-              <a href="https://www.youtube.com/@xammer" target="_blank" rel="noopener noreferrer" className="footer__social" aria-label="YouTube">
-                <YoutubeIcon size={15} />
+              <a href="https://www.instagram.com/xammeruni" target="_blank" rel="noopener noreferrer" className="footer__social" aria-label="Instagram">
+                <InstagramIcon size={15} />
               </a>
             </div>
             <div className="footer__contact-list">

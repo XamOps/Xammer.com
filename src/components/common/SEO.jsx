@@ -32,7 +32,7 @@ const SEO = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       {ogImage && <meta name="twitter:image" content={ogImage} />}
-      <meta name="twitter:site" content="@xammer_in" />
+      <meta name="twitter:site" content="@XammerUni" />
 
       {/* JSON-LD Schemas */}
       {schemas.map((schema, i) => (

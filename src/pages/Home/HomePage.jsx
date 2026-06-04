@@ -31,7 +31,7 @@ const HomePage = () => (
       <StatsBar />
       <USPSection />
       <WhatWeOffer />
-      <FounderMessage />
+      {/* <FounderMessage /> */}
       <PartnerLogos />
       <EventsSection />
       <CustomerExperience />
