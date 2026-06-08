@@ -4,33 +4,38 @@ import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/layout/Navbar/Navbar';
 import Footer from './components/layout/Footer/Footer';
 
-/* ── Home ───────────────────────────────────────────────── */
+/* -- Home -------------------------------------------- */
 import HomePage from './pages/Home/HomePage';
 
-/* ── Service Pages ─────────────────────────────────────── */
-import AWSPage                  from './pages/Services/AWSPage';
-import AzurePage                from './pages/Services/AzurePage';
-import GoogleCloudPage          from './pages/Services/GoogleCloudPage';
-import YottaPage                from './pages/Services/YottaPage';
-import CyberSecurityPage        from './pages/Services/CyberSecurityPage';
+/* -- Service Pages ------------------------------------ */
+import AWSPage                   from './pages/Services/AWSPage';
+import AzurePage                 from './pages/Services/AzurePage';
+import GoogleCloudPage           from './pages/Services/GoogleCloudPage';
+import YottaPage                 from './pages/Services/YottaPage';
+import CyberSecurityPage         from './pages/Services/CyberSecurityPage';
 import DigitalTransformationPage from './pages/Services/DigitalTransformationPage';
-import OdooPage                 from './pages/Services/OdooPage';
-import ERPPage                  from './pages/Services/ERPPage';
-import DevOpsPage               from './pages/Services/DevOpsPage';
+import OdooPage                  from './pages/Services/OdooPage';
+import ERPPage                   from './pages/Services/ERPPage';
+import DevOpsPage                from './pages/Services/DevOpsPage';
+import OracleCloudPage           from './pages/Services/OracleCloudPage';
 
-/* ── Company Pages ─────────────────────────────────────── */
-import AboutPage                from './pages/About/AboutPage';
-import ContactPage              from './pages/Contact/ContactPage';
-import CareersPage              from './pages/Careers/CareersPage';
-import CaseStudiesPage          from './pages/CaseStudies/CaseStudiesPage';
-import EventsPage               from './pages/Events/EventsPage';
-import BlogPage                 from './pages/Blog/BlogPage';
-import PartnersPage             from './pages/Partners/PartnersPage';
+/* -- Product Pages ------------------------------------ */
+import XamopsPage                from './pages/Products/XamopsPage';
+import XamCloudPage              from './pages/Products/XamCloudPage';
 
-/* ── Legal ─────────────────────────────────────────────── */
-import PrivacyPolicyPage        from './pages/Legal/PrivacyPolicyPage';
-import TermsPage                from './pages/Legal/TermsPage';
-import SitemapPage              from './pages/Sitemap/SitemapPage';
+/* -- Company Pages ------------------------------------ */
+import AboutPage                 from './pages/About/AboutPage';
+import ContactPage               from './pages/Contact/ContactPage';
+import CareersPage               from './pages/Careers/CareersPage';
+import CaseStudiesPage           from './pages/CaseStudies/CaseStudiesPage';
+import EventsPage                from './pages/Events/EventsPage';
+import BlogPage                  from './pages/Blog/BlogPage';
+import PartnersPage              from './pages/Partners/PartnersPage';
+
+/* -- Legal -------------------------------------------- */
+import PrivacyPolicyPage         from './pages/Legal/PrivacyPolicyPage';
+import TermsPage                 from './pages/Legal/TermsPage';
+import SitemapPage               from './pages/Sitemap/SitemapPage';
 
 import WhatsAppButton from './components/common/WhatsAppButton';
 import './styles/global.css';
@@ -54,16 +59,21 @@ function App() {
           {/* Home */}
           <Route path="/"                              element={<HomePage />} />
 
-          {/* Service pages */}
+          {/* Cloud service pages */}
           <Route path="/services/aws"                  element={<AWSPage />} />
           <Route path="/services/azure"                element={<AzurePage />} />
           <Route path="/services/google-cloud"         element={<GoogleCloudPage />} />
           <Route path="/services/yotta"                element={<YottaPage />} />
+          <Route path="/services/oracle-cloud"         element={<OracleCloudPage />} />
           <Route path="/services/cyber-security"       element={<CyberSecurityPage />} />
           <Route path="/services/digital-transformation" element={<DigitalTransformationPage />} />
           <Route path="/services/odoo"                 element={<OdooPage />} />
           <Route path="/services/erp"                  element={<ERPPage />} />
           <Route path="/services/devops"               element={<DevOpsPage />} />
+
+          {/* Product pages */}
+          <Route path="/products/xamops"               element={<XamopsPage />} />
+          <Route path="/products/xamcloud"             element={<XamCloudPage />} />
 
           {/* Company pages */}
           <Route path="/about"                         element={<AboutPage />} />

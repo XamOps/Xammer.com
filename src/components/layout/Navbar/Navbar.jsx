@@ -1,12 +1,28 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
-  ChevronDown, Cloud, Shield, Database,
-  ArrowRight, Server, Globe, Zap, Sun, Moon,
+  ChevronDown, Cloud, Database,
+  ArrowRight, Server, Zap, Sun, Moon,
 } from 'lucide-react';
 import { useTheme } from '../../../context/ThemeContext';
 import './Navbar.css';
 
+/* ── Cloud dropdown ───────────────────────────────────────── */
+const cloudItems = [
+  { label: 'Amazon Web Services', sub: 'Certified AWS partner',    icon: <Cloud    size={15} color="#FF9900" />, href: '/services/aws' },
+  { label: 'Google Cloud',        sub: 'GCP partner & specialised', icon: <Cloud    size={15} color="#4285F4" />, href: '/services/google-cloud' },
+  { label: 'Microsoft Azure',     sub: 'Azure Gold partner',        icon: <Cloud    size={15} color="#0078D4" />, href: '/services/azure' },
+  { label: 'Oracle Cloud',        sub: 'OCI specialist',            icon: <Server   size={15} color="#F80000" />, href: '/services/oracle-cloud' },
+  { label: 'XamCloud',            sub: 'Managed multi-cloud',       icon: <Database size={15} color="#BB86FC" />, href: '/products/xamcloud' },
+];
+
+/* ── Products dropdown ────────────────────────────────────── */
+const productsItems = [
+  { label: 'Xamops',   sub: 'DevOps-as-a-Service',      icon: <Zap      size={15} color="#BB86FC" />, href: '/products/xamops' },
+  { label: 'XamCloud', sub: 'Managed cloud operations', icon: <Database size={15} color="#58A6FF" />, href: '/products/xamcloud' },
+];
+
+/* ── OLD IT Infrastructure items (commented out) ─────────────
 const cloudProviders = [
   { label: 'Amazon Web Services (AWS)', icon: <Cloud size={15} />,  href: '/services/aws' },
   { label: 'Microsoft Azure',           icon: <Cloud size={15} />,  href: '/services/azure' },
@@ -21,14 +37,16 @@ const infraServices = [
 ];
 
 const erpServices = [
-  { label: 'Odoo ERP Implementation',    icon: <Database size={15} />, href: '/services/odoo' },
+  { label: 'Odoo ERP Implementation',     icon: <Database size={15} />, href: '/services/odoo' },
   { label: 'ERP Implementation Services', icon: <Database size={15} />, href: '/services/erp' },
 ];
+────────────────────────────────────────────────────────────── */
 
 const Navbar = () => {
-  const [scrolled,        setScrolled]        = useState(false);
-  const [mobileOpen,      setMobileOpen]      = useState(false);
-  const [mobileInfraOpen, setMobileInfraOpen] = useState(false);
+  const [scrolled,           setScrolled]           = useState(false);
+  const [mobileOpen,         setMobileOpen]         = useState(false);
+  const [mobileCloudOpen,    setMobileCloudOpen]    = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const location = useLocation();
   const navRef   = useRef(null);
   const { theme, toggle: toggleTheme } = useTheme();
@@ -41,7 +59,8 @@ const Navbar = () => {
 
   useEffect(() => {
     setMobileOpen(false);
-    setMobileInfraOpen(false);
+    setMobileCloudOpen(false);
+    setMobileProductsOpen(false);
   }, [location]);
 
   useEffect(() => {
@@ -75,7 +94,47 @@ const Navbar = () => {
               About Us
             </Link>
 
-            {/* Dropdown */}
+            {/* Cloud dropdown */}
+            <div className="navbar__dropdown-wrap">
+              <button className="navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                Cloud <ChevronDown size={14} />
+              </button>
+              <div className="navbar__dropdown" role="menu">
+                <div className="navbar__dropdown-section">
+                  {cloudItems.map((item) => (
+                    <Link key={item.href} to={item.href} className="navbar__dropdown-item" role="menuitem">
+                      {item.icon}
+                      <span className="navbar__dropdown-item-info">
+                        <span className="navbar__dropdown-item-label">{item.label}</span>
+                        <span className="navbar__dropdown-item-sub">{item.sub}</span>
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Products dropdown */}
+            <div className="navbar__dropdown-wrap">
+              <button className="navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                Products <ChevronDown size={14} />
+              </button>
+              <div className="navbar__dropdown" role="menu">
+                <div className="navbar__dropdown-section">
+                  {productsItems.map((item) => (
+                    <Link key={item.href} to={item.href} className="navbar__dropdown-item" role="menuitem">
+                      {item.icon}
+                      <span className="navbar__dropdown-item-info">
+                        <span className="navbar__dropdown-item-label">{item.label}</span>
+                        <span className="navbar__dropdown-item-sub">{item.sub}</span>
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* OLD IT Infrastructure dropdown — commented out
             <div className="navbar__dropdown-wrap">
               <button className="navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
                 IT Infrastructure <ChevronDown size={14} />
@@ -107,6 +166,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+            */}
 
             <Link to="/contact" className={`navbar__link${location.pathname === '/contact' ? ' navbar__link--active' : ''}`}>
               Contact Us
@@ -148,6 +208,45 @@ const Navbar = () => {
           <Link to="/"      className="navbar__mobile-link">Home</Link>
           <Link to="/about" className="navbar__mobile-link">About Us</Link>
 
+          {/* Cloud accordion */}
+          <button
+            className="navbar__mobile-link navbar__mobile-accord"
+            onClick={() => setMobileCloudOpen(!mobileCloudOpen)}
+          >
+            Cloud
+            <ChevronDown
+              size={14}
+              style={{ transform: mobileCloudOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}
+            />
+          </button>
+          <div className={`navbar__mobile-sub${mobileCloudOpen ? ' navbar__mobile-sub--open' : ''}`}>
+            {cloudItems.map((item) => (
+              <Link key={item.href} to={item.href} className="navbar__mobile-link navbar__mobile-link--sub">
+                {item.icon}{item.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Products accordion */}
+          <button
+            className="navbar__mobile-link navbar__mobile-accord"
+            onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+          >
+            Products
+            <ChevronDown
+              size={14}
+              style={{ transform: mobileProductsOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}
+            />
+          </button>
+          <div className={`navbar__mobile-sub${mobileProductsOpen ? ' navbar__mobile-sub--open' : ''}`}>
+            {productsItems.map((item) => (
+              <Link key={item.href} to={item.href} className="navbar__mobile-link navbar__mobile-link--sub">
+                {item.icon}{item.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* OLD IT Infrastructure accordion — commented out
           <button
             className="navbar__mobile-link navbar__mobile-accord"
             onClick={() => setMobileInfraOpen(!mobileInfraOpen)}
@@ -158,7 +257,6 @@ const Navbar = () => {
               style={{ transform: mobileInfraOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}
             />
           </button>
-
           <div className={`navbar__mobile-sub${mobileInfraOpen ? ' navbar__mobile-sub--open' : ''}`}>
             <div className="navbar__mobile-section-title">Cloud Services</div>
             {cloudProviders.map((item) => (
@@ -179,6 +277,7 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
+          */}
 
           <Link to="/contact" className="navbar__mobile-link">Contact Us</Link>
 
