@@ -5,28 +5,28 @@
   border-bottom: 1px solid var(--border-subtle);
 }
 
+/* ── Grid ──────────────────────────────────────────────────── */
 .usp__inner {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  gap: 24px;
   align-items: stretch;
 }
 
-/* Cards hidden until visible */
+/* ── Card ──────────────────────────────────────────────────── */
 .usp__item {
   display: flex;
   flex-direction: column;
   gap: 4px;
   padding: 32px 28px;
-  border-right: 1px solid var(--border-subtle);
-  border-radius: 0;
-  background: transparent;
-  border: none;
-  border-right: 1px solid var(--border-subtle);
-  box-shadow: none;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-card);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
   opacity: 0;
   transform: translateY(20px);
-  transition: background var(--transition), transform var(--transition);
+  transition: background var(--transition), transform var(--transition),
+              box-shadow var(--transition), border-color var(--transition);
   cursor: default;
 }
 
@@ -34,10 +34,14 @@
   animation: fadeInUp 0.6s ease forwards;
 }
 
-.usp__item:last-child { border-right: none; }
-.usp__item:hover { background: rgba(255,255,255,0.025); transform: translateY(-4px); }
+.usp__item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border-color: rgba(88, 166, 255, 0.2);
+}
 
-/* Icon */
+/* ── Icon ──────────────────────────────────────────────────── */
 .usp__icon {
   width: 52px;
   height: 52px;
@@ -53,7 +57,7 @@
 .usp__icon--teal   { background: rgba(3,218,198,0.12);   color: var(--teal); }
 .usp__icon--green  { background: rgba(63,185,80,0.12);   color: var(--green); }
 
-/* Animated counter number */
+/* ── Counter ───────────────────────────────────────────────── */
 .usp__counter {
   font-size: 2.4rem;
   font-weight: 900;
@@ -66,6 +70,7 @@
 .usp__counter--teal   { background: var(--gradient-teal); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .usp__counter--green  { background: linear-gradient(135deg,#3FB950,#03DAC6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
+/* ── Label ─────────────────────────────────────────────────── */
 .usp__label {
   font-size: 0.75rem;
   color: var(--text-muted);
@@ -89,15 +94,27 @@
   line-height: 1.6;
 }
 
+/* ── Tablet (2×2) ──────────────────────────────────────────── */
 @media (max-width: 1024px) {
-  .usp__inner { grid-template-columns: repeat(2, 1fr); }
-  .usp__item { border-right: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
-  .usp__item:nth-child(even) { border-right: none; }
-  .usp__item:nth-last-child(-n+2) { border-bottom: none; }
+  .usp__inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
+
+/* ── Mobile (1 col) ────────────────────────────────────────── */
 @media (max-width: 640px) {
-  .usp__inner { grid-template-columns: 1fr; }
-  .usp__item { border-right: none; border-bottom: 1px solid var(--border-subtle); }
-  .usp__item:last-child { border-bottom: none; }
-  .usp__counter { font-size: 2rem; }
+  .usp {
+    padding: 48px 0;
+  }
+  .usp__inner {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .usp__item {
+    padding: 24px 20px;
+  }
+  .usp__counter {
+    font-size: 2rem;
+  }
 }
