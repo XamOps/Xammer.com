@@ -4,7 +4,6 @@ const partners = [
   { src: '/images/partners/xammer-aws-bg-logo.png',   alt: 'Amazon Web Services' },
   { src: '/images/partners/xammer-azure-bg-logo.png', alt: 'Microsoft Azure' },
   { src: '/images/partners/xammer-gcp-bg-logo.png',   alt: 'Google Cloud Platform' },
-  { src: '/images/partners/yotta-logo-bg.png',         alt: 'Yotta Data Services' },
 ];
 
 /* Repeat 4× for a smooth seamless marquee */

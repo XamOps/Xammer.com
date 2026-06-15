@@ -38,7 +38,6 @@ const solutions = [
       'Microsoft Azure — Gold Partner',
       'Google Cloud Platform (GCP) — Specialised Partner',
       'Oracle Cloud Infrastructure (OCI) — Specialist Partner',
-      'Yotta Data Services — Managed Provider',
       'Hybrid & private cloud integration',
     ],
   },
@@ -114,7 +113,7 @@ const testimonials = [
 
 const faqs = [
   { q: 'What is XamCloud and how does it work?', a: "XamCloud is Xammer's managed multi-cloud service. We take operational responsibility for your workloads across multiple cloud providers — AWS, Azure, GCP, OCI, and others — under a single managed service engagement. You get unified cost visibility, security governance, observability, and 24x7 SRE support regardless of which cloud your workloads run on." },
-  { q: 'Which cloud providers does XamCloud support?', a: 'XamCloud supports AWS (Select Tier Partner), Microsoft Azure (Gold Partner), Google Cloud Platform (Specialised Partner), Oracle Cloud Infrastructure (OCI Specialist), and Yotta Data Services. We also support hybrid configurations that include on-premise infrastructure and private clouds.' },
+  { q: 'Which cloud providers does XamCloud support?', a: 'XamCloud supports AWS (Select Tier Partner), Microsoft Azure (Gold Partner), Google Cloud Platform (Specialised Partner), and Oracle Cloud Infrastructure (OCI Specialist). We also support hybrid configurations that include on-premise infrastructure and private clouds.' },
   { q: 'How does XamCloud reduce cloud costs across multiple providers?', a: 'XamCloud provides consolidated cost visibility across all providers, enabling us to identify cross-cloud optimisation opportunities that single-cloud tools miss. We right-size instances across all clouds simultaneously, identify workloads that can migrate to lower-cost providers, optimise reserved/committed use commitments, eliminate idle resources, and enforce spend guardrails through unified governance policies.' },
   { q: 'How does XamCloud handle security across multiple clouds?', a: 'XamCloud implements a unified security framework across all your cloud providers — centralising identity and access management, applying consistent security policies through Policy as Code, deploying Cloud Security Posture Management (CSPM) across all environments, and maintaining compliance controls for standards like SOC 2, ISO 27001, and PCI DSS regardless of which cloud the workload runs on.' },
   { q: 'Can XamCloud help us reduce vendor lock-in?', a: 'Yes. Reducing vendor lock-in is a core principle of XamCloud. We use cloud-agnostic Terraform modules, containerised workloads on Kubernetes, provider-neutral databases where possible, and portable observability tools. This gives you the flexibility to shift workloads between providers as pricing, features, or business requirements change.' },

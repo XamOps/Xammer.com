@@ -9,7 +9,6 @@ const serviceLinks = [
   { label: 'AWS Managed Services', href: '/services/aws' },
   { label: 'Microsoft Azure', href: '/services/azure' },
   { label: 'Google Cloud Platform', href: '/services/google-cloud' },
-  { label: 'Yotta Cloud', href: '/services/yotta' },
   { label: 'DevOps Automation', href: '/services/devops' },
   { label: 'Digital Transformation', href: '/services/digital-transformation' },
   { label: 'Cyber Security', href: '/services/cyber-security' },
@@ -67,9 +66,9 @@ const Footer = () => {
                 <Phone size={14} />
                 +91 87692 54249
               </a>
-              <a href="mailto:operations@xammer.in" className="footer__contact-item">
+              <a href="mailto:operations@xammer.com" className="footer__contact-item">
                 <Mail size={14} />
-                operations@xammer.in
+                operations@xammer.com
               </a>
               <div className="footer__contact-item">
                 <MapPin size={14} />

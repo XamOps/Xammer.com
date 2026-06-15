@@ -26,7 +26,6 @@ const currentPartners = [
   { name: 'AWS', category: 'Cloud Platform',     logo: 'AWS', color: '#FF9900' },
   { name: 'Microsoft Azure', category: 'Cloud Platform', logo: 'AZ', color: '#0078D4' },
   { name: 'Google Cloud', category: 'Cloud Platform', logo: 'GCP', color: '#4285F4' },
-  { name: 'Yotta Infrastructure', category: 'Data Center', logo: 'Y', color: '#03DAC6' },
   { name: 'Odoo', category: 'ERP Platform',      logo: 'O', color: '#714B67' },
   { name: 'HashiCorp',  category: 'DevOps Tools',   logo: 'HC', color: '#7B42BC' },
 ];

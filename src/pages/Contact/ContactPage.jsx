@@ -6,7 +6,7 @@ import './ContactPage.css';
 
 const services = [
   'AWS Managed Services', 'Microsoft Azure', 'Google Cloud Platform',
-  'Yotta Sovereign Cloud', 'Cyber Security', 'Digital Transformation',
+  'Cyber Security', 'Digital Transformation',
   'Odoo ERP', 'ERP Implementation', 'DevOps Automation', 'Other',
 ];
 
@@ -29,7 +29,7 @@ const ContactPage = () => {
     <>
       <SEO
         title="Contact Xammer | Get a Free Cloud Audit | Delhi, India"
-        description="Contact Xammer for a free AWS, Azure, or Google Cloud cost audit. Based in Delhi, India. Reach us at operations@xammer.in or +91 98713 38979."
+        description="Contact Xammer for a free AWS, Azure, or Google Cloud cost audit. Based in Delhi, India. Reach us at operations@xammer.com or +91 87692 54249."
         keywords="contact Xammer, free cloud audit India, AWS consulting contact Delhi, cloud cost audit"
       />
       <main>
@@ -59,11 +59,11 @@ const ContactPage = () => {
                       <div className="contact__card-value">+91 87692 54249</div>
                     </div>
                   </a>
-                  <a href="mailto:operations@xammer.in" className="contact__card glass-card">
+                  <a href="mailto:operations@xammer.com" className="contact__card glass-card">
                     <div className="contact__card-icon contact__card-icon--blue"><Mail size={20} /></div>
                     <div>
                       <div className="contact__card-label">Email Us</div>
-                      <div className="contact__card-value">operations@xammer.in</div>
+                      <div className="contact__card-value">operations@xammer.com</div>
                     </div>
                   </a>
                   <div className="contact__card glass-card">

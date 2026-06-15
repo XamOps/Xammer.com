@@ -30,7 +30,7 @@ const benefits = [
 const solutions = [
   {
     icon: <Eye size={20} />, color: 'red', title: 'Cloud Security Posture Management (CSPM)',
-    desc: 'Continuous misconfiguration scanning, real-time drift detection, and security baseline enforcement across AWS, Azure, GCP, and Yotta.',
+    desc: 'Continuous misconfiguration scanning, real-time drift detection, and security baseline enforcement across AWS, Azure, and GCP.',
     items: ['CIS Controls, AWS Security Hub, ISO 27001 scanning', 'Real-time drift detection and auto-remediation', 'Attack surface reduction — open ports, public endpoints', 'Policy-as-code enforcement with AWS Config / OPA'],
   },
   {
@@ -81,7 +81,7 @@ const faqs = [
   { q: 'How quickly can you respond to a security incident?', a: 'Xammer\'s incident response SLA for P1 security incidents (active breach, data exfiltration, ransomware) is 15 minutes from detection to initial response, 24x7 including weekends and public holidays. For P2 incidents, initial response is within one hour. Automated playbooks for common incident types execute containment actions in seconds — before human response is even needed.' },
   { q: 'Do you perform penetration testing?', a: 'Yes. Xammer conducts both external and internal penetration testing — simulating real-world attack scenarios against your cloud environment, web applications, APIs, and network infrastructure. We deliver a detailed findings report with CVSS severity scoring and prioritized remediation guidance. We also offer purple team exercises combining red team attacks with blue team detection to validate your detection capabilities.' },
   { q: 'What compliance standards does Xammer support?', a: 'We support ISO 27001, SOC 2 Type I and II, PCI DSS v4.0, HIPAA, India\'s Digital Personal Data Protection Act (DPDPA), RBI IT Framework, SEBI Cloud Adoption Framework, IRDAI IT Guidelines, and CIS Benchmarks. We implement continuous compliance monitoring using policy-as-code frameworks so compliance is maintained automatically.' },
-  { q: 'Can you respond to an active security incident right now?', a: 'Yes. If you are experiencing an active security incident — ransomware, unauthorized access, data breach, or any other security emergency — contact us immediately at operations@xammer.in or call +91-8769254249. Our incident response team will engage within 15 minutes.' },
+  { q: 'Can you respond to an active security incident right now?', a: 'Yes. If you are experiencing an active security incident — ransomware, unauthorized access, data breach, or any other security emergency — contact us immediately at operations@xammer.com or call +91-8769254249. Our incident response team will engage within 15 minutes.' },
 ];
 
 const CyberSecurityPage = () => (

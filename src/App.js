@@ -11,7 +11,6 @@ import HomePage from './pages/Home/HomePage';
 import AWSPage                   from './pages/Services/AWSPage';
 import AzurePage                 from './pages/Services/AzurePage';
 import GoogleCloudPage           from './pages/Services/GoogleCloudPage';
-import YottaPage                 from './pages/Services/YottaPage';
 import CyberSecurityPage         from './pages/Services/CyberSecurityPage';
 import DigitalTransformationPage from './pages/Services/DigitalTransformationPage';
 import OdooPage                  from './pages/Services/OdooPage';
@@ -63,7 +62,6 @@ function App() {
           <Route path="/services/aws"                  element={<AWSPage />} />
           <Route path="/services/azure"                element={<AzurePage />} />
           <Route path="/services/google-cloud"         element={<GoogleCloudPage />} />
-          <Route path="/services/yotta"                element={<YottaPage />} />
           <Route path="/services/oracle-cloud"         element={<OracleCloudPage />} />
           <Route path="/services/cyber-security"       element={<CyberSecurityPage />} />
           <Route path="/services/digital-transformation" element={<DigitalTransformationPage />} />

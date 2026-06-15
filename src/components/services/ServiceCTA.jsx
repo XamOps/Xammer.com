@@ -37,8 +37,8 @@ const ServiceCTA = ({
           </Link>
         </div>
         <div className="sp-cta__contact">
-          <a href="mailto:operations@xammer.in" className="sp-cta__link">
-            <Mail size={14} /> operations@xammer.in
+          <a href="mailto:operations@xammer.com" className="sp-cta__link">
+            <Mail size={14} /> operations@xammer.com
           </a>
           <span className="sp-cta__divider" />
           <a href="tel:+919871338979" className="sp-cta__link">

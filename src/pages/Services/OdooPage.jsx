@@ -24,7 +24,7 @@ const benefits = [
   { icon: <DollarSign size={22} />, color: 'teal', title: 'Price-to-Value', desc: 'Odoo Enterprise adds advanced modules including full Indian localization at a fraction of the per-user cost of SAP or Microsoft Dynamics. For Indian mid-market businesses needing enterprise ERP without enterprise pricing.' },
   { icon: <Users size={22} />,    color: 'green',  title: 'Modern UI — Users Actually Adopt It', desc: 'Odoo\'s modern, web-based interface is genuinely easy to use. Mobile apps for iOS and Android put ERP functionality in the hands of field teams and warehouse workers. Users adopt Odoo — which means your implementation delivers ROI.' },
   { icon: <Shield size={22} />,   color: 'violet', title: 'Built for Indian Compliance', desc: 'Full GST (CGST, SGST, IGST, CESS), TDS/TCS, e-invoicing with IRN generation, e-way bills, and Indian accounting standards. Xammer ensures your Odoo system is correctly configured for Indian compliance from day one.' },
-  { icon: <Cloud size={22} />,    color: 'blue',   title: 'Data Sovereignty on Yotta', desc: 'Xammer deploys Odoo on Yotta\'s MeitY-empanelled data center infrastructure. Your business data never leaves Indian jurisdiction — physically located within India, compliant with DPDPA, and auditable for regulatory inspection.' },
+  { icon: <Cloud size={22} />,    color: 'blue',   title: 'Data Sovereignty — India-Hosted', desc: 'Xammer deploys Odoo on MeitY-empanelled data center infrastructure. Your business data never leaves Indian jurisdiction — physically located within India, compliant with DPDPA, and auditable for regulatory inspection.' },
 ];
 
 const solutions = [
@@ -57,7 +57,7 @@ const solutions = [
 
 const processSteps = [
   { icon: <Eye size={24} />,      title: 'Discovery & Requirements', desc: 'Workshops with each department head to map current processes, pain points, data flows, and requirements. Gap analysis showing where standard Odoo meets your needs and where customization is required.', sub: 'Weeks 1–2' },
-  { icon: <Cloud size={24} />,    title: 'Setup & Configuration', desc: 'Odoo environment provisioned on Yotta sovereign infrastructure. Indian localization modules installed. Module-by-module configuration with weekly reviews to catch misunderstandings early.', sub: 'Weeks 2–10' },
+  { icon: <Cloud size={24} />,    title: 'Setup & Configuration', desc: 'Odoo environment provisioned on MeitY-compliant sovereign infrastructure. Indian localization modules installed. Module-by-module configuration with weekly reviews to catch misunderstandings early.', sub: 'Weeks 2–10' },
   { icon: <Database size={20} />, title: 'Data Migration & Integration', desc: 'Data extraction, cleansing, transformation, and staged migration with reconciliation at each step. API integrations for GST portal, bank feeds, payment gateways, and e-commerce platforms.', sub: 'Weeks 8–12' },
   { icon: <Zap size={24} />,      title: 'Training, Go-Live & Support', desc: 'Role-specific training for all user groups. Managed go-live with intensive hypercare — same-day issue resolution and daily check-ins. Ongoing managed support with helpdesk and compliance updates.', sub: 'Weeks 11–14+' },
 ];
@@ -66,13 +66,13 @@ const testimonials = [
   { quote: 'We went from running our business on Tally and Excel to having real-time inventory visibility across three warehouses. Month-end close now takes three days instead of three weeks. ROI was visible in the first quarter.', author: 'Suresh', role: 'MD, Distribution Company (Mumbai)' },
   { quote: 'Xammer set up GST, e-invoicing, TDS, and payroll correctly from day one — something our previous vendor had spent four months getting wrong. Our CA was happy with the books from the very first month.', author: 'Rekha', role: 'CFO, Manufacturing Company (Pune)' },
   { quote: 'Xammer built integrations that work flawlessly — orders flow from our website through Odoo to our logistics partner automatically, and the accounting entries post without any manual intervention.', author: 'Arun', role: 'CTO, E-Commerce Platform (Delhi)' },
-  { quote: 'The data sovereignty aspect was non-negotiable for us — we work with government clients and the data has to stay in India on compliant infrastructure. Xammer\'s Yotta-hosted Odoo deployment was the only option that met our compliance requirements.', author: 'Priya', role: 'Director, Government Technology Services' },
+  { quote: 'The data sovereignty aspect was non-negotiable for us — we work with government clients and the data has to stay in India on compliant infrastructure. Xammer\'s India-hosted Odoo deployment was the only option that met our compliance requirements.', author: 'Priya', role: 'Director, Government Technology Services' },
   { quote: 'When we had a complex manufacturing costing issue six months after go-live, their team understood both the Odoo technical side and our business process deeply enough to resolve it in hours. That level of expertise is rare.', author: 'Mohit', role: 'Head of Operations, Auto Parts Manufacturer' },
 ];
 
 const faqs = [
   { q: 'What is Odoo and is it suitable for Indian businesses?', a: 'Odoo is an open-source, all-in-one business management platform covering accounting, CRM, sales, inventory, manufacturing, HR, project management, and more. It has full Indian localization — GST, TDS, e-invoicing, Indian payroll — and is used by businesses across industries in India at every scale, from 10-person startups to multi-thousand-employee enterprises.' },
-  { q: 'How does Xammer\'s Odoo cloud hosting compare to Odoo Online (Odoo.com)?', a: 'Odoo.com (Odoo Online) hosts your data on Odoo\'s servers located outside India. For businesses that need Indian data sovereignty — whether due to regulatory requirements or security preference — this is a concern. Xammer\'s Odoo deployment on Yotta infrastructure keeps your data in India, on MeitY-empanelled infrastructure, with full sovereignty guarantees. We also provide more customization flexibility than Odoo Online allows, and more responsive local support.' },
+  { q: 'How does Xammer\'s Odoo cloud hosting compare to Odoo Online (Odoo.com)?', a: 'Odoo.com (Odoo Online) hosts your data on Odoo\'s servers located outside India. For businesses that need Indian data sovereignty — whether due to regulatory requirements or security preference — this is a concern. Xammer\'s Odoo deployment on MeitY-empanelled infrastructure keeps your data in India, with full sovereignty guarantees. We also provide more customization flexibility than Odoo Online allows, and more responsive local support.' },
   { q: 'Can Odoo replace our current Tally system?', a: 'Yes. Tally replacement with Odoo is one of our most common implementation scenarios in India. We migrate your Tally masters (customers, suppliers, items, opening balances) to Odoo and configure Odoo accounting to replicate your current workflows — with the significant additional capabilities that Odoo brings beyond Tally\'s accounting focus.' },
   { q: 'Can Odoo handle our GST and e-invoicing requirements?', a: 'Yes, fully. Odoo with proper Indian localization handles all GST requirements: CGST/SGST/IGST/CESS calculation, multi-GSTIN companies, e-invoice generation with IRN fetching from the IRP portal, e-way bill generation, GSTR-1 data export, and purchase reconciliation with GSTR-2A/2B. Xammer keeps the compliance configuration current with CBIC notifications.' },
   { q: 'How long does Odoo implementation take?', a: 'For a standard implementation covering three to five modules (accounting, sales, inventory, and purchasing) for a 20–50 user business, Xammer typically completes implementation in eight to twelve weeks. Larger, more complex implementations with manufacturing, custom development, or extensive integration requirements take twelve to twenty weeks.' },
@@ -83,8 +83,8 @@ const faqs = [
 const OdooPage = () => (
   <>
     <SEO
-      title="Odoo ERP Implementation India | Cloud-Native on Yotta | Xammer"
-      description="Xammer delivers Odoo ERP implementation in India with MeitY-compliant hosting on Yotta sovereign cloud. Full Indian localization, GST compliance, e-invoicing, and 24x7 support. Free Odoo demo."
+      title="Odoo ERP Implementation India | MeitY-Compliant Cloud-Native | Xammer"
+      description="Xammer delivers Odoo ERP implementation in India with MeitY-compliant sovereign cloud hosting. Full Indian localization, GST compliance, e-invoicing, and 24x7 support. Free Odoo demo."
       keywords="Odoo ERP implementation India, Odoo cloud deployment India, Odoo implementation partner Delhi, Odoo on cloud India, Odoo customization services, Odoo managed hosting India"
     />
     <main>
@@ -92,7 +92,7 @@ const OdooPage = () => (
         badge="Odoo Implementation Partner India"
         title="Odoo ERP Implementation —"
         highlight="Fast, Secure & Cloud-Native on India's Sovereign Cloud"
-        subtitle="Odoo is one of the world's most powerful and flexible open-source ERP platforms — trusted by over 7 million businesses globally. Xammer delivers Odoo ERP Implementation across India with cloud-native deployment on MeitY-compliant Yotta infrastructure, full end-to-end implementation, deep customization, and 24x7 managed hosting."
+        subtitle="Odoo is one of the world's most powerful and flexible open-source ERP platforms — trusted by over 7 million businesses globally. Xammer delivers Odoo ERP Implementation across India with cloud-native deployment on MeitY-compliant sovereign infrastructure, full end-to-end implementation, deep customization, and 24x7 managed hosting."
         stats={heroStats}
         accent="violet"
         ctaPrimary={{ text: 'Get Free Odoo Demo', to: '/contact' }}
@@ -132,7 +132,7 @@ const OdooPage = () => (
       <ServiceCTA
         title="Ready to Transform Your Business With"
         highlight="Odoo on India's Sovereign Cloud?"
-        body="Odoo's flexibility combined with Xammer's implementation expertise and Yotta's sovereign cloud infrastructure creates a business management platform that is powerful, compliant, and built for the Indian market. Start with a free Odoo demo customized to your industry — 60 minutes, no obligation."
+        body="Odoo's flexibility combined with Xammer's implementation expertise and India's sovereign cloud infrastructure creates a business management platform that is powerful, compliant, and built for the Indian market. Start with a free Odoo demo customized to your industry — 60 minutes, no obligation."
         ctaText="Get My Free Odoo Demo"
         ctaTo="/contact"
         accent="violet"

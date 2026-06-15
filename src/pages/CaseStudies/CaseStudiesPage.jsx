@@ -32,10 +32,10 @@ const studies = [
     author: 'Krishant, Co-Founder & CTO',
   },
   {
-    client: 'Regional NBFC', industry: 'Banking', service: 'Yotta Sovereign Cloud', accent: 'green',
+    client: 'Regional NBFC', industry: 'Banking', service: 'Sovereign Cloud Migration', accent: 'green',
     img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&auto=format&fit=crop',
     challenge: 'RBI data localization requirements prohibiting use of US-based public cloud. Existing colocation contract expensive and operationally complex.',
-    result: 'Full migration to Yotta MeitY-empanelled sovereign cloud. RBI audit passed without a single finding. 35% infrastructure cost reduction vs. colocation.',
+    result: 'Full migration to MeitY-empanelled sovereign cloud infrastructure. RBI audit passed without a single finding. 35% infrastructure cost reduction vs. colocation.',
     metrics: [{ icon: <Shield size={16} />, val: '0', label: 'Audit Findings' }, { icon: <TrendingDown size={16} />, val: '35%', label: 'Cost vs. Colocation' }, { icon: <Shield size={16} />, val: '100%', label: 'RBI Compliant' }],
     quote: 'The compliance documentation Xammer produced for our RBI audit was detailed, accurate, and got through review without a single finding.',
     author: 'Sunil, CISO',

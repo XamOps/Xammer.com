@@ -20,7 +20,6 @@ const siteMap = [
       { label: 'AWS Managed Services India', href: '/services/aws' },
       { label: 'Microsoft Azure Managed Services', href: '/services/azure' },
       { label: 'Google Cloud Platform Services', href: '/services/google-cloud' },
-      { label: 'Yotta Sovereign Cloud Services', href: '/services/yotta' },
       { label: 'DevOps Automation Services', href: '/services/devops' },
     ],
   },

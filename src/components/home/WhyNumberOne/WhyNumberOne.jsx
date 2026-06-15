@@ -49,7 +49,7 @@ const stats = [
 
 const checks = [
   'India-based team with on-site delivery capability across Delhi NCR',
-  'Multi-cloud expertise — AWS, Azure, GCP, and Yotta under one contract',
+  'Multi-cloud expertise — AWS, Azure, and GCP under one contract',
   'FinOps-driven approach: cost visibility and savings built into every engagement',
   'Contractual SLAs with penalties — not just best-effort promises',
   'VAPT and compliance advisory included in all managed security plans',

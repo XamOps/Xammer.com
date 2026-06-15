@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, Phone } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AnimatedCounter from '../common/AnimatedCounter';
 import './ServiceHero.css';
@@ -37,11 +37,6 @@ const ServiceHero = ({
           <Link to={ctaSecondary.to} className="btn-secondary">
             {ctaSecondary.text}
           </Link>
-        </div>
-        <div className="sp-hero__contact">
-          <span><Mail size={13} /> operations@xammer.in</span>
-          <span className="sp-hero__contact-divider" />
-          <span><Phone size={13} /> +91 98713 38979</span>
         </div>
       </div>
 

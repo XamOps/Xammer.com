@@ -32,7 +32,7 @@ const solutions = [
   },
   {
     icon: <Settings size={20} />, color: 'teal', title: 'Infrastructure as Code (IaC)',
-    items: ['Terraform modules for AWS, Azure, GCP, Yotta', 'CloudFormation, ARM Templates, Pulumi', 'IaC code review and approval workflows', 'Drift detection and automated remediation', 'State management — S3, Azure Storage, Terraform Cloud'],
+    items: ['Terraform modules for AWS, Azure, GCP', 'CloudFormation, ARM Templates, Pulumi', 'IaC code review and approval workflows', 'Drift detection and automated remediation', 'State management — S3, Azure Storage, Terraform Cloud'],
   },
   {
     icon: <Server size={20} />, color: 'violet', title: 'Kubernetes & Container Orchestration',
@@ -69,7 +69,7 @@ const testimonials = [
 const faqs = [
   { q: 'What CI/CD tools does Xammer work with?', a: 'We work with all major CI/CD platforms: GitHub Actions, GitLab CI/CD, Azure DevOps Pipelines, AWS CodePipeline/CodeBuild, Jenkins, CircleCI, and Bitbucket Pipelines. We recommend the tool that best fits your existing tech stack and team skills — not what\'s most convenient for us.' },
   { q: 'How do you migrate from our current manual deployment process?', a: 'We use a phased approach: first we build the new pipeline alongside your current process, then migrate one application or service at a time. This means your team continues shipping throughout the migration with zero disruption. The full migration typically takes 4–8 weeks depending on the number of applications.' },
-  { q: 'Do you support on-premise Kubernetes as well as managed (EKS/AKS/GKE)?', a: 'Yes. We support managed Kubernetes on all major cloud providers (EKS, AKS, GKE) as well as self-managed clusters on bare metal or VM infrastructure. For regulated industries requiring sovereign infrastructure, we also implement Kubernetes on Yotta\'s MeitY-compliant data centers.' },
+  { q: 'Do you support on-premise Kubernetes as well as managed (EKS/AKS/GKE)?', a: 'Yes. We support managed Kubernetes on all major cloud providers (EKS, AKS, GKE) as well as self-managed clusters on bare metal or VM infrastructure. For regulated industries requiring sovereign infrastructure, we also implement Kubernetes on MeitY-compliant data center environments.' },
   { q: 'What is DevSecOps and why should we implement it?', a: 'DevSecOps integrates security practices directly into the DevOps pipeline — so every code commit is scanned for vulnerabilities, every container image is checked before deployment, and every infrastructure change is validated against security policies automatically. It shifts security left (earlier in the process) where issues are far cheaper to fix than in production.' },
   { q: 'How do you handle multi-environment deployments (dev/staging/prod)?', a: 'We design environment promotion workflows where code flows automatically from feature branches through development and staging environments before reaching production — with automated testing gates at each stage and manual approval for production deployments where required. Environment configuration is managed via Terraform workspaces and environment-specific variable injection.' },
 ];

@@ -30,7 +30,7 @@ const benefits = [
 const solutions = [
   {
     icon: <Cloud size={20} />, color: 'violet', title: 'Cloud Infrastructure Transformation',
-    desc: 'Migrating from on-premise or legacy cloud to modern, cloud-native infrastructure on AWS, Azure, GCP, or Yotta — automated, secure, cost-optimized, and scalable from day one.',
+    desc: 'Migrating from on-premise or legacy cloud to modern, cloud-native infrastructure on AWS, Azure, or GCP — automated, secure, cost-optimized, and scalable from day one.',
     items: ['Multi-cloud architecture design', 'DPDPA, RBI, SEBI, IRDAI compliance', 'Infrastructure as Code with Terraform', 'Zero-downtime migration execution'],
   },
   {

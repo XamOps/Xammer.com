@@ -10,10 +10,10 @@ import './Navbar.css';
 /* ── Cloud dropdown ───────────────────────────────────────── */
 const cloudItems = [
   { label: 'Amazon Web Services', sub: 'Certified AWS partner',    icon: <Cloud    size={15} color="#FF9900" />, href: '/services/aws' },
-  { label: 'Google Cloud',        sub: 'GCP partner & specialised', icon: <Cloud    size={15} color="#4285F4" />, href: '/services/google-cloud' },
-  { label: 'Microsoft Azure',     sub: 'Azure Gold partner',        icon: <Cloud    size={15} color="#0078D4" />, href: '/services/azure' },
-  { label: 'Oracle Cloud',        sub: 'OCI specialist',            icon: <Server   size={15} color="#F80000" />, href: '/services/oracle-cloud' },
-  { label: 'XamCloud',            sub: 'Managed multi-cloud',       icon: <Database size={15} color="#BB86FC" />, href: '/products/xamcloud' },
+  // { label: 'Google Cloud',        sub: 'GCP partner & specialised', icon: <Cloud    size={15} color="#4285F4" />, href: '/services/google-cloud' },
+  { label: 'Microsoft Azure',     sub: 'Advance Consulting Partner',        icon: <Cloud    size={15} color="#0078D4" />, href: '/services/azure' },
+  { label: 'Oracle Cloud',        sub: 'Premier Partner',            icon: <Server   size={15} color="#F80000" />, href: '/services/oracle-cloud' },
+  { label: 'XamCloud',            sub: 'SPE Partner',       icon: <Database size={15} color="#BB86FC" />, href: '/products/xamcloud' },
 ];
 
 /* ── Products dropdown ────────────────────────────────────── */

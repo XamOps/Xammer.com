@@ -25,14 +25,13 @@ const certifications = [
   { name: 'AWS Select Tier Consulting Partner', color: '#FF9900', abbr: 'AWS' },
   { name: 'Microsoft Azure Expert MSP',          color: '#0078D4', abbr: 'AZ' },
   { name: 'Google Cloud Certified Partner',      color: '#4285F4', abbr: 'GCP' },
-  { name: 'Yotta Infrastructure Partner',        color: '#03DAC6', abbr: 'Y' },
 ];
 
 const timeline = [
   { year: '2014', title: 'Founded in Delhi', desc: 'Xammer was founded with a simple belief: Indian enterprises deserve world-class cloud engineering without the enterprise price tag.' },
   { year: '2016', title: 'First 100 Clients', desc: 'Crossed 100 active managed services clients across Delhi NCR, primarily in FinTech and healthcare sectors.' },
   { year: '2018', title: 'AWS Partner Status', desc: 'Achieved AWS Select Tier Consulting Partner status — recognition of technical depth and client satisfaction outcomes.' },
-  { year: '2020', title: 'Multi-Cloud Practice', desc: 'Expanded to full multi-cloud coverage — AWS, Azure, GCP, and Yotta sovereign cloud — with 500+ projects delivered.' },
+  { year: '2020', title: 'Multi-Cloud Practice', desc: 'Expanded to full multi-cloud coverage — AWS, Azure, and GCP — with 500+ projects delivered.' },
   { year: '2022', title: 'Azure Expert MSP', desc: 'Earned Microsoft Azure Expert MSP designation — fewer than 100 partners globally — and launched our DevSecOps practice.' },
   { year: '2024', title: '1,000+ Projects', desc: 'Crossed 1,000 successful project deliveries with 180+ certified professionals serving enterprises across 12 industries.' },
 ];

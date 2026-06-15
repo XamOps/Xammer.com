@@ -42,7 +42,7 @@ export const organizationSchema = {
       availableLanguage: ['English', 'Hindi'],
     },
   ],
-  email: 'operations@xammer.in',
+  email: 'operations@xammer.com',
   sameAs: [
     'https://x.com/XammerUni',
     'https://www.linkedin.com/company/xammer/',
