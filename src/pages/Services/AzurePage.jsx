@@ -14,7 +14,7 @@ import ServiceCTA from '../../components/services/ServiceCTA';
 const heroStats = [
   { value: 55, suffix: '%', label: 'Average Cost Reduction', color: 'blue' },
   { value: 1000, suffix: '+', label: 'Projects Delivered', color: 'violet' },
-  { value: 10,  suffix: '+', label: 'Years Cloud Experience', color: 'teal' },
+  { value: 5,   suffix: '+', label: 'Years Cloud Experience', color: 'teal' },
   { value: 95,  suffix: '%', label: 'Fortune 500 Trust Azure', color: 'green' },
 ];
 

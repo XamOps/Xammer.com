@@ -6,7 +6,7 @@ import AnimatedCounter from '../../components/common/AnimatedCounter';
 import './AboutPage.css';
 
 const stats = [
-  { value: 10,   suffix: '+', label: 'Years in Cloud & IT' },
+  { value: 5,    suffix: '+', label: 'Years in Cloud & IT' },
   { value: 1000, suffix: '+', label: 'Projects Delivered' },
   { value: 180,  suffix: '+', label: 'Certified Experts' },
   { value: 98.5, suffix: '%', decimals: 1, label: 'Client Satisfaction' },
@@ -40,7 +40,7 @@ const AboutPage = () => (
   <>
     <SEO
       title="About Xammer | India's Trusted Cloud Managed Services Partner"
-      description="Xammer is a Delhi-based cloud managed services company with 10+ years experience, 1,000+ projects, and 180+ certified cloud engineers. AWS Select Tier, Azure Expert MSP, Google Cloud Partner."
+      description="Xammer is a Delhi-based cloud managed services company with 5+ years experience, 1,000+ projects, and 180+ certified cloud engineers. AWS Select Tier, Azure Expert MSP, Google Cloud Partner."
       keywords="about Xammer, cloud managed services company India, AWS consulting partner Delhi, about us"
     />
     <main>
@@ -129,7 +129,7 @@ const AboutPage = () => (
         <div className="container">
           <div className="about-timeline__header">
             <div className="section-label">Our Journey</div>
-            <h2 className="section-title">10 Years of Building Better Cloud</h2>
+            <h2 className="section-title">5 Years of Building Better Cloud</h2>
             <div className="divider" />
           </div>
           <div className="about-timeline__list">

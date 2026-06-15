@@ -19,7 +19,7 @@ const FounderMessage = () => (
             <div className="founder__badges">
               <span className="badge badge-violet">AWS Certified</span>
               <span className="badge badge-blue">Azure Expert</span>
-              <span className="badge badge-teal">10+ Yrs</span>
+              <span className="badge badge-teal">5+ Yrs</span>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import './WhyNumberOne.css';
 
 const stats = [
   {
-    value: '10+',
+    value: '5+',
     valueColor: 'var(--violet)',
     label: 'Years of Cloud Expertise',
     note: 'Delivering enterprise IT since 2014 — before most Indian companies had a cloud strategy.',

@@ -15,7 +15,7 @@ import ServiceCTA from '../../components/services/ServiceCTA';
 const heroStats = [
   { value: 80, suffix: '%', label: 'Max Cost Reduction', color: 'orange' },
   { value: 1000, suffix: '+', label: 'Projects Delivered', color: 'blue' },
-  { value: 10,  suffix: '+', label: 'Years AWS Expertise', color: 'teal' },
+  { value: 5,   suffix: '+', label: 'Years AWS Expertise', color: 'teal' },
   { value: 99.9, suffix: '%', decimals: 1, label: 'Uptime SLA', color: 'green' },
 ];
 
@@ -151,7 +151,7 @@ const AWSPage = () => (
         stats={[
           { value: '1,000+', label: 'Projects Delivered' },
           { value: '50–80%', label: 'Avg Cost Reduction' },
-          { value: '10+', label: 'Years AWS Expertise' },
+          { value: '5+', label: 'Years AWS Expertise' },
         ]}
       />
     </main>

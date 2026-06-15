@@ -7,7 +7,7 @@ const stats = [
   {
     icon: <Award size={22} />,
     color: 'violet',
-    to: 10,
+    to: 5,
     suffix: '+',
     label: 'Years in Cloud & IT',
   },
