@@ -1,0 +1,61 @@
+name: Build and Deploy to EC2
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build React app
+        run: npm run build || exit 1
+
+      - name: Verify build folder
+        run: |
+          if [ ! -d "build" ] || [ -z "$(ls -A build)" ]; then
+            echo "Build folder empty or missing!"
+            exit 1
+          fi
+
+      - name: Deploy build to EC2 via rsync
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avzr --delete
+          path: build/
+          remote_path: /home/ec2-user/xammer.in/build_new/
+          remote_host: ${{ secrets.SSH_HOST }}
+          remote_user: ${{ secrets.SSH_USER }}
+          remote_key: ${{ secrets.SSH_KEY }}
+
+      - name: Atomic swap, backup & reload nginx on EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            # Purana build backup karo
+            if [ -d /home/ec2-user/xammer.in/build ]; then
+              cp -r /home/ec2-user/xammer.in/build /home/ec2-user/xammer.in/build_backup
+            fi
+
+            # Atomic swap — zero downtime
+            mv /home/ec2-user/xammer.in/build_new /home/ec2-user/xammer.in/build
+
+            # Nginx reload
+            sudo systemctl reload nginx
+
+            echo "Deployment successful!"
