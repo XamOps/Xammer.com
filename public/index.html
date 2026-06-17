@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="en-IN">
   <head>
+    <!-- ═══════════════════════════════════════════════════════
+         Google Tag Manager — must be FIRST script in <head>
+    ════════════════════════════════════════════════════════ -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WD6VQDMC');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- ═══════════════════════════════════════════════════════
+         Google Analytics 4 (GA4) — gtag.js  ID: G-83ZJNSHDWV
+    ════════════════════════════════════════════════════════ -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-83ZJNSHDWV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-83ZJNSHDWV');
+    </script>
+    <!-- End Google Analytics 4 -->
+
+    <!-- ═══════════════════════════════════════════════════════
+         Charset · Favicon · Viewport
+    ════════════════════════════════════════════════════════ -->
     <meta charset="UTF-8">
     <link rel="icon" href="%PUBLIC_URL%/fevicon.png" type="image/png">
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/logo.svg">
@@ -8,7 +33,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Primary SEO — overridden per-page by react-helmet-async -->
+    <!-- ═══════════════════════════════════════════════════════
+         Primary SEO — overridden per-page by react-helmet-async
+    ════════════════════════════════════════════════════════ -->
     <title>Xammer — Cloud Managed Services, DevOps &amp; Digital Transformation | Delhi, India</title>
 
     <meta name="title"       content="Xammer — Cloud Managed Services, DevOps &amp; Digital Transformation | Delhi, India">
@@ -17,43 +44,63 @@
     <meta name="robots"      content="index, follow">
     <meta name="author"      content="Xammer IT Solutions">
 
+    <!-- Google Search Console verification -->
+    <meta name="google-site-verification" content="0acf6f8ce687b60f">
+
     <link rel="canonical" href="https://xammer.com/">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type"        content="website">
-    <meta property="og:site_name"   content="Xammer">
-    <meta property="og:locale"      content="en_IN">
-    <meta property="og:title"       content="Xammer — Cloud Managed Services, DevOps &amp; Digital Transformation | Delhi, India">
-    <meta property="og:description" content="Xammer helps Indian enterprises cut cloud costs by 30–40%, automate deployments with DevOps CI/CD pipelines, and modernise their IT infrastructure — backed by a 99.9% uptime SLA.">
-    <meta property="og:url"         content="https://xammer.com/">
-    <meta property="og:image"       content="https://xammer.com/images/og-default.jpg">
+    <!-- ═══════════════════════════════════════════════════════
+         Open Graph / Facebook
+    ════════════════════════════════════════════════════════ -->
+    <meta property="og:type"         content="website">
+    <meta property="og:site_name"    content="Xammer">
+    <meta property="og:locale"       content="en_IN">
+    <meta property="og:title"        content="Xammer — Cloud Managed Services, DevOps &amp; Digital Transformation | Delhi, India">
+    <meta property="og:description"  content="Xammer helps Indian enterprises cut cloud costs by 30–40%, automate deployments with DevOps CI/CD pipelines, and modernise their IT infrastructure — backed by a 99.9% uptime SLA.">
+    <meta property="og:url"          content="https://xammer.com/">
+    <meta property="og:image"        content="https://xammer.com/images/og-default.jpg">
     <meta property="og:image:width"  content="1200">
     <meta property="og:image:height" content="630">
 
-    <!-- Twitter -->
+    <!-- ═══════════════════════════════════════════════════════
+         Twitter Card
+    ════════════════════════════════════════════════════════ -->
     <meta name="twitter:card"        content="summary_large_image">
     <meta name="twitter:site"        content="@XammerUni">
     <meta name="twitter:title"       content="Xammer — Cloud Managed Services &amp; IT Consulting | Delhi, India">
     <meta name="twitter:description" content="Cut cloud costs by 30–40%, automate deployments, and modernise IT infrastructure with Xammer's managed services. Delhi-based. 5+ years. 99.9% uptime SLA.">
     <meta name="twitter:image"       content="https://xammer.com/images/og-default.jpg">
 
-    <!-- PWA / Theme -->
-    <meta name="theme-color"            content="#0D1117">
+    <!-- ═══════════════════════════════════════════════════════
+         PWA / Theme
+    ════════════════════════════════════════════════════════ -->
+    <meta name="theme-color"             content="#0D1117">
     <meta name="msapplication-TileColor" content="#0D1117">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
 
-    <!-- Geo tags for local SEO -->
+    <!-- ═══════════════════════════════════════════════════════
+         Local SEO — Geo tags
+    ════════════════════════════════════════════════════════ -->
     <meta name="geo.region"    content="IN-DL">
     <meta name="geo.placename" content="Delhi">
     <meta name="geo.position"  content="28.6139;77.2090">
     <meta name="ICBM"          content="28.6139, 77.2090">
 
-    <!-- Preconnect for Google Fonts -->
+    <!-- ═══════════════════════════════════════════════════════
+         Google Fonts
+    ════════════════════════════════════════════════════════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- ═══════════════════════════════════════════════════════
+         Google Tag Manager (noscript) — must be FIRST in <body>
+    ════════════════════════════════════════════════════════ -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WD6VQDMC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <noscript>
       <p>Xammer IT Solutions — Cloud Managed Services and IT Consulting in Delhi, India. Please enable JavaScript for the best experience.</p>
     </noscript>
