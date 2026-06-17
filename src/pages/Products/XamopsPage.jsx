@@ -4,6 +4,7 @@ import {
   GitBranch, Terminal, TrendingUp, Clock,
 } from 'lucide-react';
 import SEO from '../../components/common/SEO';
+import { XAMOPS_SEO } from '../../utils/seoData';
 import ServiceHero from '../../components/services/ServiceHero';
 import ServiceBenefits from '../../components/services/ServiceBenefits';
 import ServiceSolutions from '../../components/services/ServiceSolutions';
@@ -125,9 +126,11 @@ const faqs = [
 const XamopsPage = () => (
   <>
     <SEO
-      title="Xamops — DevOps-as-a-Service | Xammer"
-      description="Xamops is Xammer's fully managed DevOps-as-a-Service. We build and manage your CI/CD pipelines, Kubernetes platform, IaC, DevSecOps, and 24x7 SRE operations. Free DevOps assessment."
-      keywords="DevOps as a Service India, managed DevOps, CI/CD pipeline management, Kubernetes managed service, SRE as a service India"
+      title={XAMOPS_SEO.title}
+      description={XAMOPS_SEO.description}
+      keywords={XAMOPS_SEO.keywords}
+      canonical={XAMOPS_SEO.canonical}
+      ogImage={XAMOPS_SEO.ogImage}
     />
     <main>
       <ServiceHero

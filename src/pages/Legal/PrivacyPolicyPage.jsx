@@ -1,4 +1,5 @@
 import SEO from '../../components/common/SEO';
+import { PRIVACY_SEO } from '../../utils/seoData';
 import PageHero from '../../components/common/PageHero';
 import './LegalPage.css';
 
@@ -16,7 +17,13 @@ const sections = [
 
 const PrivacyPolicyPage = () => (
   <>
-    <SEO title="Privacy Policy | Xammer" description="Xammer's Privacy Policy — how we collect, use, and protect your personal data in compliance with DPDPA 2023." />
+    <SEO
+      title={PRIVACY_SEO.title}
+      description={PRIVACY_SEO.description}
+      keywords={PRIVACY_SEO.keywords}
+      canonical={PRIVACY_SEO.canonical}
+      ogImage={PRIVACY_SEO.ogImage}
+    />
     <main>
       <PageHero badge="Last Updated: June 2025" title="Privacy" highlight="Policy" accent="blue" />
       <section className="legal section">

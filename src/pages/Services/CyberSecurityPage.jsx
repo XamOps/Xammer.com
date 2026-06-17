@@ -3,6 +3,7 @@ import {
   Search, RefreshCw, CheckCircle, Zap, Globe,
 } from 'lucide-react';
 import SEO from '../../components/common/SEO';
+import { CYBER_SEO } from '../../utils/seoData';
 import ServiceHero from '../../components/services/ServiceHero';
 import ServiceBenefits from '../../components/services/ServiceBenefits';
 import ServiceSolutions from '../../components/services/ServiceSolutions';
@@ -87,9 +88,11 @@ const faqs = [
 const CyberSecurityPage = () => (
   <>
     <SEO
-      title="Cyber Security Managed Services India | Proactive Cloud Security | Xammer"
-      description="Xammer delivers proactive Cyber Security Managed Services in India — CSPM, zero-trust IAM, 24x7 threat detection, penetration testing, and compliance automation. Free security assessment."
-      keywords="cyber security managed services India, cloud security services India, managed security services provider Delhi, zero-trust security India, CSPM India"
+      title={CYBER_SEO.title}
+      description={CYBER_SEO.description}
+      keywords={CYBER_SEO.keywords}
+      canonical={CYBER_SEO.canonical}
+      ogImage={CYBER_SEO.ogImage}
     />
     <main>
       <ServiceHero

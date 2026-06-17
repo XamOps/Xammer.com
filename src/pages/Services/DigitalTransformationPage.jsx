@@ -3,6 +3,7 @@ import {
   TrendingUp, Users, RefreshCw, BarChart2, Cpu, Eye,
 } from 'lucide-react';
 import SEO from '../../components/common/SEO';
+import { DIGITAL_SEO } from '../../utils/seoData';
 import ServiceHero from '../../components/services/ServiceHero';
 import ServiceBenefits from '../../components/services/ServiceBenefits';
 import ServiceSolutions from '../../components/services/ServiceSolutions';
@@ -83,9 +84,11 @@ const faqs = [
 const DigitalTransformationPage = () => (
   <>
     <SEO
-      title="Digital Transformation Services India | Cloud-Native Modernization | Xammer"
-      description="Xammer is India's trusted Digital Transformation Services partner. We help enterprises modernize legacy systems, automate processes, and adopt AI, cloud, and DevOps for competitive advantage. Free assessment."
-      keywords="digital transformation services India, cloud digital transformation consulting Delhi, legacy system modernization India, enterprise digital transformation partner, IT modernization services India"
+      title={DIGITAL_SEO.title}
+      description={DIGITAL_SEO.description}
+      keywords={DIGITAL_SEO.keywords}
+      canonical={DIGITAL_SEO.canonical}
+      ogImage={DIGITAL_SEO.ogImage}
     />
     <main>
       <ServiceHero

@@ -4,6 +4,7 @@ import {
   Clock, CheckCircle, BarChart2,
 } from 'lucide-react';
 import SEO from '../../components/common/SEO';
+import { XAMCLOUD_SEO } from '../../utils/seoData';
 import ServiceHero from '../../components/services/ServiceHero';
 import ServiceBenefits from '../../components/services/ServiceBenefits';
 import ServiceSolutions from '../../components/services/ServiceSolutions';
@@ -123,9 +124,11 @@ const faqs = [
 const XamCloudPage = () => (
   <>
     <SEO
-      title="XamCloud — Managed Multi-Cloud Operations | Xammer"
-      description="XamCloud is Xammer's managed multi-cloud service. We manage AWS, Azure, GCP, and OCI under one SLA — with unified cost governance, security, observability, and 24x7 SRE operations."
-      keywords="managed multi-cloud India, multi-cloud management, AWS Azure GCP managed, cloud operations India, FinOps multi-cloud"
+      title={XAMCLOUD_SEO.title}
+      description={XAMCLOUD_SEO.description}
+      keywords={XAMCLOUD_SEO.keywords}
+      canonical={XAMCLOUD_SEO.canonical}
+      ogImage={XAMCLOUD_SEO.ogImage}
     />
     <main>
       <ServiceHero

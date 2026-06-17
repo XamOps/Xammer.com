@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import SEO from '../../components/common/SEO';
+import { CONTACT_SEO } from '../../utils/seoData';
 import PageHero from '../../components/common/PageHero';
 import './ContactPage.css';
 
@@ -28,9 +29,11 @@ const ContactPage = () => {
   return (
     <>
       <SEO
-        title="Contact Xammer | Get a Free Cloud Audit | Delhi, India"
-        description="Contact Xammer for a free AWS, Azure, or Google Cloud cost audit. Based in Delhi, India. Reach us at operations@xammer.com or +91 87692 54249."
-        keywords="contact Xammer, free cloud audit India, AWS consulting contact Delhi, cloud cost audit"
+        title={CONTACT_SEO.title}
+        description={CONTACT_SEO.description}
+        keywords={CONTACT_SEO.keywords}
+        canonical={CONTACT_SEO.canonical}
+        ogImage={CONTACT_SEO.ogImage}
       />
       <main>
         <PageHero

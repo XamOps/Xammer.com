@@ -1,6 +1,7 @@
 import { MapPin, Clock, ArrowRight, Zap, Heart, Users, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/common/SEO';
+import { CAREERS_SEO } from '../../utils/seoData';
 import PageHero from '../../components/common/PageHero';
 import './CareersPage.css';
 
@@ -35,9 +36,11 @@ const deptColors = {
 const CareersPage = () => (
   <>
     <SEO
-      title="Careers at Xammer | Cloud Engineering Jobs in Delhi, India"
-      description="Join Xammer's cloud engineering team in Delhi. We're hiring AWS architects, DevOps engineers, cloud security experts, and SREs. Funded certifications, remote-friendly."
-      keywords="careers Xammer, cloud engineering jobs Delhi, AWS architect job India, DevOps engineer hiring, cloud jobs India"
+      title={CAREERS_SEO.title}
+      description={CAREERS_SEO.description}
+      keywords={CAREERS_SEO.keywords}
+      canonical={CAREERS_SEO.canonical}
+      ogImage={CAREERS_SEO.ogImage}
     />
     <main>
       <PageHero

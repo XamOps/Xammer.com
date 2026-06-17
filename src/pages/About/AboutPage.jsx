@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import SEO from '../../components/common/SEO';
 import PageHero from '../../components/common/PageHero';
 import AnimatedCounter from '../../components/common/AnimatedCounter';
+import { ABOUT_SEO } from '../../utils/seoData';
 import './AboutPage.css';
 
 const stats = [
@@ -39,9 +40,11 @@ const timeline = [
 const AboutPage = () => (
   <>
     <SEO
-      title="About Xammer | India's Trusted Cloud Managed Services Partner"
-      description="Xammer is a Delhi-based cloud managed services company with 5+ years experience, 1,000+ projects, and 180+ certified cloud engineers. AWS Select Tier, Azure Expert MSP, Google Cloud Partner."
-      keywords="about Xammer, cloud managed services company India, AWS consulting partner Delhi, about us"
+      title={ABOUT_SEO.title}
+      description={ABOUT_SEO.description}
+      keywords={ABOUT_SEO.keywords}
+      canonical={ABOUT_SEO.canonical}
+      ogImage={ABOUT_SEO.ogImage}
     />
     <main>
       <PageHero

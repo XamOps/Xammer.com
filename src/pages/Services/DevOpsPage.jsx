@@ -1,5 +1,6 @@
 import { GitBranch, Server, Shield, Zap, Eye, RefreshCw, Settings, Cloud } from 'lucide-react';
 import SEO from '../../components/common/SEO';
+import { DEVOPS_SEO } from '../../utils/seoData';
 import ServiceHero from '../../components/services/ServiceHero';
 import ServiceBenefits from '../../components/services/ServiceBenefits';
 import ServiceSolutions from '../../components/services/ServiceSolutions';
@@ -77,9 +78,11 @@ const faqs = [
 const DevOpsPage = () => (
   <>
     <SEO
-      title="DevOps Automation Services India | CI/CD, Kubernetes, IaC | Xammer"
-      description="Xammer delivers DevOps automation services in India — CI/CD pipelines, Terraform IaC, Kubernetes, DevSecOps, and observability. Deploy faster with fewer failures. Free DevOps assessment."
-      keywords="DevOps services India, CI/CD pipeline India, Kubernetes managed services, DevSecOps India, Terraform IaC India, DevOps automation Delhi"
+      title={DEVOPS_SEO.title}
+      description={DEVOPS_SEO.description}
+      keywords={DEVOPS_SEO.keywords}
+      canonical={DEVOPS_SEO.canonical}
+      ogImage={DEVOPS_SEO.ogImage}
     />
     <main>
       <ServiceHero

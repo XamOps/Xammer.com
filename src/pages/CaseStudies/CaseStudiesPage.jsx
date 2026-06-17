@@ -1,5 +1,6 @@
 import { TrendingDown, Clock, Shield, Zap } from 'lucide-react';
 import SEO from '../../components/common/SEO';
+import { CASE_STUDIES_SEO } from '../../utils/seoData';
 import PageHero from '../../components/common/PageHero';
 import './CaseStudiesPage.css';
 
@@ -65,9 +66,11 @@ const accentMap = { orange: '#FF9900', blue: 'var(--blue)', violet: 'var(--viole
 const CaseStudiesPage = () => (
   <>
     <SEO
-      title="Case Studies | Cloud Transformation Success Stories | Xammer"
-      description="Explore Xammer's client success stories — 62% AWS cost reduction, RBI-compliant sovereign cloud migration, Odoo ERP implementation, and more from 1,000+ projects."
-      keywords="Xammer case studies, cloud cost reduction India, AWS success story, cloud transformation India"
+      title={CASE_STUDIES_SEO.title}
+      description={CASE_STUDIES_SEO.description}
+      keywords={CASE_STUDIES_SEO.keywords}
+      canonical={CASE_STUDIES_SEO.canonical}
+      ogImage={CASE_STUDIES_SEO.ogImage}
     />
     <main>
       <PageHero

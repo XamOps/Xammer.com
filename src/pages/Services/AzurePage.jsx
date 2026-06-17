@@ -3,6 +3,7 @@ import {
   TrendingDown, Settings, Eye, RefreshCw,
 } from 'lucide-react';
 import SEO from '../../components/common/SEO';
+import { AZURE_SEO } from '../../utils/seoData';
 import ServiceHero from '../../components/services/ServiceHero';
 import ServiceBenefits from '../../components/services/ServiceBenefits';
 import ServiceSolutions from '../../components/services/ServiceSolutions';
@@ -84,9 +85,11 @@ const faqs = [
 const AzurePage = () => (
   <>
     <SEO
-      title="Microsoft Azure Managed Services India | Azure Expert MSP | Xammer"
-      description="Xammer is a Microsoft Azure Expert MSP in India. We architect, migrate, and manage Azure environments — reducing costs by 35–55%, unlocking AMM funding, and delivering 24x7 managed operations."
-      keywords="Microsoft Azure managed services India, Azure consulting partner India, Azure Expert MSP Delhi, Azure cloud migration India, JioAzure partner"
+      title={AZURE_SEO.title}
+      description={AZURE_SEO.description}
+      keywords={AZURE_SEO.keywords}
+      canonical={AZURE_SEO.canonical}
+      ogImage={AZURE_SEO.ogImage}
     />
     <main>
       <ServiceHero

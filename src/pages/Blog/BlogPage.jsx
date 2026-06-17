@@ -1,6 +1,7 @@
 import { Clock, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/common/SEO';
+import { BLOG_SEO } from '../../utils/seoData';
 import PageHero from '../../components/common/PageHero';
 import './BlogPage.css';
 
@@ -19,9 +20,11 @@ const posts = [
 const BlogPage = () => (
   <>
     <SEO
-      title="Cloud Blog & Insights | AWS, Azure, DevOps, Security | Xammer"
-      description="In-depth technical articles on AWS cost optimisation, Azure migration, DevOps best practices, cloud security, and digital transformation from Xammer's engineering team."
-      keywords="cloud blog India, AWS cost optimisation blog, Azure migration guide, DevOps best practices India, cloud security blog"
+      title={BLOG_SEO.title}
+      description={BLOG_SEO.description}
+      keywords={BLOG_SEO.keywords}
+      canonical={BLOG_SEO.canonical}
+      ogImage={BLOG_SEO.ogImage}
     />
     <main>
       <PageHero

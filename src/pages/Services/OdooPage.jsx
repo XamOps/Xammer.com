@@ -3,6 +3,7 @@ import {
   Users, DollarSign, Eye, Cloud,
 } from 'lucide-react';
 import SEO from '../../components/common/SEO';
+import { ODOO_SEO } from '../../utils/seoData';
 import ServiceHero from '../../components/services/ServiceHero';
 import ServiceBenefits from '../../components/services/ServiceBenefits';
 import ServiceSolutions from '../../components/services/ServiceSolutions';
@@ -83,9 +84,11 @@ const faqs = [
 const OdooPage = () => (
   <>
     <SEO
-      title="Odoo ERP Implementation India | MeitY-Compliant Cloud-Native | Xammer"
-      description="Xammer delivers Odoo ERP implementation in India with MeitY-compliant sovereign cloud hosting. Full Indian localization, GST compliance, e-invoicing, and 24x7 support. Free Odoo demo."
-      keywords="Odoo ERP implementation India, Odoo cloud deployment India, Odoo implementation partner Delhi, Odoo on cloud India, Odoo customization services, Odoo managed hosting India"
+      title={ODOO_SEO.title}
+      description={ODOO_SEO.description}
+      keywords={ODOO_SEO.keywords}
+      canonical={ODOO_SEO.canonical}
+      ogImage={ODOO_SEO.ogImage}
     />
     <main>
       <ServiceHero

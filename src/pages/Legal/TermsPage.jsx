@@ -1,4 +1,5 @@
 import SEO from '../../components/common/SEO';
+import { TERMS_SEO } from '../../utils/seoData';
 import PageHero from '../../components/common/PageHero';
 import './LegalPage.css';
 
@@ -16,7 +17,13 @@ const sections = [
 
 const TermsPage = () => (
   <>
-    <SEO title="Terms of Service | Xammer" description="Xammer's Terms of Service — governing use of our website and cloud managed services." />
+    <SEO
+      title={TERMS_SEO.title}
+      description={TERMS_SEO.description}
+      keywords={TERMS_SEO.keywords}
+      canonical={TERMS_SEO.canonical}
+      ogImage={TERMS_SEO.ogImage}
+    />
     <main>
       <PageHero badge="Last Updated: June 2025" title="Terms of" highlight="Service" accent="violet" />
       <section className="legal section">

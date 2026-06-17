@@ -3,6 +3,7 @@ import {
   DollarSign, Users, Shield, Eye,
 } from 'lucide-react';
 import SEO from '../../components/common/SEO';
+import { ERP_SEO } from '../../utils/seoData';
 import ServiceHero from '../../components/services/ServiceHero';
 import ServiceBenefits from '../../components/services/ServiceBenefits';
 import ServiceSolutions from '../../components/services/ServiceSolutions';
@@ -84,9 +85,11 @@ const faqs = [
 const ERPPage = () => (
   <>
     <SEO
-      title="ERP Implementation Services India | SAP, Odoo, Dynamics 365 | Xammer"
-      description="Xammer delivers end-to-end ERP Implementation Services in India — system selection, full implementation, zero-loss data migration, integrations, and 24x7 support for SAP, Odoo, NetSuite, and Dynamics 365."
-      keywords="ERP implementation services India, enterprise ERP consulting India, ERP system implementation Delhi, ERP cloud migration India, cloud ERP managed services"
+      title={ERP_SEO.title}
+      description={ERP_SEO.description}
+      keywords={ERP_SEO.keywords}
+      canonical={ERP_SEO.canonical}
+      ogImage={ERP_SEO.ogImage}
     />
     <main>
       <ServiceHero

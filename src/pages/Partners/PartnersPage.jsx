@@ -1,6 +1,7 @@
 import { ArrowRight, Award, Users, TrendingUp, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/common/SEO';
+import { PARTNERS_SEO } from '../../utils/seoData';
 import PageHero from '../../components/common/PageHero';
 import './PartnersPage.css';
 
@@ -33,9 +34,11 @@ const currentPartners = [
 const PartnersPage = () => (
   <>
     <SEO
-      title="Partner With Xammer | Cloud Reseller & Referral Programme India"
-      description="Join Xammer's partner programme — referral partners, resellers, technology vendors, and strategic alliances. Revenue sharing, co-marketing, and dedicated support."
-      keywords="Xammer partner programme, cloud reseller India, AWS partner referral India, IT partner programme Delhi"
+      title={PARTNERS_SEO.title}
+      description={PARTNERS_SEO.description}
+      keywords={PARTNERS_SEO.keywords}
+      canonical={PARTNERS_SEO.canonical}
+      ogImage={PARTNERS_SEO.ogImage}
     />
     <main>
       <PageHero

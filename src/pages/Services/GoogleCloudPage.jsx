@@ -3,6 +3,7 @@ import {
   Server, TrendingDown, Map, BarChart2, Eye, Settings,
 } from 'lucide-react';
 import SEO from '../../components/common/SEO';
+import { GCP_SEO } from '../../utils/seoData';
 import ServiceHero from '../../components/services/ServiceHero';
 import ServiceBenefits from '../../components/services/ServiceBenefits';
 import ServiceSolutions from '../../components/services/ServiceSolutions';
@@ -83,9 +84,11 @@ const faqs = [
 const GoogleCloudPage = () => (
   <>
     <SEO
-      title="Google Cloud Managed Services India | Certified GCP Partner | Xammer"
-      description="Xammer is a certified Google Cloud Partner in India. We deliver GCP cloud transformation, BigQuery data warehousing, Google Maps Platform, and cost optimization. Free GCP assessment."
-      keywords="Google Cloud managed services India, Google Cloud Partner India, GCP consulting Delhi, Google Maps Platform partner, GCP cost optimization India"
+      title={GCP_SEO.title}
+      description={GCP_SEO.description}
+      keywords={GCP_SEO.keywords}
+      canonical={GCP_SEO.canonical}
+      ogImage={GCP_SEO.ogImage}
     />
     <main>
       <ServiceHero

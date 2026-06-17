@@ -4,6 +4,7 @@ import {
   Clock, CheckCircle,
 } from 'lucide-react';
 import SEO from '../../components/common/SEO';
+import { ORACLE_SEO } from '../../utils/seoData';
 import ServiceHero from '../../components/services/ServiceHero';
 import ServiceBenefits from '../../components/services/ServiceBenefits';
 import ServiceSolutions from '../../components/services/ServiceSolutions';
@@ -118,9 +119,11 @@ const faqs = [
 const OracleCloudPage = () => (
   <>
     <SEO
-      title="Oracle Cloud (OCI) Managed Services India | Xammer"
-      description="Xammer is an Oracle Cloud (OCI) specialist partner in India. We manage Autonomous Database, OCI migrations, and multi-cloud Oracle workloads. Free OCI assessment."
-      keywords="Oracle Cloud India, OCI managed services, Oracle Autonomous Database, OCI migration India, Oracle Cloud partner India"
+      title={ORACLE_SEO.title}
+      description={ORACLE_SEO.description}
+      keywords={ORACLE_SEO.keywords}
+      canonical={ORACLE_SEO.canonical}
+      ogImage={ORACLE_SEO.ogImage}
     />
     <main>
       <ServiceHero

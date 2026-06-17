@@ -1,6 +1,7 @@
 import { Calendar, Clock, MapPin, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/common/SEO';
+import { EVENTS_SEO } from '../../utils/seoData';
 import PageHero from '../../components/common/PageHero';
 import './EventsPage.css';
 
@@ -23,9 +24,11 @@ const past = [
 const EventsPage = () => (
   <>
     <SEO
-      title="Events & Webinars | Cloud, DevOps & Security | Xammer"
-      description="Join Xammer's free webinars and workshops on AWS, Azure, Google Cloud, DevOps, cybersecurity, and Odoo ERP. Live sessions for Indian IT leaders."
-      keywords="cloud webinars India, AWS webinar India, DevOps workshop Delhi, cloud events India"
+      title={EVENTS_SEO.title}
+      description={EVENTS_SEO.description}
+      keywords={EVENTS_SEO.keywords}
+      canonical={EVENTS_SEO.canonical}
+      ogImage={EVENTS_SEO.ogImage}
     />
     <main>
       <PageHero

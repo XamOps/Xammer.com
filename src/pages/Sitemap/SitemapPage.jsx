@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import SEO from '../../components/common/SEO';
+import { SITEMAP_SEO } from '../../utils/seoData';
 import PageHero from '../../components/common/PageHero';
 import './SitemapPage.css';
 
@@ -57,7 +58,13 @@ const siteMap = [
 
 const SitemapPage = () => (
   <>
-    <SEO title="Sitemap | Xammer" description="Full sitemap of Xammer's website — all pages, services, and resources." />
+    <SEO
+      title={SITEMAP_SEO.title}
+      description={SITEMAP_SEO.description}
+      keywords={SITEMAP_SEO.keywords}
+      canonical={SITEMAP_SEO.canonical}
+      ogImage={SITEMAP_SEO.ogImage}
+    />
     <main>
       <PageHero title="Sitemap" highlight="— All Pages" accent="teal" />
       <section className="sitemap section">

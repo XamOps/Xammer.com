@@ -4,6 +4,7 @@ import {
   TrendingDown, Clock, CheckCircle,
 } from 'lucide-react';
 import SEO from '../../components/common/SEO';
+import { AWS_SEO } from '../../utils/seoData';
 import ServiceHero from '../../components/services/ServiceHero';
 import ServiceBenefits from '../../components/services/ServiceBenefits';
 import ServiceSolutions from '../../components/services/ServiceSolutions';
@@ -94,9 +95,11 @@ const faqs = [
 const AWSPage = () => (
   <>
     <SEO
-      title="AWS Managed Services India | Cut Cloud Costs by 80% | Xammer"
-      description="Xammer is an AWS Select Tier Consulting Partner in India. We reduce AWS infrastructure costs by 50–80%, automate cloud operations, and deliver 99.9% uptime SLA. Free AWS cost audit."
-      keywords="AWS managed services India, AWS consulting partner India, cloud cost reduction AWS, AWS Systems Manager experts, cloud migration AWS India"
+      title={AWS_SEO.title}
+      description={AWS_SEO.description}
+      keywords={AWS_SEO.keywords}
+      canonical={AWS_SEO.canonical}
+      ogImage={AWS_SEO.ogImage}
     />
     <main>
       <ServiceHero
