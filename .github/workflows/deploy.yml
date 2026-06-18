@@ -1,4 +1,5 @@
 name: Build and Deploy to EC2
+
 on:
   push:
     branches:
@@ -7,6 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -21,7 +23,7 @@ jobs:
         run: npm ci
 
       - name: Build React app
-        run: npm run build || exit 1
+        run: npm run build
 
       - name: Verify build folder
         run: |
@@ -29,6 +31,16 @@ jobs:
             echo "Build folder empty or missing!"
             exit 1
           fi
+
+      - name: Prepare build_new directory on EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            rm -rf /home/ec2-user/xammer.in/build_new
+            mkdir -p /home/ec2-user/xammer.in/build_new
 
       - name: Deploy build to EC2 via rsync
         uses: burnett01/rsync-deployments@7.0.1
@@ -47,15 +59,30 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            # Purana build backup karo
+            set -e
+
+            # Remove old backup and backup current build
+            rm -rf /home/ec2-user/xammer.in/build_backup
             if [ -d /home/ec2-user/xammer.in/build ]; then
-              cp -r /home/ec2-user/xammer.in/build /home/ec2-user/xammer.in/build_backup
+              mv /home/ec2-user/xammer.in/build /home/ec2-user/xammer.in/build_backup
             fi
 
-            # Atomic swap — zero downtime
+            # Atomic swap
             mv /home/ec2-user/xammer.in/build_new /home/ec2-user/xammer.in/build
 
-            # Nginx reload
-            sudo systemctl reload nginx
+            # Reload nginx with auto rollback if it fails
+            if ! sudo systemctl reload nginx; then
+              echo "Nginx reload failed! Rolling back..."
+              mv /home/ec2-user/xammer.in/build /home/ec2-user/xammer.in/build_new
+              mv /home/ec2-user/xammer.in/build_backup /home/ec2-user/xammer.in/build
+              sudo systemctl reload nginx
+              exit 1
+            fi
+
+            # Save deploy info
+            echo "Deployed at: $(date)"                        > /home/ec2-user/xammer.in/deploy.log
+            echo "Commit: ${{ github.sha }}"                  >> /home/ec2-user/xammer.in/deploy.log
+            echo "Branch: ${{ github.ref_name }}"             >> /home/ec2-user/xammer.in/deploy.log
+            echo "By: ${{ github.actor }}"                    >> /home/ec2-user/xammer.in/deploy.log
 
             echo "Deployment successful!"
