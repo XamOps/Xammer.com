@@ -140,7 +140,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="footer__bottom">
           <div className="footer__copyright">
-            © {new Date().getFullYear()} Xammer IT Solutions Pvt Ltd. All rights reserved. |{' '}
+            © {new Date().getFullYear()} Xammer. All rights reserved. |{' '}
             <span>Proudly built in Delhi, India 🇮🇳</span>
           </div>
           <div className="footer__legal">
