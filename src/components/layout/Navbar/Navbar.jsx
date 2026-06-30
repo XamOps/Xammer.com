@@ -13,13 +13,13 @@ const cloudItems = [
   { label: 'Google Cloud',        sub: 'GCP partner & specialised', icon: <Cloud    size={15} color="#4285F4" />, href: '/services/google-cloud' },
   { label: 'Microsoft Azure',     sub: 'Advance Consulting Partner',        icon: <Cloud    size={15} color="#0078D4" />, href: '/services/azure' },
   { label: 'Oracle Cloud',        sub: 'Premier Partner',            icon: <Server   size={15} color="#F80000" />, href: '/services/oracle-cloud' },
-  { label: 'XamCloud',            sub: 'SPE Partner',       icon: <Database size={15} color="#BB86FC" />, href: '/products/xamcloud' },
+  // { label: 'XamCloud',            sub: 'SPE Partner',       icon: <Database size={15} color="#BB86FC" />, href: '/products/xamcloud' },
 ];
 
 /* ── Products dropdown ────────────────────────────────────── */
 const productsItems = [
   { label: 'Xamops',   sub: 'DevOps-as-a-Service',      icon: <Zap      size={15} color="#BB86FC" />, href: '/products/xamops' },
-  { label: 'XamCloud', sub: 'Managed cloud operations', icon: <Database size={15} color="#58A6FF" />, href: '/products/xamcloud' },
+  { label: 'XamCloud', sub: 'SPE Partner', icon: <Database size={15} color="#58A6FF" />, href: '/products/xamcloud' },
 ];
 
 /* ── OLD IT Infrastructure items (commented out) ─────────────
