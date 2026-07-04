@@ -1,9 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, PlayCircle, Lock, TrendingDown, Zap } from 'lucide-react';
+import { ArrowRight, PlayCircle } from 'lucide-react';
 import WaveCyberBg from './WaveCyberBg';
 import './HeroSection.css';
-import { Shield } from "lucide-react";
 
 /* ── Terminal lines ──────────────────────────────────── */
 const TERMINAL_LINES = [
