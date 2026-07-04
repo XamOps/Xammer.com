@@ -169,10 +169,10 @@ const HeroSection = () => {
         </div>
 
         {/* RIGHT: Terminal + Metrics */}
-        <div className="hero__visual">
+        {/* <div className="hero__visual"> */}
 
           {/* Terminal window */}
-          <div className="hero__terminal">
+          {/* <div className="hero__terminal">
             <div className="hero__terminal-bar">
               <div className="hero__terminal-dots">
                 <span style={{ background: '#FF5F56' }} />
@@ -184,9 +184,9 @@ const HeroSection = () => {
                 <span className="hero__terminal-live-dot" />
                 LIVE
               </div>
-            </div>
+            </div> */}
 
-            <div className="hero__terminal-body" ref={terminalRef}>
+            {/* <div className="hero__terminal-body" ref={terminalRef}>
               {TERMINAL_LINES.slice(0, visibleLines).map((line, i) => (
                 <div className="hero__t-line" key={`${i}-${visibleLines}`}>
                   {line.type === 'cmd' ? (
@@ -206,9 +206,9 @@ const HeroSection = () => {
                     </span>
                   )}
                 </div>
-              ))}
+              ))} */}
               {/* Blinking cursor */}
-              {visibleLines < TERMINAL_LINES.length && (
+              {/* {visibleLines < TERMINAL_LINES.length && (
                 <div className="hero__t-line">
                   <span className="hero__t-prompt">
                     xammer<span className="hero__t-path">:~</span>$
@@ -217,10 +217,10 @@ const HeroSection = () => {
                 </div>
               )}
             </div>
-          </div>
+          </div> */}
 
           {/* CI/CD pipeline strip */}
-          <div className="hero__pipeline">
+          {/* <div className="hero__pipeline">
             <span className="hero__pipeline-label">pipeline:</span>
             <div className="hero__pipeline-steps">
               {[
@@ -244,10 +244,18 @@ const HeroSection = () => {
                 )
               )}
             </div>
-          </div>
+          </div> */}
+          {/* RIGHT: Hero Image */}
+<div className="hero__visual">
+  <img
+    src="/images/hero-img.jpg" // Update with your image path
+    alt="Cloud DevOps Illustration"
+    className="hero__image"
+  />
+</div>
 
           {/* Metric cards */}
-          <div className="hero__metrics">
+          {/* <div className="hero__metrics">
             <div className="hero__metric-card">
               <div className="hero__metric-icon" style={{ background: 'rgba(63,185,80,0.12)', color: 'var(--green)' }}>
                 <Lock size={15} />
@@ -275,9 +283,7 @@ const HeroSection = () => {
                 <div className="hero__metric-label">Faster Deploy</div>
               </div>
             </div>
-          </div>
-
-        </div>
+          </div> */}
       </div>
     </section>
   );
