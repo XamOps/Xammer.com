@@ -7,6 +7,7 @@ import './Footer.css';
 
 const serviceLinks = [
   { label: 'AWS Managed Services', href: '/services/aws' },
+  { label: 'AWS Cost Optimization (Noida)', href: '/aws-cloud-cost-optimization-services-in-noida' },
   { label: 'Microsoft Azure', href: '/services/azure' },
   { label: 'Google Cloud Platform', href: '/services/google-cloud' },
   { label: 'DevOps Automation', href: '/services/devops' },

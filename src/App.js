@@ -29,6 +29,7 @@ import CareersPage               from './pages/Careers/CareersPage';
 import CaseStudiesPage           from './pages/CaseStudies/CaseStudiesPage';
 import EventsPage                from './pages/Events/EventsPage';
 import BlogPage                  from './pages/Blog/BlogPage';
+import AWSCostOptimizationNoidaPage from './pages/Blog/AWSCostOptimizationNoidaPage';
 import PartnersPage              from './pages/Partners/PartnersPage';
 
 /* -- Legal -------------------------------------------- */
@@ -82,6 +83,7 @@ function App() {
           <Route path="/events"                        element={<EventsPage />} />
           <Route path="/events/*"                      element={<EventsPage />} />
           <Route path="/blog"                          element={<BlogPage />} />
+          <Route path="/aws-cloud-cost-optimization-services-in-noida" element={<AWSCostOptimizationNoidaPage />} />
           <Route path="/partners"                      element={<PartnersPage />} />
 
           {/* Legal */}
