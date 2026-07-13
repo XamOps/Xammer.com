@@ -38,6 +38,8 @@ import TermsPage                 from './pages/Legal/TermsPage';
 import SitemapPage               from './pages/Sitemap/SitemapPage';
 
 import WhatsAppButton from './components/common/WhatsAppButton';
+import ContactPopup from './components/common/ContactPopup';
+import ScrollToTop from './components/common/ScrollToTop';
 import './styles/global.css';
 
 const NotFound = () => (
@@ -54,6 +56,7 @@ function App() {
     <HelmetProvider>
       <ThemeProvider>
       <Router>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           {/* Home */}
@@ -96,6 +99,7 @@ function App() {
         </Routes>
         <Footer />
         <WhatsAppButton />
+        <ContactPopup />
       </Router>
       </ThemeProvider>
     </HelmetProvider>
