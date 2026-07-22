@@ -5,7 +5,7 @@ import './AWSCostOptimizationNoidaPage.css';
 const PAGE_TITLE = 'AWS Cloud Cost Optimization Services in Noida | Save 30%-40%';
 const PAGE_DESCRIPTION = 'Xammer offers certified AWS cloud cost optimization services in Noida, infrastructure optimization, and up to 40% AWS cost reduction, and 100% technical support';
 const PAGE_CANONICAL = 'https://xammer.com/aws-cloud-cost-optimization-services-in-noida';
-const OG_IMAGE = '/images/hero-img.jpg';
+const OG_IMAGE = 'https://xammer.com/images/hero-img.jpg';
 
 const SCHEMAS = [
   {
@@ -51,7 +51,7 @@ const SCHEMAS = [
     'url': PAGE_CANONICAL,
     'mainEntityOfPage': PAGE_CANONICAL,
     'image': [
-      `https://xammer.com${OG_IMAGE}`
+      OG_IMAGE
     ],
     'author': {
       '@type': 'Organization',

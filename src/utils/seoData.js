@@ -19,13 +19,19 @@ export const organizationSchema = {
   logo: `${SITE_URL}/images/logo.png`,
   foundingDate: '2019',
   description:
-    'Xammer is a Delhi-based IT consulting and managed services company specializing in cloud automation, DevOps, digital transformation, and enterprise IT solutions.',
+    'Xammer is a Delhi NCR-based IT consulting and managed services company (serving Delhi, Noida & Gurgaon) specializing in cloud automation, DevOps, digital transformation, and enterprise IT solutions.',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Delhi',
     addressRegion: 'Delhi',
     addressCountry: 'IN',
   },
+  areaServed: [
+    { '@type': 'City', name: 'Delhi' },
+    { '@type': 'City', name: 'Noida' },
+    { '@type': 'City', name: 'Gurgaon' },
+    { '@type': 'AdministrativeArea', name: 'Delhi NCR' },
+  ],
   contactPoint: [
     {
       '@type': 'ContactPoint',
@@ -95,154 +101,154 @@ export const serviceSchemas = [
 
 /* ── Home ("/") ─────────────────────────────────────────────── */
 export const HOME_SEO = {
-  title: 'Xammer — Cloud Managed Services, DevOps & Digital Transformation | Delhi, India',
+  title: 'Xammer — Cloud Managed Services & DevOps Company | Delhi NCR',
   description:
-    'Xammer is a premier cloud managed services company in Delhi. We specialise in AWS, Azure, Google Cloud, DevOps automation, cyber security, and digital transformation for Indian enterprises.',
+    'Cloud managed services company serving Delhi, Noida & Gurgaon (Delhi NCR). AWS, Azure, Google Cloud, DevOps automation, cyber security & digital transformation.',
   keywords:
-    'cloud managed services India, AWS consulting Delhi, DevOps automation company, digital transformation India, cloud cost optimisation, IT consulting Delhi, Azure consulting India, Google Cloud partner',
+    'cloud managed services Delhi NCR, cloud managed services Noida, cloud managed services Gurgaon, AWS consulting Delhi, DevOps automation company, digital transformation India, cloud cost optimisation, IT consulting Delhi, IT consulting Noida, IT consulting Gurgaon, Azure consulting India, Google Cloud partner',
   canonical: `${SITE_URL}/`,
   ogImage: OG_IMAGE,
 };
 
 /* ── About ("/about") ───────────────────────────────────────── */
 export const ABOUT_SEO = {
-  title: "About Xammer | India's Trusted Cloud Managed Services Partner",
+  title: 'About Xammer | Cloud Managed Services Partner in Delhi NCR',
   description:
-    "Xammer is a Delhi-based cloud managed services company with 5+ years experience, 1,000+ projects, and 180+ certified cloud engineers. AWS Select Tier, Azure Expert MSP, Google Cloud Partner.",
+    "Xammer is a Delhi NCR-based cloud managed services company (Delhi, Noida, Gurgaon) with 5+ years' experience, 1,000+ projects & 180+ certified cloud engineers.",
   keywords:
-    'about Xammer, cloud managed services company India, AWS consulting partner Delhi, IT consulting company India, cloud MSP Delhi, Xammer about us',
+    'about Xammer, cloud managed services company Delhi NCR, AWS consulting partner Delhi, AWS consulting partner Noida, IT consulting company Gurgaon, cloud MSP Delhi, cloud MSP Noida, Xammer about us',
   canonical: `${SITE_URL}/about`,
   ogImage: OG_IMAGE,
 };
 
 /* ── AWS ("/services/aws") ──────────────────────────────────── */
 export const AWS_SEO = {
-  title: 'AWS Managed Services India | Cut Cloud Costs by 80% | Xammer',
+  title: 'AWS Managed Services in Delhi NCR | Cut Cloud Costs 80% | Xammer',
   description:
-    'Xammer is an AWS Select Tier Consulting Partner in India. We reduce AWS costs by 50–80%, automate cloud operations, and deliver 99.9% uptime SLA. Free AWS cost audit.',
+    'AWS Select Tier Partner serving Delhi, Noida & Gurgaon. We cut AWS costs 50–80%, automate cloud ops, and deliver 99.9% uptime SLA. Free AWS cost audit.',
   keywords:
-    'AWS managed services India, AWS consulting partner India, cloud cost reduction AWS, AWS Systems Manager India, cloud migration AWS India, AWS Select Tier partner Delhi',
+    'AWS managed services Delhi NCR, AWS consulting partner Delhi, AWS consulting partner Noida, AWS managed services Gurgaon, cloud cost reduction AWS, AWS Systems Manager India, cloud migration AWS India, AWS Select Tier partner Delhi',
   canonical: `${SITE_URL}/services/aws`,
   ogImage: OG_IMAGE,
 };
 
 /* ── Azure ("/services/azure") ──────────────────────────────── */
 export const AZURE_SEO = {
-  title: 'Microsoft Azure Managed Services India | Azure Expert MSP | Xammer',
+  title: 'Microsoft Azure Managed Services | Delhi NCR | Xammer',
   description:
-    'Xammer is a Microsoft Azure Expert MSP in India. We architect, migrate, and manage Azure environments — reducing costs by 35–55% and delivering 24x7 managed operations.',
+    'Azure Expert MSP serving Delhi, Noida & Gurgaon. We architect, migrate, and manage Azure environments — cutting costs 35–55% with 24x7 managed operations.',
   keywords:
-    'Microsoft Azure managed services India, Azure consulting partner India, Azure Expert MSP Delhi, Azure cloud migration India, Azure cost optimisation, Azure Advanced MSP India',
+    'Microsoft Azure managed services Delhi NCR, Azure consulting partner Delhi, Azure consulting partner Noida, Azure Expert MSP Gurgaon, Azure cloud migration India, Azure cost optimisation, Azure Advanced MSP India',
   canonical: `${SITE_URL}/services/azure`,
   ogImage: OG_IMAGE,
 };
 
 /* ── Google Cloud ("/services/google-cloud") ────────────────── */
 export const GCP_SEO = {
-  title: 'Google Cloud Managed Services India | Certified GCP Partner | Xammer',
+  title: 'Google Cloud Managed Services | Delhi NCR | Xammer',
   description:
-    'Xammer is a certified Google Cloud Partner in India. We deliver GCP cloud transformation, BigQuery data warehousing, Google Maps Platform, and cost optimisation. Free GCP assessment.',
+    'Certified Google Cloud Partner serving Delhi, Noida & Gurgaon. GCP cloud transformation, BigQuery data warehousing, and cost optimisation. Free GCP assessment.',
   keywords:
-    'Google Cloud managed services India, GCP partner India, Google Cloud consulting Delhi, BigQuery implementation India, GCP cost optimisation, Google Maps Platform partner',
+    'Google Cloud managed services Delhi NCR, GCP partner Delhi, Google Cloud consulting Noida, Google Cloud consulting Gurgaon, BigQuery implementation India, GCP cost optimisation, Google Maps Platform partner',
   canonical: `${SITE_URL}/services/google-cloud`,
   ogImage: OG_IMAGE,
 };
 
 /* ── Oracle Cloud ("/services/oracle-cloud") ────────────────── */
 export const ORACLE_SEO = {
-  title: 'Oracle Cloud (OCI) Managed Services India | Premier Partner | Xammer',
+  title: 'Oracle Cloud (OCI) Managed Services | Delhi NCR | Xammer',
   description:
-    'Xammer is an Oracle Cloud OCI Premier Partner in India. We manage Autonomous Database, OCI migrations, and multi-cloud Oracle workloads. Free OCI assessment available.',
+    'Oracle Cloud OCI Premier Partner serving Delhi, Noida & Gurgaon. We manage Autonomous Database, OCI migrations & multi-cloud Oracle workloads. Free assessment.',
   keywords:
-    'Oracle Cloud India, OCI managed services, Oracle Autonomous Database, OCI migration India, Oracle Cloud Premier Partner, Oracle ERP cloud India',
+    'Oracle Cloud Delhi NCR, OCI managed services Delhi, OCI managed services Noida, Oracle Autonomous Database, OCI migration Gurgaon, Oracle Cloud Premier Partner, Oracle ERP cloud India',
   canonical: `${SITE_URL}/services/oracle-cloud`,
   ogImage: OG_IMAGE,
 };
 
 /* ── Cyber Security ("/services/cyber-security") ────────────── */
 export const CYBER_SEO = {
-  title: 'Cyber Security Managed Services India | Proactive Cloud Security | Xammer',
+  title: 'Cyber Security Managed Services | Delhi NCR | Xammer',
   description:
-    'Xammer delivers Cyber Security Managed Services in India — CSPM, zero-trust IAM, 24x7 threat detection, penetration testing, and compliance automation. Free security assessment.',
+    'Cyber Security Managed Services for Delhi, Noida & Gurgaon — CSPM, zero-trust IAM, 24x7 threat detection, penetration testing & compliance. Free assessment.',
   keywords:
-    'cyber security managed services India, cloud security services India, managed security services provider Delhi, zero-trust security India, CSPM India, VAPT services India',
+    'cyber security managed services Delhi NCR, cloud security services Delhi, managed security services provider Noida, zero-trust security Gurgaon, CSPM India, VAPT services India',
   canonical: `${SITE_URL}/services/cyber-security`,
   ogImage: OG_IMAGE,
 };
 
 /* ── DevOps ("/services/devops") ────────────────────────────── */
 export const DEVOPS_SEO = {
-  title: 'DevOps Automation Services India | CI/CD, Kubernetes, IaC | Xammer',
+  title: 'DevOps Automation Services | Delhi NCR | Xammer',
   description:
-    'Xammer delivers DevOps automation in India — CI/CD pipelines, Terraform IaC, Kubernetes, DevSecOps, and observability. Deploy faster with fewer failures. Free DevOps assessment.',
+    'DevOps automation for Delhi, Noida & Gurgaon — CI/CD pipelines, Terraform IaC, Kubernetes, DevSecOps & observability. Deploy faster. Free DevOps assessment.',
   keywords:
-    'DevOps services India, CI/CD pipeline India, Kubernetes managed services, DevSecOps India, Terraform IaC India, DevOps automation Delhi, SRE services India',
+    'DevOps services Delhi NCR, CI/CD pipeline Delhi, Kubernetes managed services Noida, DevSecOps Gurgaon, Terraform IaC India, DevOps automation Delhi, SRE services India',
   canonical: `${SITE_URL}/services/devops`,
   ogImage: OG_IMAGE,
 };
 
 /* ── Digital Transformation ("/services/digital-transformation") */
 export const DIGITAL_SEO = {
-  title: 'Digital Transformation Services India | Cloud-Native Modernisation | Xammer',
+  title: 'Digital Transformation Services | Delhi NCR | Xammer',
   description:
-    'Xammer is India\'s trusted Digital Transformation partner. We modernise legacy systems, automate processes, and adopt AI, cloud, and DevOps for competitive enterprise advantage.',
+    'Trusted Digital Transformation partner for Delhi, Noida & Gurgaon enterprises. We modernise legacy systems, automate processes, and adopt AI, cloud & DevOps.',
   keywords:
-    'digital transformation services India, cloud digital transformation consulting Delhi, legacy system modernisation India, enterprise digital transformation, IT modernisation services India',
+    'digital transformation services Delhi NCR, digital transformation consulting Delhi, digital transformation Noida, legacy system modernisation Gurgaon, enterprise digital transformation, IT modernisation services India',
   canonical: `${SITE_URL}/services/digital-transformation`,
   ogImage: OG_IMAGE,
 };
 
 /* ── ERP ("/services/erp") ──────────────────────────────────── */
 export const ERP_SEO = {
-  title: 'ERP Implementation Services India | SAP, Odoo, Dynamics 365 | Xammer',
+  title: 'ERP Implementation Services | Delhi NCR | Xammer',
   description:
-    'Xammer delivers end-to-end ERP Implementation in India — selection, implementation, data migration, integrations, and 24x7 support for SAP, Odoo, NetSuite, and Dynamics 365.',
+    'End-to-end ERP implementation for Delhi, Noida & Gurgaon — selection, migration, integrations & 24x7 support for SAP, Odoo, NetSuite & Dynamics 365.',
   keywords:
-    'ERP implementation services India, enterprise ERP consulting India, ERP system implementation Delhi, ERP cloud migration India, SAP consulting India, cloud ERP managed services',
+    'ERP implementation services Delhi NCR, enterprise ERP consulting Delhi, ERP system implementation Noida, ERP cloud migration Gurgaon, SAP consulting India, cloud ERP managed services',
   canonical: `${SITE_URL}/services/erp`,
   ogImage: OG_IMAGE,
 };
 
 /* ── Odoo ("/services/odoo") ────────────────────────────────── */
 export const ODOO_SEO = {
-  title: 'Odoo ERP Implementation India | MeitY-Compliant Cloud-Native | Xammer',
+  title: 'Odoo ERP Implementation | Delhi NCR | Xammer',
   description:
-    'Xammer delivers Odoo ERP implementation in India with MeitY-compliant sovereign cloud hosting. Full Indian localisation, GST compliance, e-invoicing, and 24x7 support. Free Odoo demo.',
+    'Odoo ERP implementation for Delhi, Noida & Gurgaon with MeitY-compliant sovereign cloud hosting, GST compliance, e-invoicing & 24x7 support. Free demo.',
   keywords:
-    'Odoo ERP implementation India, Odoo cloud deployment India, Odoo implementation partner Delhi, Odoo on cloud India, Odoo customisation services, Odoo managed hosting India',
+    'Odoo ERP implementation Delhi NCR, Odoo cloud deployment Delhi, Odoo implementation partner Noida, Odoo on cloud Gurgaon, Odoo customisation services, Odoo managed hosting India',
   canonical: `${SITE_URL}/services/odoo`,
   ogImage: OG_IMAGE,
 };
 
 /* ── XamCloud ("/products/xamcloud") ───────────────────────── */
 export const XAMCLOUD_SEO = {
-  title: 'XamCloud — Managed Multi-Cloud Operations Platform | Xammer',
+  title: 'XamCloud — Managed Multi-Cloud Platform | Delhi NCR | Xammer',
   description:
-    'XamCloud manages AWS, Azure, GCP, and OCI under one SLA — unified cost governance, security, observability, and 24x7 SRE operations for Indian enterprises.',
+    'XamCloud manages AWS, Azure, GCP & OCI under one SLA — unified cost governance, security & 24x7 SRE operations for enterprises across Delhi, Noida & Gurgaon.',
   keywords:
-    'managed multi-cloud India, multi-cloud management platform, AWS Azure GCP managed services, cloud operations India, FinOps multi-cloud, XamCloud product',
+    'managed multi-cloud Delhi NCR, multi-cloud management platform Delhi, AWS Azure GCP managed services Noida, cloud operations Gurgaon, FinOps multi-cloud, XamCloud product',
   canonical: `${SITE_URL}/products/xamcloud`,
   ogImage: OG_IMAGE,
 };
 
 /* ── XamOps ("/products/xamops") ────────────────────────────── */
 export const XAMOPS_SEO = {
-  title: 'Xamops — DevOps-as-a-Service Platform | Xammer',
+  title: 'Xamops — DevOps-as-a-Service Platform | Delhi NCR | Xammer',
   description:
-    'Xamops is Xammer\'s fully managed DevOps-as-a-Service. We build and manage CI/CD pipelines, Kubernetes, IaC, DevSecOps, and 24x7 SRE operations. Free DevOps assessment.',
+    "Xamops is Xammer's fully managed DevOps-as-a-Service for Delhi NCR enterprises. CI/CD, Kubernetes, IaC, DevSecOps & 24x7 SRE. Free DevOps assessment.",
   keywords:
-    'DevOps as a Service India, managed DevOps platform, CI/CD pipeline management, Kubernetes managed service, SRE as a service India, XamOps product',
+    'DevOps as a Service Delhi NCR, managed DevOps platform Delhi, CI/CD pipeline management Noida, Kubernetes managed service Gurgaon, SRE as a service India, XamOps product',
   canonical: `${SITE_URL}/products/xamops`,
   ogImage: OG_IMAGE,
 };
 
 /* ── Contact ("/contact") ───────────────────────────────────── */
 export const CONTACT_SEO = {
-  title: 'Contact Xammer | Get a Free Cloud Audit | Delhi, India',
+  title: 'Contact Xammer | Free Cloud Audit | Delhi, Noida & Gurgaon',
   description:
-    'Contact Xammer for a free AWS, Azure, or Google Cloud cost audit. Based in Delhi, India. Reach us at operations@xammer.com or call +91 87692 54249.',
+    'Contact Xammer for a free AWS, Azure or GCP cost audit. Serving Delhi, Noida & Gurgaon (Delhi NCR). Email operations@xammer.com or call +91 87692 54249.',
   keywords:
-    'contact Xammer, free cloud audit India, AWS consulting contact Delhi, cloud cost audit, cloud managed services enquiry, Xammer phone email',
+    'contact Xammer, free cloud audit Delhi NCR, AWS consulting contact Delhi, AWS consulting contact Noida, cloud cost audit Gurgaon, cloud managed services enquiry, Xammer phone email',
   canonical: `${SITE_URL}/contact`,
   ogImage: OG_IMAGE,
 };
@@ -251,31 +257,31 @@ export const CONTACT_SEO = {
 export const CASE_STUDIES_SEO = {
   title: 'Case Studies | Cloud Transformation Success Stories | Xammer',
   description:
-    'Explore Xammer client success stories — 62% AWS cost reduction, RBI-compliant sovereign cloud migration, Odoo ERP rollout, and more across 1,000+ projects.',
+    'Client success stories from Delhi NCR and across India — 62% AWS cost reduction, RBI-compliant sovereign cloud migration, Odoo ERP rollout & more.',
   keywords:
-    'Xammer case studies, cloud cost reduction India, AWS success story, cloud transformation India, ERP implementation case study, DevOps success story India',
+    'Xammer case studies, cloud cost reduction Delhi NCR, AWS success story Delhi, cloud transformation Noida, ERP implementation case study Gurgaon, DevOps success story India',
   canonical: `${SITE_URL}/case-studies`,
   ogImage: OG_IMAGE,
 };
 
 /* ── Partners ("/partners") ─────────────────────────────────── */
 export const PARTNERS_SEO = {
-  title: 'Partner With Xammer | Cloud Reseller & Referral Programme India',
+  title: 'Partner With Xammer | Cloud Reseller Programme | Delhi NCR',
   description:
-    'Join Xammer\'s partner programme — referral partners, resellers, technology vendors, and strategic alliances. Revenue sharing, co-marketing, and dedicated partner support.',
+    "Join Xammer's partner programme in Delhi, Noida & Gurgaon — referral partners, resellers & technology alliances. Revenue sharing and co-marketing support.",
   keywords:
-    'Xammer partner programme, cloud reseller India, AWS partner referral India, IT partner programme Delhi, cloud partnership opportunities India',
+    'Xammer partner programme, cloud reseller Delhi NCR, AWS partner referral Delhi, IT partner programme Noida, cloud partnership opportunities Gurgaon',
   canonical: `${SITE_URL}/partners`,
   ogImage: OG_IMAGE,
 };
 
 /* ── Careers ("/careers") ───────────────────────────────────── */
 export const CAREERS_SEO = {
-  title: 'Careers at Xammer | Cloud Engineering Jobs in Delhi, India',
+  title: 'Careers at Xammer | Cloud Engineering Jobs in Delhi NCR',
   description:
-    'Join Xammer\'s cloud engineering team in Delhi. We\'re hiring AWS architects, DevOps engineers, cloud security experts, and SREs. Funded certifications, remote-friendly.',
+    "Join Xammer's cloud engineering team across Delhi, Noida & Gurgaon. Hiring AWS architects, DevOps engineers, cloud security experts & SREs. Remote-friendly.",
   keywords:
-    'careers Xammer, cloud engineering jobs Delhi, AWS architect job India, DevOps engineer hiring, cloud jobs India, IT jobs Delhi 2025',
+    'careers Xammer, cloud engineering jobs Delhi NCR, AWS architect job Delhi, DevOps engineer hiring Noida, cloud jobs Gurgaon, IT jobs Delhi NCR 2025',
   canonical: `${SITE_URL}/careers`,
   ogImage: OG_IMAGE,
 };
@@ -284,9 +290,9 @@ export const CAREERS_SEO = {
 export const BLOG_SEO = {
   title: 'Cloud Blog & Insights | AWS, Azure, DevOps, Security | Xammer',
   description:
-    'In-depth articles on AWS cost optimisation, Azure migration, DevOps best practices, cloud security, and digital transformation from Xammer\'s engineering team.',
+    "In-depth articles on AWS cost optimisation, Azure migration, DevOps & cloud security from Xammer's Delhi NCR engineering team, for IT leaders across India.",
   keywords:
-    'cloud blog India, AWS cost optimisation blog, Azure migration guide, DevOps best practices India, cloud security blog, Xammer engineering blog',
+    'cloud blog Delhi NCR, AWS cost optimisation blog, Azure migration guide, DevOps best practices India, cloud security blog, Xammer engineering blog',
   canonical: `${SITE_URL}/blog`,
   ogImage: OG_IMAGE,
 };
@@ -295,9 +301,9 @@ export const BLOG_SEO = {
 export const EVENTS_SEO = {
   title: 'Events & Webinars | Cloud, DevOps & Security | Xammer',
   description:
-    'Join Xammer\'s free webinars and workshops on AWS, Azure, Google Cloud, DevOps, cybersecurity, and Odoo ERP. Live sessions for Indian IT leaders and enterprises.',
+    'Free webinars and workshops on AWS, Azure, GCP, DevOps, cybersecurity & Odoo ERP — live sessions for IT leaders in Delhi, Noida, Gurgaon & across India.',
   keywords:
-    'cloud webinars India, AWS webinar India, DevOps workshop Delhi, cloud events India, Xammer events, IT webinar India 2025',
+    'cloud webinars Delhi NCR, AWS webinar Delhi, DevOps workshop Noida, cloud events Gurgaon, Xammer events, IT webinar India 2025',
   canonical: `${SITE_URL}/events`,
   ogImage: OG_IMAGE,
 };

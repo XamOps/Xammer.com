@@ -1,0 +1,11 @@
+# Serve real files/directories (including the per-route prerendered
+# index.html files) as-is; fall back to the root index.html for any other
+# path so React Router can handle it client-side.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  RewriteRule ^ index.html [L]
+</IfModule>
