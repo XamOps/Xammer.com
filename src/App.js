@@ -30,6 +30,10 @@ import CaseStudiesPage           from './pages/CaseStudies/CaseStudiesPage';
 import EventsPage                from './pages/Events/EventsPage';
 import BlogPage                  from './pages/Blog/BlogPage';
 import AWSCostOptimizationNoidaPage from './pages/Blog/AWSCostOptimizationNoidaPage';
+import OracleCloudPartnerNoidaPage from './pages/Blog/OracleCloudPartnerNoidaPage';
+import OracleCloudCostOptimizationNoidaPage from './pages/Blog/OracleCloudCostOptimizationNoidaPage';
+import AzureCostOptimizationNoidaPage from './pages/Blog/AzureCostOptimizationNoidaPage';
+import MicrosoftAzurePartnerNoidaPage from './pages/Blog/MicrosoftAzurePartnerNoidaPage';
 import PartnersPage              from './pages/Partners/PartnersPage';
 
 /* -- Legal -------------------------------------------- */
@@ -87,6 +91,10 @@ function App() {
           <Route path="/events/*"                      element={<EventsPage />} />
           <Route path="/blog"                          element={<BlogPage />} />
           <Route path="/aws-cloud-cost-optimization-services-in-noida" element={<AWSCostOptimizationNoidaPage />} />
+          <Route path="/authorized-oracle-cloud-partner-in-noida" element={<OracleCloudPartnerNoidaPage />} />
+          <Route path="/oracle-cloud-cost-optimization-services-in-noida" element={<OracleCloudCostOptimizationNoidaPage />} />
+          <Route path="/azure-cost-optimization-services-in-noida" element={<AzureCostOptimizationNoidaPage />} />
+          <Route path="/microsoft-azure-partner-in-noida" element={<MicrosoftAzurePartnerNoidaPage />} />
           <Route path="/partners"                      element={<PartnersPage />} />
 
           {/* Legal */}

@@ -59,6 +59,54 @@ const routes = [
       ogImage: 'https://xammer.com/images/hero-img.jpg',
     },
   },
+  {
+    urlPath: '/authorized-oracle-cloud-partner-in-noida',
+    data: {
+      title: 'Authorized Oracle Cloud Partner in Noida | Xammer',
+      description:
+        'Xammer is an Authorized Oracle Cloud Partner in Noida offering 100% technical support, 180+ certified engineers, and secure, scalable OCI solutions for enterprises.',
+      keywords:
+        'Authorized Oracle Cloud Partner in Noida, Oracle Cloud Consultants in Noida, Oracle Cloud Infrastructure Partner in Noida, OCI Consulting Service Provider in Noida, Top OCI Consultants in Noida',
+      canonical: 'https://xammer.com/authorized-oracle-cloud-partner-in-noida',
+      ogImage: 'https://xammer.com/images/hero-img.jpg',
+    },
+  },
+  {
+    urlPath: '/oracle-cloud-cost-optimization-services-in-noida',
+    data: {
+      title: 'Oracle Cloud Cost Optimization Services in Noida | Xammer',
+      description:
+        'Xammer delivers Oracle Cloud Cost Optimization Services in Noida, helping businesses save 30%-40% on cloud costs with 100% expert technical support.',
+      keywords:
+        'Oracle Cloud Cost Optimization Services in Noida, Oracle Cloud Cost Management Services in Noida, Oracle Cloud Managed Services in Noida, Oracle Cloud Infrastructure Services in Noida, Oracle Cloud Migration Services in Noida',
+      canonical: 'https://xammer.com/oracle-cloud-cost-optimization-services-in-noida',
+      ogImage: 'https://xammer.com/images/event-img3.jpeg',
+    },
+  },
+  {
+    urlPath: '/azure-cost-optimization-services-in-noida',
+    data: {
+      title: 'Azure Cost Optimization Services in Noida | Xammer',
+      description:
+        'Xammer delivers Azure Cost Optimization Services in Noida, reducing Microsoft Azure cloud costs by 30%-40% with 100% expert technical support.',
+      keywords:
+        'Azure Cost Optimization Services in Noida, Azure Managed Services Provider in Noida, Trusted Azure Consultants in Noida, Microsoft Azure Consulting Services in Noida, Azure Cloud Infrastructure Services in Delhi',
+      canonical: 'https://xammer.com/azure-cost-optimization-services-in-noida',
+      ogImage: 'https://xammer.com/images/event-img2.jpeg',
+    },
+  },
+  {
+    urlPath: '/microsoft-azure-partner-in-noida',
+    data: {
+      title: 'Microsoft Azure Partner in Noida | Xammer',
+      description:
+        'Xammer is a trusted Microsoft Azure Partner in Noida offering 100% technical support, 180+ certified engineers, and enterprise-grade Azure cloud solutions.',
+      keywords:
+        'Microsoft Azure Partner in Noida, Top Azure Partner in Noida, Top Azure Consultants in Noida, Azure Migration Services in Noida, Microsoft Azure Solutions Partner in Noida',
+      canonical: 'https://xammer.com/microsoft-azure-partner-in-noida',
+      ogImage: 'https://xammer.com/images/event-img1.jpeg',
+    },
+  },
 ];
 
 const escapeHtml = (str) =>

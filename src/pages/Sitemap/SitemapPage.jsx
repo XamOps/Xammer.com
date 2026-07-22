@@ -47,6 +47,16 @@ const siteMap = [
     ],
   },
   {
+    heading: 'Noida & Delhi NCR Pages',
+    links: [
+      { label: 'AWS Cloud Cost Optimization Services in Noida', href: '/aws-cloud-cost-optimization-services-in-noida' },
+      { label: 'Authorized Oracle Cloud Partner in Noida', href: '/authorized-oracle-cloud-partner-in-noida' },
+      { label: 'Oracle Cloud Cost Optimization Services in Noida', href: '/oracle-cloud-cost-optimization-services-in-noida' },
+      { label: 'Microsoft Azure Partner in Noida', href: '/microsoft-azure-partner-in-noida' },
+      { label: 'Azure Cost Optimization Services in Noida', href: '/azure-cost-optimization-services-in-noida' },
+    ],
+  },
+  {
     heading: 'Legal',
     links: [
       { label: 'Privacy Policy', href: '/privacy-policy' },
