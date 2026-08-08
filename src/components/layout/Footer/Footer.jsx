@@ -7,17 +7,24 @@ import './Footer.css';
 
 const serviceLinks = [
   { label: 'AWS Managed Services', href: '/services/aws' },
-  { label: 'AWS Cost Optimization (Noida)', href: '/aws-cloud-cost-optimization-services-in-noida' },
   { label: 'Microsoft Azure', href: '/services/azure' },
-  { label: 'Microsoft Azure Partner (Noida)', href: '/microsoft-azure-partner-in-noida' },
-  { label: 'Azure Cost Optimization (Noida)', href: '/azure-cost-optimization-services-in-noida' },
-  { label: 'Authorized Oracle Cloud Partner (Noida)', href: '/authorized-oracle-cloud-partner-in-noida' },
-  { label: 'Oracle Cloud Cost Optimization (Noida)', href: '/oracle-cloud-cost-optimization-services-in-noida' },
   { label: 'Google Cloud Platform', href: '/services/google-cloud' },
   { label: 'DevOps Automation', href: '/services/devops' },
   { label: 'Digital Transformation', href: '/services/digital-transformation' },
   { label: 'Cyber Security', href: '/services/cyber-security' },
   { label: 'Odoo ERP', href: '/services/odoo' },
+];
+
+const landingPageLinks = [
+  { label: 'Authorized Microsoft Azure Partner in Bangalore', href: '/authorized-microsoft-azure-partner-in-bangalore' },
+  { label: 'Microsoft Azure Consulting Services in Gurgaon', href: '/microsoft-azure-cloud-cost-optimization-services-in-gurgaon' },
+  { label: 'Authorized Oracle Cloud Partner in Gurgaon', href: '/authorized-oracle-cloud-partner-in-gurgaon' },
+  { label: 'Oracle Cloud Cost Optimization Services in Delhi', href: '/oracle-cloud-cost-optimization-services-in-delhi' },
+  { label: 'AWS Cloud Cost Optimization Services in Noida', href: '/aws-cloud-cost-optimization-services-in-noida' },
+  { label: 'Authorized Oracle Cloud Partner in Noida', href: '/authorized-oracle-cloud-partner-in-noida' },
+  { label: 'Oracle Cloud Cost Optimization Services in Noida', href: '/oracle-cloud-cost-optimization-services-in-noida' },
+  { label: 'Microsoft Azure Partner in Noida', href: '/microsoft-azure-partner-in-noida' },
+  { label: 'Azure Cost Optimization Services in Noida', href: '/azure-cost-optimization-services-in-noida' },
 ];
 
 const companyLinks = [
@@ -140,6 +147,19 @@ const Footer = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* City & Cost Optimization Landing Pages */}
+        <div className="footer__base">
+          
+          <nav className="footer__base-links" aria-label="City and cost optimization landing pages">
+            {landingPageLinks.map((l, i) => (
+              <span key={l.href} className="footer__base-item">
+                <Link to={l.href} className="footer__base-link">{l.label}</Link>
+                {i < landingPageLinks.length - 1 && <span className="footer__base-sep" aria-hidden="true">|</span>}
+              </span>
+            ))}
+          </nav>
         </div>
 
         {/* Bottom */}

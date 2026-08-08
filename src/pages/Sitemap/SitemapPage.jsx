@@ -54,6 +54,15 @@ const siteMap = [
       { label: 'Oracle Cloud Cost Optimization Services in Noida', href: '/oracle-cloud-cost-optimization-services-in-noida' },
       { label: 'Microsoft Azure Partner in Noida', href: '/microsoft-azure-partner-in-noida' },
       { label: 'Azure Cost Optimization Services in Noida', href: '/azure-cost-optimization-services-in-noida' },
+      { label: 'Oracle Cloud Cost Optimization Services in Delhi', href: '/oracle-cloud-cost-optimization-services-in-delhi' },
+    ],
+  },
+  {
+    heading: 'Bangalore & Gurgaon Pages',
+    links: [
+      { label: 'Authorized Microsoft Azure Partner in Bangalore', href: '/authorized-microsoft-azure-partner-in-bangalore' },
+      { label: 'Authorized Oracle Cloud Partner in Gurgaon', href: '/authorized-oracle-cloud-partner-in-gurgaon' },
+      { label: 'Microsoft Azure Cloud Cost Optimization Services in Gurgaon', href: '/microsoft-azure-cloud-cost-optimization-services-in-gurgaon' },
     ],
   },
   {

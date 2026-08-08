@@ -34,6 +34,10 @@ import OracleCloudPartnerNoidaPage from './pages/Blog/OracleCloudPartnerNoidaPag
 import OracleCloudCostOptimizationNoidaPage from './pages/Blog/OracleCloudCostOptimizationNoidaPage';
 import AzureCostOptimizationNoidaPage from './pages/Blog/AzureCostOptimizationNoidaPage';
 import MicrosoftAzurePartnerNoidaPage from './pages/Blog/MicrosoftAzurePartnerNoidaPage';
+import MicrosoftAzurePartnerBangalorePage from './pages/Blog/MicrosoftAzurePartnerBangalorePage';
+import OracleCloudPartnerGurgaonPage from './pages/Blog/OracleCloudPartnerGurgaonPage';
+import AzureCostOptimizationGurgaonPage from './pages/Blog/AzureCostOptimizationGurgaonPage';
+import OracleCloudCostOptimizationDelhiPage from './pages/Blog/OracleCloudCostOptimizationDelhiPage';
 import PartnersPage              from './pages/Partners/PartnersPage';
 
 /* -- Legal -------------------------------------------- */
@@ -95,6 +99,10 @@ function App() {
           <Route path="/oracle-cloud-cost-optimization-services-in-noida" element={<OracleCloudCostOptimizationNoidaPage />} />
           <Route path="/azure-cost-optimization-services-in-noida" element={<AzureCostOptimizationNoidaPage />} />
           <Route path="/microsoft-azure-partner-in-noida" element={<MicrosoftAzurePartnerNoidaPage />} />
+          <Route path="/authorized-microsoft-azure-partner-in-bangalore" element={<MicrosoftAzurePartnerBangalorePage />} />
+          <Route path="/authorized-oracle-cloud-partner-in-gurgaon" element={<OracleCloudPartnerGurgaonPage />} />
+          <Route path="/microsoft-azure-cloud-cost-optimization-services-in-gurgaon" element={<AzureCostOptimizationGurgaonPage />} />
+          <Route path="/oracle-cloud-cost-optimization-services-in-delhi" element={<OracleCloudCostOptimizationDelhiPage />} />
           <Route path="/partners"                      element={<PartnersPage />} />
 
           {/* Legal */}

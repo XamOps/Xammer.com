@@ -107,6 +107,54 @@ const routes = [
       ogImage: 'https://xammer.com/images/event-img1.jpeg',
     },
   },
+  {
+    urlPath: '/authorized-microsoft-azure-partner-in-bangalore',
+    data: {
+      title: 'Authorized Microsoft Azure Partner in Bangalore | Xammer',
+      description:
+        'Xammer is an Authorized Microsoft Azure Partner in Bangalore offering 100% technical support by authorized engineers, 180+ certified experts, and secure, scalable Azure solutions.',
+      keywords:
+        'Authorized Microsoft Azure Partner in Bangalore, Microsoft Azure Solutions Partner in Bangalore, Authorized Azure Partner in Bangalore, Top Azure Consultants in Bangalore, Top Azure Partner in Bangalore',
+      canonical: 'https://xammer.com/authorized-microsoft-azure-partner-in-bangalore',
+      ogImage: 'https://xammer.com/images/hero-img.jpg',
+    },
+  },
+  {
+    urlPath: '/authorized-oracle-cloud-partner-in-gurgaon',
+    data: {
+      title: 'Authorized Oracle Cloud Partner in Gurgaon | Xammer',
+      description:
+        'Xammer is an Authorized Oracle Cloud Partner in Gurgaon offering technical support by authorized engineers, 100% technical support, and enterprise-ready OCI solutions.',
+      keywords:
+        'Authorized Oracle Cloud Partner in Gurgaon, Oracle Cloud Consultants in Gurgaon, Oracle Cloud Infrastructure Partner in Gurgaon, OCI Consulting Service Provider in Gurgaon, Top OCI Consultants in Gurgaon',
+      canonical: 'https://xammer.com/authorized-oracle-cloud-partner-in-gurgaon',
+      ogImage: 'https://xammer.com/images/hero-img.jpg',
+    },
+  },
+  {
+    urlPath: '/microsoft-azure-cloud-cost-optimization-services-in-gurgaon',
+    data: {
+      title: 'Microsoft Azure Cloud Cost Optimization Services in Gurgaon | Xammer',
+      description:
+        'Xammer delivers Microsoft Azure Cloud Cost Optimization Services in Gurgaon, targeting 30%-40% cost efficiency with 100% visibility and smarter Azure operations.',
+      keywords:
+        'Microsoft Azure Cloud Cost Optimization Services in Gurgaon, Microsoft Azure Consulting Services in Gurgaon, Azure Cloud Cost Management Services in Gurgaon, Azure Cost Optimization Services in Gurgaon, Azure Cloud Security Services in Gurgaon',
+      canonical: 'https://xammer.com/microsoft-azure-cloud-cost-optimization-services-in-gurgaon',
+      ogImage: 'https://xammer.com/images/event-img2.jpeg',
+    },
+  },
+  {
+    urlPath: '/oracle-cloud-cost-optimization-services-in-delhi',
+    data: {
+      title: 'Oracle Cloud Cost Optimization Services in Delhi | Xammer',
+      description:
+        'Xammer delivers Oracle Cloud Cost Optimization Services in Delhi, targeting 30%-40% cost optimization with a Delhi-based team, FinOps strategy, and 24x7 managed support.',
+      keywords:
+        'Oracle Cloud Cost Optimization Services in Delhi, Oracle Cloud Cost Management Services in Delhi, Oracle Cloud Managed Services in Delhi, Oracle Cloud Infrastructure Services in Delhi, Oracle Cloud Migration Services in Delhi',
+      canonical: 'https://xammer.com/oracle-cloud-cost-optimization-services-in-delhi',
+      ogImage: 'https://xammer.com/images/event-img3.jpeg',
+    },
+  },
 ];
 
 const escapeHtml = (str) =>

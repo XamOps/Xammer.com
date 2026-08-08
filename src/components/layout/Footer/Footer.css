@@ -185,6 +185,48 @@
   transform: translateY(-1px);
 }
 
+/* City & cost optimization landing page links */
+.footer__base {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.footer__base-title {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.footer__base-links {
+  display: block;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+}
+
+.footer__base-item {
+  display: inline;
+}
+
+.footer__base-link {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer__base-link:hover { color: var(--text-secondary); }
+
+.footer__base-sep {
+  display: inline-block;
+  margin: 0 10px;
+  color: var(--border-card);
+  font-size: 0.78rem;
+}
+
 /* Bottom bar */
 .footer__bottom {
   padding: 20px 0;
