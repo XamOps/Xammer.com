@@ -1,0 +1,110 @@
+.cs-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--gradient-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.cs-card__glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0.75;
+}
+
+.cs-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lifted);
+  border-color: rgba(3, 218, 198, 0.3);
+}
+
+.cs-card__top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.cs-card__id { min-width: 0; }
+
+.cs-card__client {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.cs-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.cs-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.cs-card__tags .badge { font-size: 0.72rem; padding: 3px 10px; }
+
+.cs-card__desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.cs-card__outcomes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+.cs-card__outcomes li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.cs-card__outcomes li svg {
+  color: var(--teal);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.cs-card__footer {
+  padding-top: 18px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.cs-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--teal);
+}
+
+.cs-card__arrow { transition: transform var(--transition); }
+.cs-card:hover .cs-card__arrow { transform: translateX(4px); }
+
+@media (max-width: 768px) {
+  .cs-card { padding: 24px; }
+}

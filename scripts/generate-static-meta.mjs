@@ -16,13 +16,23 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, '..');
 const buildDir = path.join(projectRoot, 'build');
 
-// seoData.js is plain ES module syntax (no JSX/CSS imports), so it can be
-// imported directly in Node once given an .mjs extension.
+// seoData.js and caseStudiesData.js are plain ES module syntax (no JSX/CSS
+// imports), so they can be imported directly in Node once given an .mjs
+// extension. caseStudiesData.js imports seoData.js by its real relative
+// path, so both temp files must sit side by side under the same names.
 const seoDataSrc = path.join(projectRoot, 'src/utils/seoData.js');
 const seoDataTmp = path.join(__dirname, '.seoData.generated.mjs');
 fs.copyFileSync(seoDataSrc, seoDataTmp);
 const seo = await import(pathToFileURL(seoDataTmp).href);
+
+const caseStudiesDataSrc = path.join(projectRoot, 'src/utils/caseStudiesData.js');
+const caseStudiesDataTmp = path.join(__dirname, '.caseStudiesData.generated.mjs');
+const caseStudiesSrc = fs.readFileSync(caseStudiesDataSrc, 'utf8').replace("from './seoData'", "from './.seoData.generated.mjs'");
+fs.writeFileSync(caseStudiesDataTmp, caseStudiesSrc);
+const { caseStudies } = await import(pathToFileURL(caseStudiesDataTmp).href);
+
 fs.unlinkSync(seoDataTmp);
+fs.unlinkSync(caseStudiesDataTmp);
 
 const routes = [
   { urlPath: '/', data: seo.HOME_SEO },
@@ -155,6 +165,7 @@ const routes = [
       ogImage: 'https://xammer.com/images/event-img3.jpeg',
     },
   },
+  ...caseStudies.map((cs) => ({ urlPath: `/case-studies/${cs.slug}`, data: cs.seo })),
 ];
 
 const escapeHtml = (str) =>

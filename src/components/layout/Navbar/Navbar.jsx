@@ -18,7 +18,7 @@ const cloudItems = [
 
 /* ── Products dropdown ────────────────────────────────────── */
 const productsItems = [
-  { label: 'Xamops',   sub: 'DevOps-as-a-Service',      icon: <Zap      size={15} color="#BB86FC" />, href: '/products/xamops' },
+  { label: 'Xamops',   sub: 'DevOps-as-a-Service',      icon: <Zap      size={15} color="#BB86FC" />, href: 'https://xamops.com/' },
   { label: 'XamCloud', sub: 'SPE Partner', icon: <Database size={15} color="#58A6FF" />, href: '/products/xamcloud' },
 ];
 

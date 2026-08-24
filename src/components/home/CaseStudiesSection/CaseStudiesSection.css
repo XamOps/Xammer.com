@@ -1,0 +1,47 @@
+.case-studies {
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.case-studies::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 55% 45% at 85% 0%, rgba(3, 218, 198, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.case-studies__head {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.case-studies__head .section-label,
+.case-studies__head .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid: centers and caps card width so 1, 2, or 3 studies all look intentional */
+.case-studies__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 380px));
+  justify-content: center;
+  gap: 28px;
+}
+
+.case-studies__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 44px;
+}
+
+@media (max-width: 768px) {
+  .case-studies__grid { grid-template-columns: 1fr; }
+}

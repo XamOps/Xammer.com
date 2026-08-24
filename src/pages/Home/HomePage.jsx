@@ -8,6 +8,7 @@ import PartnerLogos from '../../components/home/PartnerLogos/PartnerLogos';
 import EventsSection from '../../components/home/EventsSection/EventsSection';
 import CustomerExperience from '../../components/home/CustomerExperience/CustomerExperience';
 import ReviewsSection from '../../components/home/ReviewsSection/ReviewsSection';
+import CaseStudiesSection from '../../components/home/CaseStudiesSection/CaseStudiesSection';
 import WhyNumberOne from '../../components/home/WhyNumberOne/WhyNumberOne';
 import {
   HOME_SEO,
@@ -36,6 +37,7 @@ const HomePage = () => (
       <EventsSection />
       <CustomerExperience />
       <ReviewsSection />
+      <CaseStudiesSection />
       <WhyNumberOne />
     </main>
   </>

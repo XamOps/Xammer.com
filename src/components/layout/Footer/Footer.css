@@ -13,8 +13,6 @@
 }
 
 /* Brand column */
-.footer__brand {}
-
 .footer__logo {
   display: flex;
   align-items: center;
@@ -88,7 +86,6 @@
 }
 
 /* Link columns */
-.footer__col {}
 
 .footer__col-title {
   font-size: 0.8rem;

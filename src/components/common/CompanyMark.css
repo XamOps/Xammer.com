@@ -1,0 +1,35 @@
+.company-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  font-weight: 800;
+  color: #0D1117;
+  position: relative;
+  box-shadow: var(--shadow-card);
+}
+
+.company-mark::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+}
+
+.company-mark span { position: relative; z-index: 1; }
+
+/* Sizes */
+.company-mark--sm { width: 40px;  height: 40px;  font-size: 0.9rem;  border-radius: var(--radius-sm); }
+.company-mark--md { width: 56px;  height: 56px;  font-size: 1.15rem; }
+.company-mark--lg { width: 84px;  height: 84px;  font-size: 1.6rem;  border-radius: var(--radius-lg); }
+
+/* Accents */
+.company-mark--violet { background: var(--gradient-violet); }
+.company-mark--blue   { background: linear-gradient(135deg, var(--blue), var(--cyan)); }
+.company-mark--teal   { background: var(--gradient-teal); }
+.company-mark--green  { background: linear-gradient(135deg, var(--green), var(--teal)); }
+.company-mark--cyan   { background: var(--gradient-teal); }
+.company-mark--orange { background: linear-gradient(135deg, #FF9900, var(--violet)); }

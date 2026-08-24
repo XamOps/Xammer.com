@@ -27,6 +27,7 @@ import AboutPage                 from './pages/About/AboutPage';
 import ContactPage               from './pages/Contact/ContactPage';
 import CareersPage               from './pages/Careers/CareersPage';
 import CaseStudiesPage           from './pages/CaseStudies/CaseStudiesPage';
+import CaseStudyDetailPage       from './pages/CaseStudies/CaseStudyDetail/CaseStudyDetailPage';
 import EventsPage                from './pages/Events/EventsPage';
 import BlogPage                  from './pages/Blog/BlogPage';
 import AWSCostOptimizationNoidaPage from './pages/Blog/AWSCostOptimizationNoidaPage';
@@ -90,6 +91,7 @@ function App() {
           <Route path="/contact"                       element={<ContactPage />} />
           <Route path="/careers"                       element={<CareersPage />} />
           <Route path="/case-studies"                  element={<CaseStudiesPage />} />
+          <Route path="/case-studies/:slug"            element={<CaseStudyDetailPage />} />
           <Route path="/case-studies/*"                element={<CaseStudiesPage />} />
           <Route path="/events"                        element={<EventsPage />} />
           <Route path="/events/*"                      element={<EventsPage />} />
