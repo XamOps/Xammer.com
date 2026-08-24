@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
-import CompanyMark from './CompanyMark';
+import CaseStudyLogo from './CaseStudyLogo';
 import './CaseStudyCard.css';
 
 const badgeAccent = { teal: 'teal', violet: 'violet', blue: 'blue', green: 'green', cyan: 'blue', orange: 'blue' };
@@ -12,7 +12,7 @@ const CaseStudyCard = ({ cs, className = '', style }) => (
     <div className="cs-card__glow" style={{ background: `var(--${cs.accent === 'cyan' || cs.accent === 'orange' ? 'blue' : cs.accent})` }} aria-hidden="true" />
 
     <div className="cs-card__top">
-      <CompanyMark name={cs.client} accent={cs.accent} size="md" />
+      <CaseStudyLogo cs={cs} size="md" />
       <div className="cs-card__id">
         <div className="cs-card__client">{cs.client}</div>
         <div className="cs-card__meta"><MapPin size={12} /> {cs.location}</div>

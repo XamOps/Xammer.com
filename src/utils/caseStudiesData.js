@@ -23,6 +23,7 @@ export const caseStudies = [
   {
     slug: 'metaverze',
     client: 'Metaverze',
+    logo: '/images/metaverze-logo.png',
     industry: 'Professional Services / Technology',
     location: 'India',
     website: 'metaverze.cloud',
@@ -164,6 +165,7 @@ export const caseStudies = [
   {
     slug: 'sparkapp',
     client: 'SparkApp',
+    logo: '/images/sparkapp-logo.jpg',
     industry: 'Professional Services',
     location: 'Delhi, India',
     service: 'Cloud Infrastructure Modernization',

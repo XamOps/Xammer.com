@@ -22,6 +22,45 @@ const productsItems = [
   { label: 'XamCloud', sub: 'SPE Partner', icon: <Database size={15} color="#58A6FF" />, href: '/products/xamcloud' },
 ];
 
+/* Renders an internal route as a router Link, or an external URL as a
+   real anchor that opens in a new tab (react-router's Link can't do this
+   correctly for absolute URLs). */
+const NavDropdownItem = ({ item }) => {
+  const isExternal = /^https?:\/\//.test(item.href);
+  const content = (
+    <>
+      {item.icon}
+      <span className="navbar__dropdown-item-info">
+        <span className="navbar__dropdown-item-label">{item.label}</span>
+        <span className="navbar__dropdown-item-sub">{item.sub}</span>
+      </span>
+    </>
+  );
+  return isExternal ? (
+    <a href={item.href} target="_blank" rel="noopener noreferrer" className="navbar__dropdown-item" role="menuitem">
+      {content}
+    </a>
+  ) : (
+    <Link to={item.href} className="navbar__dropdown-item" role="menuitem">
+      {content}
+    </Link>
+  );
+};
+
+const NavMobileItem = ({ item }) => {
+  const isExternal = /^https?:\/\//.test(item.href);
+  const content = <>{item.icon}{item.label}</>;
+  return isExternal ? (
+    <a href={item.href} target="_blank" rel="noopener noreferrer" className="navbar__mobile-link navbar__mobile-link--sub">
+      {content}
+    </a>
+  ) : (
+    <Link to={item.href} className="navbar__mobile-link navbar__mobile-link--sub">
+      {content}
+    </Link>
+  );
+};
+
 /* ── OLD IT Infrastructure items (commented out) ─────────────
 const cloudProviders = [
   { label: 'Amazon Web Services (AWS)', icon: <Cloud size={15} />,  href: '/services/aws' },
@@ -122,13 +161,7 @@ const Navbar = () => {
               <div className="navbar__dropdown" role="menu">
                 <div className="navbar__dropdown-section">
                   {productsItems.map((item) => (
-                    <Link key={item.href} to={item.href} className="navbar__dropdown-item" role="menuitem">
-                      {item.icon}
-                      <span className="navbar__dropdown-item-info">
-                        <span className="navbar__dropdown-item-label">{item.label}</span>
-                        <span className="navbar__dropdown-item-sub">{item.sub}</span>
-                      </span>
-                    </Link>
+                    <NavDropdownItem item={item} key={item.href} />
                   ))}
                 </div>
               </div>
@@ -240,9 +273,7 @@ const Navbar = () => {
           </button>
           <div className={`navbar__mobile-sub${mobileProductsOpen ? ' navbar__mobile-sub--open' : ''}`}>
             {productsItems.map((item) => (
-              <Link key={item.href} to={item.href} className="navbar__mobile-link navbar__mobile-link--sub">
-                {item.icon}{item.label}
-              </Link>
+              <NavMobileItem item={item} key={item.href} />
             ))}
           </div>
 

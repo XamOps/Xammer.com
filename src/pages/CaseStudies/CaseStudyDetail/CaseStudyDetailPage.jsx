@@ -5,7 +5,7 @@ import {
   Boxes, Workflow, KeyRound, Eye, Sparkles,
 } from 'lucide-react';
 import SEO from '../../../components/common/SEO';
-import CompanyMark from '../../../components/common/CompanyMark';
+import CaseStudyLogo from '../../../components/common/CaseStudyLogo';
 import { caseStudies, getCaseStudyBySlug } from '../../../utils/caseStudiesData';
 import { useInView } from '../../../utils/useInView';
 import './CaseStudyDetailPage.css';
@@ -66,7 +66,7 @@ const CaseStudyDetailPage = () => {
             </Link>
 
             <div className="csd-hero__id">
-              <CompanyMark name={cs.client} accent={cs.accent} size="lg" />
+              <CaseStudyLogo cs={cs} size="lg" />
               <div>
                 <div className="csd-hero__client">{cs.client}</div>
                 <div className="csd-hero__loc">
