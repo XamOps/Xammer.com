@@ -323,6 +323,369 @@ export const caseStudies = [
       ogImage: OG_IMAGE,
     },
   },
+
+  {
+    slug: 'onfinance',
+    client: 'OnFinance AI',
+    logo: '/images/OnFinance.png',
+    industry: 'FinTech / BFSI',
+    location: 'Bengaluru, India',
+    service: 'Cloud Infrastructure Modernization',
+    engagementType: 'Net New Business',
+    accent: 'violet',
+
+    tagline: "Modernizing OnFinance AI's AI Infrastructure with Amazon EKS",
+    heroSubtitle:
+      'How Xammer helped OnFinance AI build a scalable, secure and cost-efficient cloud foundation for financial AI workloads.',
+
+    overview: [
+      { label: 'Industry', value: 'FinTech / BFSI' },
+      { label: 'Location', value: 'Bengaluru, India' },
+      { label: 'Business Model', value: 'B2B Enterprise AI SaaS' },
+      { label: 'Cloud Platform', value: 'Amazon Web Services' },
+      { label: 'Engagement', value: 'Cloud Infrastructure Modernization' },
+      { label: 'Core Technology', value: 'Amazon EKS & AI/ML Workloads' },
+      { label: 'Engagement Type', value: 'Net New Business' },
+    ],
+
+    about:
+      "OnFinance AI is a Bengaluru-based fintech company building domain-specific generative AI platforms for the Banking, Financial Services, and Insurance (BFSI) sector. Founded in 2022, OnFinance AI helps financial institutions streamline complex workflows across regulatory compliance, financial research, and market intelligence. Its proprietary financial-domain LLM, NeoGPT, powers specialized financial use cases, while its flagship ComplianceOS platform acts as an automated regulatory co-pilot — tracking regulatory updates, converting circulars into actionable tasks, automating evidence collection, and generating audit-ready reports. As OnFinance AI scaled its AI workloads and expanded its enterprise footprint, it required a cloud infrastructure foundation capable of supporting demanding AI inference and compliance workloads with greater scalability, security, reliability, and cost efficiency.",
+
+    challenge: {
+      intro:
+        "As OnFinance AI's financial AI platforms evolved, the underlying infrastructure needed to support increasingly demanding LLM inference, compliance processing, and application workloads. The customer required an environment capable of dynamically scaling compute resources while maintaining the security, availability, observability, and cost efficiency expected for enterprise BFSI workloads.",
+      points: [
+        'High AI inference latency — serving specialized financial LLM workloads required efficient compute infrastructure for responsive inference and document processing',
+        'Variable compute requirements as AI/ML workload demand fluctuated significantly',
+        'Unpredictable infrastructure costs from maintaining capacity for peak workloads',
+        'Enterprise security requirements around identity, access, encryption, and workload isolation',
+        'Slow release cycles for AI-powered compliance capabilities and application services',
+        'Scalability needed to support enterprise growth and future international expansion',
+      ],
+    },
+
+    objective: {
+      intro:
+        'Xammer worked with OnFinance AI to establish a scalable, secure, and cost-efficient cloud foundation for its AI and financial application workloads.',
+      points: [
+        'Modernize application infrastructure using Amazon EKS',
+        'Enable scalable containerized application and AI workloads',
+        'Dynamically provision compute resources based on workload demand',
+        'Improve compute utilization and infrastructure cost efficiency',
+        'Establish security controls appropriate for enterprise financial workloads',
+        'Improve infrastructure and application observability',
+        'Create a more standardized environment for application deployment',
+        'Establish a portable cloud foundation to support future multi-region expansion',
+      ],
+    },
+
+    solution: [
+      {
+        icon: 'Boxes',
+        title: 'Container Orchestration',
+        desc: 'Amazon EKS as the central platform for managing, deploying, and scaling containerized application and AI/ML workloads.',
+      },
+      {
+        icon: 'Workflow',
+        title: 'Dynamic Compute Scaling',
+        desc: 'AWS Karpenter and EC2 Auto Scaling dynamically provision compute capacity based on workload demand, including specialized resources for AI/ML.',
+      },
+      {
+        icon: 'Server',
+        title: 'Container Registry',
+        desc: 'Amazon ECR provides secure storage and management of container images for application and model-serving workloads.',
+      },
+      {
+        icon: 'Database',
+        title: 'Database & Caching',
+        desc: 'Amazon Aurora PostgreSQL supports relational compliance data, metadata, and audit information, with Amazon ElastiCache for high-speed caching.',
+      },
+      {
+        icon: 'Search',
+        title: 'Storage & Vector Search',
+        desc: 'Amazon S3 stores compliance documents and unstructured data, while Amazon OpenSearch Service supports search and vector-based retrieval for RAG-driven financial applications.',
+      },
+      {
+        icon: 'KeyRound',
+        title: 'Networking & Security',
+        desc: 'AWS Application Load Balancer and API Gateway route application traffic, while AWS IAM and AWS KMS provide identity, access control, and encryption.',
+      },
+      {
+        icon: 'Eye',
+        title: 'Observability',
+        desc: 'Amazon CloudWatch and AWS X-Ray provide visibility into application performance, infrastructure health, and service interactions.',
+      },
+    ],
+
+    implementation: [
+      {
+        title: 'Infrastructure Foundation',
+        desc: "Xammer established the AWS infrastructure foundation required to support OnFinance AI's containerized workloads, including compute, networking, identity, and security components.",
+      },
+      {
+        title: 'EKS & Container Deployment',
+        desc: 'The Amazon EKS environment was configured as the central orchestration layer for application microservices and AI/ML workloads, with Amazon ECR integrated for container image management.',
+      },
+      {
+        title: 'Dynamic Compute Provisioning',
+        desc: 'Karpenter-based provisioning enabled compute resources to be dynamically provisioned based on cluster requirements, improving resource utilization.',
+      },
+      {
+        title: 'AI Workload Infrastructure',
+        desc: 'The architecture was designed to support specialized AI inference compute, including GPU-backed compute where required for model-serving workloads powering NeoGPT and ComplianceOS.',
+      },
+      {
+        title: 'Data, Storage & Search',
+        desc: 'Managed AWS data services were incorporated to support compliance information, application metadata, regulatory documents, caching, and retrieval workloads.',
+      },
+      {
+        title: 'Security Implementation',
+        desc: 'Security controls were incorporated across identity, access, encryption, and workload infrastructure using AWS IAM, AWS KMS, IRSA, and Kubernetes-based workload isolation.',
+      },
+      {
+        title: 'Monitoring & Observability',
+        desc: 'Amazon CloudWatch and AWS X-Ray were incorporated to provide visibility into infrastructure health, application performance, and service interactions.',
+      },
+    ],
+
+    outcomes: [
+      { title: '~40–45% Reduction in Total Monthly AWS Spend', desc: 'Improved infrastructure utilization and dynamic resource provisioning helped reduce overall AWS infrastructure expenditure.' },
+      { title: '~50–60% Inference & Compute Savings', desc: 'Optimization of compute resources for AI workloads reduced infrastructure overhead associated with inference and processing.' },
+      { title: '~30–40% Reduction in Operational Overhead', desc: 'The modernized containerized environment and automated infrastructure operations reduced manual management effort.' },
+      { title: 'Scalable AI Infrastructure', desc: 'Amazon EKS and dynamic compute provisioning established a foundation capable of scaling application and AI workloads on demand.' },
+      { title: 'Improved Enterprise Security', desc: 'Identity, encryption, access control, and workload isolation strengthened the infrastructure foundation for enterprise BFSI workloads.' },
+      { title: 'Centralized Observability', desc: 'CloudWatch and X-Ray provided improved visibility across infrastructure and application workloads.' },
+      { title: 'Foundation for Multi-Region Expansion', desc: 'A standardized, portable containerized architecture ready to support future expansion into the US, UK, and MENA regions.' },
+    ],
+
+    beforeAfter: [
+      { before: 'Infrastructure required modernization for demanding AI workloads', after: 'AWS infrastructure modernized around Amazon EKS' },
+      { before: 'Compute capacity needed to accommodate variable AI workloads', after: 'Dynamic compute provisioning and autoscaling incorporated' },
+      { before: 'AI workloads could result in underutilized compute resources', after: 'Compute capacity aligned more closely with workload demand' },
+      { before: 'Infrastructure costs were affected by variable resource utilization', after: 'Automated scaling and optimization improved cost efficiency' },
+      { before: 'Application workloads required a more standardized infrastructure platform', after: 'Containerized operating environment established through Amazon EKS' },
+      { before: 'Enterprise security requirements needed to be addressed across workloads', after: 'IAM, KMS, IRSA, and workload isolation incorporated' },
+      { before: 'Infrastructure and application visibility needed improvement', after: 'CloudWatch and X-Ray established centralized observability' },
+      { before: 'Future geographic expansion required a scalable and portable foundation', after: 'Containerized architecture provides a standardized baseline for expansion' },
+    ],
+
+    technology: [
+      { name: 'Amazon EKS', desc: 'Central container orchestration platform for application and AI/ML workloads.' },
+      { name: 'Amazon EC2', desc: 'Compute capacity for the EKS cluster.' },
+      { name: 'AWS Karpenter', desc: 'Dynamic, workload-aware compute provisioning and scaling.' },
+      { name: 'Amazon ECR', desc: 'Secure storage and management of container images.' },
+      { name: 'Amazon Aurora PostgreSQL', desc: 'Relational compliance data, metadata, and audit information.' },
+      { name: 'Amazon ElastiCache', desc: 'High-speed caching for frequently accessed data and application responses.' },
+      { name: 'Amazon S3', desc: 'Scalable storage for compliance documents and unstructured data.' },
+      { name: 'Amazon OpenSearch Service', desc: 'Search and vector-based retrieval for RAG-driven financial applications.' },
+      { name: 'AWS Application Load Balancer & API Gateway', desc: 'Application traffic routing.' },
+      { name: 'AWS IAM & AWS KMS', desc: 'Identity, access control, and encryption capabilities.' },
+      { name: 'Amazon CloudWatch & AWS X-Ray', desc: 'Observability into application performance, infrastructure health, and service interactions.' },
+    ],
+
+    approach: {
+      intro:
+        'Xammer designed the solution around Amazon EKS as the central container orchestration platform for OnFinance AI\'s application and AI/ML workloads, combining container orchestration, dynamic compute provisioning, managed databases, caching, storage, search, networking, security, and observability.',
+      closing:
+        "The improved infrastructure foundation supports the continued development of NeoGPT and ComplianceOS, while enabling OnFinance AI's engineering team to focus more on financial AI innovation and less on manual infrastructure management.",
+      roles: ['Cloud Architecture', 'AWS', 'Containerization', 'Kubernetes', 'AI/ML Infrastructure', 'Cost Optimization', 'Security', 'Observability'],
+    },
+
+    businessImpact: [
+      'The engagement was not simply about introducing Kubernetes. It helped OnFinance AI establish the cloud foundation required to operate and scale AI-powered financial applications more efficiently.',
+      "By combining Amazon EKS with dynamic compute provisioning, managed data services, security controls, and centralized observability, Xammer helped create a more structured infrastructure environment for OnFinance AI's growing AI workloads — and a scalable baseline for its continued enterprise growth and planned expansion into the US, UK, and MENA regions.",
+    ],
+
+    seo: {
+      title: 'OnFinance AI Case Study | Amazon EKS AI Infrastructure Modernization | Xammer',
+      description:
+        'How Xammer helped OnFinance AI modernize its AI infrastructure on Amazon EKS — scalable AI inference, dynamic compute provisioning, and enterprise-grade security for BFSI workloads.',
+      keywords:
+        'OnFinance AI case study, Amazon EKS case study, AI infrastructure AWS, Xammer AWS case study, fintech AI infrastructure, Kubernetes AI workloads, AWS Karpenter',
+      canonical: `${SITE_URL}/case-studies/onfinance`,
+      ogImage: OG_IMAGE,
+    },
+  },
+
+  {
+    slug: 'swiftseed-ventures',
+    client: 'Swiftseed Ventures',
+    logo: '/images/Swiiftseed-Ventures.png',
+    industry: 'Technology / SaaS',
+    location: 'India',
+    service: 'Production Infrastructure & Disaster Recovery',
+    engagementType: 'Net New Business',
+    accent: 'green',
+
+    tagline: 'Building a Resilient, Secure & Cost-Optimized AWS Infrastructure for Swiftseed Ventures',
+    heroSubtitle:
+      'How Xammer helped Swiftseed Ventures establish a secure, scalable and disaster-resilient production environment on AWS.',
+
+    overview: [
+      { label: 'Industry', value: 'Technology / SaaS' },
+      { label: 'Cloud Platform', value: 'Amazon Web Services' },
+      { label: 'Engagement', value: 'Production Infrastructure & Disaster Recovery' },
+      { label: 'Primary Region', value: 'Mumbai (ap-south-1)' },
+      { label: 'DR Region', value: 'N. Virginia (us-east-1)' },
+      { label: 'Core Technology', value: 'Amazon EC2, Auto Scaling, RDS MySQL' },
+      { label: 'DR Strategy', value: 'Warm Standby' },
+      { label: 'Engagement Type', value: 'Net New Business' },
+    ],
+
+    about:
+      'Swiftseed Ventures is a technology-driven business operating a task management application that required a scalable, secure, and highly available production environment on AWS. As the application moved into production, Swiftseed needed a cloud infrastructure foundation capable of supporting application scalability while providing business continuity, disaster recovery, security, monitoring, and cost efficiency.',
+
+    challenge: {
+      intro:
+        'Swiftseed Ventures required a production-ready AWS environment capable of supporting a scalable task management application while maintaining strong availability and business continuity. The customer required an architecture that could support scalability, security, minimal downtime, cross-region disaster recovery, and controlled infrastructure costs.',
+      points: [
+        'Establishing a scalable and highly available application environment',
+        'Implementing cross-region Disaster Recovery for business continuity',
+        'Minimizing downtime during a potential regional AWS outage',
+        'Establishing a practical recovery process with a defined RTO',
+        'Maintaining near-zero data loss through cross-region database replication',
+        'Securing application and database workloads through private networking and encryption',
+        'Implementing monitoring and operational visibility',
+        'Designing the DR environment without the cost of a fully active secondary production environment',
+      ],
+    },
+
+    objective: {
+      intro:
+        'Xammer worked with Swiftseed Ventures to establish a secure, scalable and disaster-resilient production environment on AWS.',
+      points: [
+        'Deploy a scalable task management application on AWS',
+        'Establish a highly available production architecture',
+        'Implement cross-region Disaster Recovery',
+        'Minimize downtime during a regional outage',
+        'Achieve an approximately 15-minute RTO',
+        'Maintain a near-zero RPO through cross-region database replication',
+        'Secure infrastructure using private networking and encryption',
+        'Implement centralized monitoring and operational visibility',
+        'Optimize DR infrastructure costs through a warm-standby approach',
+      ],
+    },
+
+    solution: [
+      {
+        icon: 'Server',
+        title: 'Scalable Application Infrastructure',
+        desc: 'An EC2 Auto Scaling Group deployed within private subnets to support scalable application workloads.',
+      },
+      {
+        icon: 'Workflow',
+        title: 'Application Load Balancing',
+        desc: 'An Application Load Balancer receives application traffic and distributes requests to the EC2 application layer.',
+      },
+      {
+        icon: 'Database',
+        title: 'Managed Database',
+        desc: 'Amazon RDS for MySQL deployed within the private network as the production database.',
+      },
+      {
+        icon: 'RefreshCw',
+        title: 'Cross-Region Disaster Recovery',
+        desc: 'A cross-region RDS Read Replica established in N. Virginia provides a recovery path in the event of a Mumbai regional outage.',
+      },
+      {
+        icon: 'Cloud',
+        title: 'Warm Standby Architecture',
+        desc: 'The DR environment was designed as a warm standby rather than a fully active secondary production environment, balancing recovery capability with cost.',
+      },
+      {
+        icon: 'Lock',
+        title: 'Security',
+        desc: 'Private subnets, Security Groups, IAM roles, KMS encryption, and AWS Systems Manager Parameter Store incorporated into the architecture.',
+      },
+      {
+        icon: 'Eye',
+        title: 'Monitoring & Observability',
+        desc: 'Amazon CloudWatch, RDS Enhanced Monitoring, RDS Performance Insights, ALB access logs, and Auto Scaling activity monitoring for operational visibility.',
+      },
+    ],
+
+    implementation: [
+      {
+        title: 'Production Infrastructure',
+        desc: 'Xammer established the AWS networking and infrastructure foundation, including VPC configuration, subnets, Security Groups, IAM roles, EC2 instances, Auto Scaling, and the Application Load Balancer.',
+      },
+      {
+        title: 'Database Deployment',
+        desc: "Amazon RDS for MySQL was configured within the private network as the application's production database.",
+      },
+      {
+        title: 'Cross-Region DR',
+        desc: 'Xammer configured the N. Virginia DR environment and established the cross-region RDS Read Replica to support database recovery during a regional outage.',
+      },
+      {
+        title: 'Security Implementation',
+        desc: 'Security controls were incorporated through private networking, KMS encryption, IAM roles, Security Groups, and AWS Systems Manager Parameter Store.',
+      },
+      {
+        title: 'Monitoring & Observability',
+        desc: 'CloudWatch monitoring was configured for EC2 CPU utilization, RDS connections, ALB 5xx errors, and operational events, with RDS Enhanced Monitoring and Performance Insights for additional database visibility.',
+      },
+      {
+        title: 'Backup & Recovery',
+        desc: 'RDS automated backups, database snapshots, AMI snapshots, and cross-region AMI copies were incorporated into the recovery strategy.',
+      },
+    ],
+
+    outcomes: [
+      { title: '~15-Minute Recovery Target', desc: 'The warm-standby DR architecture established a recovery workflow targeting approximately 15 minutes from regional failure detection to application availability.' },
+      { title: 'Near-Zero Data Loss Target', desc: 'Cross-region RDS replication supports a near-zero RPO target through continuous replication.' },
+      { title: 'Scalable Application Infrastructure', desc: 'EC2 Auto Scaling provides the ability to scale application capacity based on workload requirements.' },
+      { title: 'Secure Production Environment', desc: 'Private networking, KMS encryption, IAM roles, Security Groups, and secure parameter management incorporated throughout.' },
+      { title: 'Operational Visibility', desc: 'CloudWatch, RDS monitoring, Performance Insights, ALB logs, and Auto Scaling activity provide visibility across the production environment.' },
+      { title: 'Cost-Efficient Disaster Recovery', desc: 'The warm-standby approach provides cross-region recovery capability without maintaining a fully active secondary application environment.' },
+    ],
+
+    beforeAfter: [
+      { before: 'Required a scalable production environment for the task management application', after: 'AWS production environment established with EC2 + Auto Scaling' },
+      { before: 'Required a defined cross-region DR strategy', after: 'Warm-standby DR environment established in N. Virginia' },
+      { before: 'Needed minimal downtime during regional failure', after: 'Recovery workflow designed around ~15-minute RTO' },
+      { before: 'Required cross-region database protection', after: 'RDS MySQL Read Replica established in N. Virginia' },
+      { before: 'Required secure application and database networking', after: 'Private subnets and Security Groups implemented' },
+      { before: 'Required encryption and controlled access', after: 'KMS encryption and IAM roles implemented' },
+      { before: 'Required operational visibility', after: 'CloudWatch, RDS monitoring and ALB logging implemented' },
+      { before: 'Needed DR without excessive infrastructure cost', after: 'Warm-standby architecture used to optimize DR spend' },
+    ],
+
+    technology: [
+      { name: 'Amazon EC2 & Auto Scaling', desc: 'Compute layer for the scalable task management application.' },
+      { name: 'Application Load Balancer', desc: 'Distributes application traffic across the EC2 layer.' },
+      { name: 'Amazon RDS for MySQL', desc: 'Production database, with a cross-region Read Replica for disaster recovery.' },
+      { name: 'Amazon VPC', desc: 'Public and private subnets for secure application and database networking.' },
+      { name: 'AWS KMS', desc: 'Encryption for RDS and EBS data at rest.' },
+      { name: 'AWS IAM', desc: 'Least-privilege access control via IAM roles.' },
+      { name: 'AWS Systems Manager Parameter Store', desc: 'Secure management of application secrets and configuration.' },
+      { name: 'Amazon CloudWatch', desc: 'Monitoring for EC2, RDS, ALB, and Auto Scaling activity.' },
+      { name: 'Amazon Machine Images (AMI)', desc: 'Snapshot-based backup and cross-region recovery for compute instances.' },
+    ],
+
+    approach: {
+      intro:
+        'Xammer designed and implemented an AWS architecture centered around Amazon EC2, Auto Scaling, Application Load Balancing, and Amazon RDS for MySQL — establishing the supporting cloud infrastructure required to operate the production workload securely while maintaining a cross-region recovery path.',
+      closing:
+        'The architecture connects the production application environment in Mumbai with the N. Virginia recovery environment, providing a defined regional disaster recovery path built around business continuity and cost efficiency.',
+      roles: ['Cloud Architecture', 'AWS Infrastructure', 'Disaster Recovery', 'Security', 'Monitoring', 'Cost Optimization'],
+    },
+
+    businessImpact: [
+      'The engagement was not simply about deploying an application on AWS. It helped Swiftseed Ventures establish the cloud infrastructure and disaster recovery foundation required to operate a production application with greater resilience, security, and operational readiness.',
+      'By combining EC2 Auto Scaling, Application Load Balancing, Amazon RDS, cross-region replication, monitoring, security controls, and a warm-standby DR strategy, Xammer helped create a structured infrastructure model designed around business continuity and cost efficiency — providing Swiftseed a defined recovery path in the event of a regional disruption while avoiding the cost of a fully active secondary environment.',
+    ],
+
+    seo: {
+      title: 'Swiftseed Ventures Case Study | AWS Disaster Recovery & Production Infrastructure | Xammer',
+      description:
+        'How Xammer helped Swiftseed Ventures build a resilient, secure, and cost-optimized AWS production environment with cross-region disaster recovery.',
+      keywords:
+        'Swiftseed Ventures case study, AWS disaster recovery case study, cross-region RDS replica, Xammer AWS case study, warm standby DR AWS, AWS production infrastructure',
+      canonical: `${SITE_URL}/case-studies/swiftseed-ventures`,
+      ogImage: OG_IMAGE,
+    },
+  },
 ];
 
 export const getCaseStudyBySlug = (slug) =>

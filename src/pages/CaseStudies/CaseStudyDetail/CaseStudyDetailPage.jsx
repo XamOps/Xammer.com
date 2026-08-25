@@ -2,7 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import {
   ArrowRight, ArrowLeft, MapPin, Globe2, Building2, Target,
   ListChecks, ShieldCheck, Cog, Lock, Gauge, Cloud, CheckCircle2, Phone,
-  Boxes, Workflow, KeyRound, Eye, Sparkles,
+  Boxes, Workflow, KeyRound, Eye, Sparkles, Server, Database, RefreshCw, Search,
 } from 'lucide-react';
 import SEO from '../../../components/common/SEO';
 import CaseStudyLogo from '../../../components/common/CaseStudyLogo';
@@ -10,7 +10,10 @@ import { caseStudies, getCaseStudyBySlug } from '../../../utils/caseStudiesData'
 import { useInView } from '../../../utils/useInView';
 import './CaseStudyDetailPage.css';
 
-const iconMap = { ShieldCheck, Cog, Lock, Gauge, Cloud, Boxes, Workflow, KeyRound, Eye };
+const iconMap = {
+  ShieldCheck, Cog, Lock, Gauge, Cloud, Boxes, Workflow, KeyRound, Eye,
+  Server, Database, RefreshCw, Search,
+};
 
 const Reveal = ({ as: Tag = 'div', className = '', children, ...rest }) => {
   const [ref, visible] = useInView({ threshold: 0.1 });
