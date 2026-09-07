@@ -6,15 +6,19 @@ import PageHero from '../../components/common/PageHero';
 import './BlogPage.css';
 
 const posts = [
-  { tag: 'AWS Cost Optimisation', accent: 'orange', readTime: '8 min', date: 'May 2025', title: 'How We Reduced a FinTech Startup\'s AWS Bill by 62% in 90 Days', excerpt: 'A step-by-step breakdown of the exact rightsizing, Reserved Instance, and Spot fleet changes that cut one client\'s monthly AWS spend from ₹28L to ₹11L — without touching a single production workload.', img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&auto=format&fit=crop' },
-  { tag: 'Cloud Security', accent: 'red', readTime: '6 min', date: 'Apr 2025', title: '10 IAM Misconfigurations We Find in Almost Every AWS Environment', excerpt: 'After reviewing hundreds of AWS environments, these are the access control mistakes that appear most frequently — and the ones attackers exploit first. Are any of them in your account?', img: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop' },
-  { tag: 'DevOps', accent: 'blue', readTime: '10 min', date: 'Apr 2025', title: 'Building a Zero-Downtime CI/CD Pipeline on AWS: A Complete Guide', excerpt: 'From CodePipeline to blue-green deployments on ECS — a practical guide to building deployment automation that your team can trust for production releases.', img: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=600&auto=format&fit=crop' },
-  { tag: 'Sovereign Cloud', accent: 'green', readTime: '7 min', date: 'Mar 2025', title: 'DPDPA 2023: What Indian Enterprises Need to Do About Data Localisation', excerpt: 'India\'s Digital Personal Data Protection Act has significant implications for where you store and process data. Here\'s what BFSI, healthcare, and consumer tech companies need to know.', img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&auto=format&fit=crop' },
-  { tag: 'Odoo ERP', accent: 'violet', readTime: '5 min', date: 'Mar 2025', title: 'Migrating from Tally to Odoo: What Actually Happens to Your Data', excerpt: 'The most common question from businesses considering Odoo is about their historical data. Here\'s exactly what can be migrated, what gets left behind, and how we handle the transition.', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop' },
-  { tag: 'Azure', accent: 'blue', readTime: '9 min', date: 'Feb 2025', title: 'Azure Hybrid Benefit: How to Maximise Your Microsoft Licensing Savings', excerpt: 'Most organisations with Windows Server or SQL Server licences are leaving significant Azure savings on the table. Here\'s how to calculate your potential savings and implement Hybrid Benefit correctly.', img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop' },
-  { tag: 'Google Cloud', accent: 'teal', readTime: '7 min', date: 'Feb 2025', title: 'BigQuery Cost Optimisation: 8 Techniques That Actually Work', excerpt: 'BigQuery bills can surprise you. Here are the slot reservation, query optimisation, and materialised view strategies that consistently reduce BigQuery costs by 30–50% for our clients.', img: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?w=600&auto=format&fit=crop' },
-  { tag: 'FinOps', accent: 'green', readTime: '6 min', date: 'Jan 2025', title: 'The FinOps Practices Every Indian CTO Should Implement in 2025', excerpt: 'Cloud costs are now the second-largest line item for most tech companies. Here are the governance frameworks, tagging strategies, and commitment-based discount approaches that keep spend under control.', img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop' },
-  { tag: 'Cyber Security', accent: 'red', readTime: '8 min', date: 'Jan 2025', title: 'Why 73% of Indian Companies Had a Cloud Security Incident Last Year', excerpt: 'The CSPM assessment data from 200+ cloud environments we reviewed in 2024 reveals the most dangerous misconfiguration patterns affecting Indian enterprises — and what to do about them.', img: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&auto=format&fit=crop' },
+  { tag: 'Google Cloud', accent: 'green', readTime: '8 min', date: 'Sep 2026', title: 'Certified Google Cloud Partner in Noida', excerpt: 'Xammer is a Certified Google Cloud Partner in Noida offering 100% technical support by authorized engineers, secure migration, managed services, and scalable GCP solutions.', img: '/images/event-img1.jpeg', href: '/certified-google-cloud-partner-in-noida' },
+  { tag: 'Google Cloud', accent: 'blue', readTime: '7 min', date: 'Sep 2026', title: 'Google Cloud Cost Optimization Services in Ahmedabad', excerpt: 'Xammer delivers Google Cloud Cost Optimization Services in Ahmedabad targeting 30%-40% savings through rightsizing, FinOps, and 100% technical support.', img: '/images/event-img2.jpeg', href: '/google-cloud-cost-optimization-services-in-ahmedabad' },
+  { tag: 'Google Cloud', accent: 'teal', readTime: '9 min', date: 'Sep 2026', title: 'Google Cloud Managed Services Provider in Bangalore', excerpt: 'Xammer is a Google Cloud Managed Services Provider in Bangalore offering 24/7 cloud expertise, 100% technical support, monitoring, security, and infrastructure management.', img: '/images/event-img3.jpeg', href: '/google-cloud-managed-services-provider-in-bangalore' },
+  { tag: 'Google Cloud', accent: 'violet', readTime: '9 min', date: 'Sep 2026', title: 'Google Cloud Transformation Services in Gurgaon', excerpt: 'Xammer delivers Google Cloud Transformation Services in Gurgaon with certified expertise, 100% technical support, and enterprise-ready migration, modernization, and governance.', img: '/images/event-img4.jpeg', href: '/google-cloud-transformation-services-in-gurgaon' },
+  { tag: 'Microsoft Azure', accent: 'teal', readTime: '7 min', date: 'Aug 2026', title: 'Microsoft Azure Cloud Cost Optimization Services in Gurgaon', excerpt: 'Xammer delivers Microsoft Azure Cloud Cost Optimization Services in Gurgaon, targeting 30%-40% cost efficiency with 100% visibility and smarter Azure operations.', img: '/images/event-img1.jpeg', href: '/microsoft-azure-cloud-cost-optimization-services-in-gurgaon' },
+  { tag: 'Microsoft Azure', accent: 'violet', readTime: '8 min', date: 'Aug 2026', title: 'Authorized Microsoft Azure Partner in Bangalore', excerpt: 'Xammer is an Authorized Microsoft Azure Partner in Bangalore offering 100% technical support by authorized engineers, 180+ certified experts, and secure, scalable Azure solutions.', img: '/images/event-img2.jpeg', href: '/authorized-microsoft-azure-partner-in-bangalore' },
+  { tag: 'Oracle Cloud', accent: 'orange', readTime: '7 min', date: 'Aug 2026', title: 'Oracle Cloud Cost Optimization Services in Delhi', excerpt: 'Xammer delivers Oracle Cloud Cost Optimization Services in Delhi, targeting 30%-40% cost optimization with a Delhi-based team, FinOps strategy, and 24x7 managed support.', img: '/images/event-img3.jpeg', href: '/oracle-cloud-cost-optimization-services-in-delhi' },
+  { tag: 'Oracle Cloud', accent: 'red', readTime: '8 min', date: 'Aug 2026', title: 'Authorized Oracle Cloud Partner in Gurgaon', excerpt: 'Xammer is an Authorized Oracle Cloud Partner in Gurgaon offering technical support by authorized engineers, 100% technical support, and enterprise-ready OCI solutions.', img: '/images/event-img4.jpeg', href: '/authorized-oracle-cloud-partner-in-gurgaon' },
+  { tag: 'Microsoft Azure', accent: 'teal', readTime: '7 min', date: 'Jul 2026', title: 'Azure Cost Optimization Services in Noida', excerpt: 'Xammer delivers Azure Cost Optimization Services in Noida, reducing Microsoft Azure cloud costs by 30%-40% with 100% expert technical support.', img: '/images/event-img1.jpeg', href: '/azure-cost-optimization-services-in-noida' },
+  { tag: 'Microsoft Azure', accent: 'violet', readTime: '8 min', date: 'Jul 2026', title: 'Microsoft Azure Partner in Noida', excerpt: 'Xammer is a trusted Microsoft Azure Partner in Noida offering 100% technical support, 180+ certified engineers, and enterprise-grade Azure cloud solutions.', img: '/images/event-img2.jpeg', href: '/microsoft-azure-partner-in-noida' },
+  { tag: 'Oracle Cloud', accent: 'orange', readTime: '7 min', date: 'Jul 2026', title: 'Oracle Cloud Cost Optimization Services in Noida', excerpt: 'Xammer delivers Oracle Cloud Cost Optimization Services in Noida, helping businesses save 30%-40% on cloud costs with 100% expert technical support.', img: '/images/event-img3.jpeg', href: '/oracle-cloud-cost-optimization-services-in-noida' },
+  { tag: 'Oracle Cloud', accent: 'red', readTime: '9 min', date: 'Jul 2026', title: 'Authorized Oracle Cloud Partner in Noida', excerpt: 'Xammer is an Authorized Oracle Cloud Partner in Noida offering 100% technical support, 180+ certified engineers, and secure, scalable OCI solutions for enterprises.', img: '/images/event-img4.jpeg', href: '/authorized-oracle-cloud-partner-in-noida' },
+  { tag: 'AWS', accent: 'blue', readTime: '8 min', date: 'Jul 2026', title: 'AWS Cloud Cost Optimization Services in Noida', excerpt: 'Xammer offers certified AWS cloud cost optimization services in Noida, infrastructure optimization, up to 40% AWS cost reduction, and 100% technical support.', img: '/images/event-img1.jpeg', href: '/aws-cloud-cost-optimization-services-in-noida' },
 ];
 
 const BlogPage = () => (
@@ -30,8 +34,8 @@ const BlogPage = () => (
       <PageHero
         badge="Read by 4,000+ IT Leaders Across India"
         title="Cloud Insights &"
-        highlight="Deep Dives"
-        subtitle="In-depth technical articles, how-to guides, and industry analysis from Xammer's engineering team — on AWS, Azure, GCP, DevOps, security, and digital transformation."
+        highlight="City Guides"
+        subtitle="In-depth guides on AWS, Azure, Google Cloud, and Oracle Cloud services, cost optimization, and managed operations for businesses across Delhi NCR, Bangalore, Gurgaon & Ahmedabad."
         accent="blue"
       />
 
@@ -50,7 +54,7 @@ const BlogPage = () => (
                 <span><Clock size={13} /> {posts[0].readTime} read</span>
                 <span>{posts[0].date}</span>
               </div>
-              <Link to="/contact" className="btn-primary blog__featured-cta">
+              <Link to={posts[0].href} className="btn-primary blog__featured-cta">
                 Read Article <ArrowRight size={14} />
               </Link>
             </div>
@@ -70,7 +74,7 @@ const BlogPage = () => (
                   <p className="blog__card-excerpt">{p.excerpt}</p>
                   <div className="blog__meta">
                     <span><Clock size={13} /> {p.readTime} read</span>
-                    <Link to="/contact" className="blog__read-more">Read →</Link>
+                    <Link to={p.href} className="blog__read-more">Read →</Link>
                   </div>
                 </div>
               </div>
