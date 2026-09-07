@@ -25,6 +25,10 @@ const landingPageLinks = [
   { label: 'Oracle Cloud Cost Optimization Services in Noida', href: '/oracle-cloud-cost-optimization-services-in-noida' },
   { label: 'Microsoft Azure Partner in Noida', href: '/microsoft-azure-partner-in-noida' },
   { label: 'Azure Cost Optimization Services in Noida', href: '/azure-cost-optimization-services-in-noida' },
+  { label: 'Certified Google Cloud Partner in Noida', href: '/certified-google-cloud-partner-in-noida' },
+  { label: 'Google Cloud Cost Optimization Services in Ahmedabad', href: '/google-cloud-cost-optimization-services-in-ahmedabad' },
+  { label: 'Google Cloud Managed Services Provider in Bangalore', href: '/google-cloud-managed-services-provider-in-bangalore' },
+  { label: 'Google Cloud Transformation Services in Gurgaon', href: '/google-cloud-transformation-services-in-gurgaon' },
 ];
 
 const companyLinks = [

@@ -165,6 +165,54 @@ const routes = [
       ogImage: 'https://xammer.com/images/event-img3.jpeg',
     },
   },
+  {
+    urlPath: '/certified-google-cloud-partner-in-noida',
+    data: {
+      title: 'Certified Google Cloud Partner in Noida | Xammer',
+      description:
+        'Xammer is a Certified Google Cloud Partner in Noida offering 100% technical support by authorized engineers, secure migration, managed services, and scalable GCP solutions.',
+      keywords:
+        'Certified Google Cloud Partner in Noida, Authorized Google Cloud Partner in Noida, GCP Partner in Noida, Google Cloud Consultants in Noida, Google Cloud Managed Services in Noida',
+      canonical: 'https://xammer.com/certified-google-cloud-partner-in-noida',
+      ogImage: 'https://xammer.com/images/hero-img.jpg',
+    },
+  },
+  {
+    urlPath: '/google-cloud-cost-optimization-services-in-ahmedabad',
+    data: {
+      title: 'Google Cloud Cost Optimization Services in Ahmedabad | Xammer',
+      description:
+        'Xammer delivers Google Cloud Cost Optimization Services in Ahmedabad targeting 30%-40% savings through rightsizing, FinOps, and 100% technical support.',
+      keywords:
+        'Google Cloud Cost Optimization Services in Ahmedabad, GCP Cost Optimization Services in Ahmedabad, Google Cloud Cost Management Services in Ahmedabad, Google Cloud Cost Reduction Services in Ahmedabad, Google Cloud FinOps Services in Ahmedabad',
+      canonical: 'https://xammer.com/google-cloud-cost-optimization-services-in-ahmedabad',
+      ogImage: 'https://xammer.com/images/hero-img.jpg',
+    },
+  },
+  {
+    urlPath: '/google-cloud-managed-services-provider-in-bangalore',
+    data: {
+      title: 'Google Cloud Managed Services Provider in Bangalore | Xammer',
+      description:
+        'Xammer is a Google Cloud Managed Services Provider in Bangalore offering 24/7 cloud expertise, 100% technical support, monitoring, security, and infrastructure management.',
+      keywords:
+        'Google Cloud Managed Services Provider in Bangalore, GCP Managed Services Provider in Bangalore, GCP Infrastructure Management Services in Bangalore, Google Cloud Monitoring Services in Bangalore, Google Cloud Managed Security Services in Bangalore',
+      canonical: 'https://xammer.com/google-cloud-managed-services-provider-in-bangalore',
+      ogImage: 'https://xammer.com/images/hero-img.jpg',
+    },
+  },
+  {
+    urlPath: '/google-cloud-transformation-services-in-gurgaon',
+    data: {
+      title: 'Google Cloud Transformation Services in Gurgaon | Xammer',
+      description:
+        'Xammer delivers Google Cloud Transformation Services in Gurgaon with certified expertise, 100% technical support, and enterprise-ready migration, modernization, and governance.',
+      keywords:
+        'Google Cloud Transformation Services in Gurgaon, Google Cloud Migration Services in Gurgaon, Enterprise Cloud Transformation Services in Gurgaon, Enterprise Google Cloud Solutions in Gurgaon, GCP Migration Services in Gurgaon',
+      canonical: 'https://xammer.com/google-cloud-transformation-services-in-gurgaon',
+      ogImage: 'https://xammer.com/images/hero-img.jpg',
+    },
+  },
   ...caseStudies.map((cs) => ({ urlPath: `/case-studies/${cs.slug}`, data: cs.seo })),
 ];
 

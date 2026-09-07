@@ -39,6 +39,10 @@ import MicrosoftAzurePartnerBangalorePage from './pages/Blog/MicrosoftAzurePartn
 import OracleCloudPartnerGurgaonPage from './pages/Blog/OracleCloudPartnerGurgaonPage';
 import AzureCostOptimizationGurgaonPage from './pages/Blog/AzureCostOptimizationGurgaonPage';
 import OracleCloudCostOptimizationDelhiPage from './pages/Blog/OracleCloudCostOptimizationDelhiPage';
+import GoogleCloudPartnerNoidaPage from './pages/Blog/GoogleCloudPartnerNoidaPage';
+import GoogleCloudCostOptimizationAhmedabadPage from './pages/Blog/GoogleCloudCostOptimizationAhmedabadPage';
+import GoogleCloudManagedServicesBangalorePage from './pages/Blog/GoogleCloudManagedServicesBangalorePage';
+import GoogleCloudTransformationGurgaonPage from './pages/Blog/GoogleCloudTransformationGurgaonPage';
 import PartnersPage              from './pages/Partners/PartnersPage';
 
 /* -- Legal -------------------------------------------- */
@@ -105,6 +109,10 @@ function App() {
           <Route path="/authorized-oracle-cloud-partner-in-gurgaon" element={<OracleCloudPartnerGurgaonPage />} />
           <Route path="/microsoft-azure-cloud-cost-optimization-services-in-gurgaon" element={<AzureCostOptimizationGurgaonPage />} />
           <Route path="/oracle-cloud-cost-optimization-services-in-delhi" element={<OracleCloudCostOptimizationDelhiPage />} />
+          <Route path="/certified-google-cloud-partner-in-noida" element={<GoogleCloudPartnerNoidaPage />} />
+          <Route path="/google-cloud-cost-optimization-services-in-ahmedabad" element={<GoogleCloudCostOptimizationAhmedabadPage />} />
+          <Route path="/google-cloud-managed-services-provider-in-bangalore" element={<GoogleCloudManagedServicesBangalorePage />} />
+          <Route path="/google-cloud-transformation-services-in-gurgaon" element={<GoogleCloudTransformationGurgaonPage />} />
           <Route path="/partners"                      element={<PartnersPage />} />
 
           {/* Legal */}
