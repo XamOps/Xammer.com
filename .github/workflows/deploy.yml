@@ -19,6 +19,20 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
+      - name: DIAGNOSTIC - print nginx config (read-only, temporary)
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            echo "=== nginx -v ==="
+            nginx -v 2>&1 || true
+            echo "=== files mentioning xammer under /etc/nginx ==="
+            sudo grep -rl "xammer" /etc/nginx 2>/dev/null || true
+            echo "=== full effective config (nginx -T) ==="
+            sudo nginx -T 2>&1
+
       - name: Install dependencies
         run: npm ci
 
