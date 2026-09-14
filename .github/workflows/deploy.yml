@@ -19,19 +19,54 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
-      - name: DIAGNOSTIC - print nginx config (read-only, temporary)
+      - name: Fix nginx try_files to serve per-route static HTML
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            echo "=== nginx -v ==="
-            nginx -v 2>&1 || true
-            echo "=== files mentioning xammer under /etc/nginx ==="
-            sudo grep -rl "xammer" /etc/nginx 2>/dev/null || true
-            echo "=== full effective config (nginx -T) ==="
-            sudo nginx -T 2>&1
+            set -e
+
+            FILES=$(sudo grep -rl "xammer" /etc/nginx 2>/dev/null || true)
+            if [ -z "$FILES" ]; then
+              echo "No nginx config file mentioning 'xammer' found under /etc/nginx. Skipping."
+              exit 0
+            fi
+
+            CHANGED=0
+            for f in $FILES; do
+              if sudo grep -qE 'try_files[[:space:]]+\$uri[[:space:]]+/index\.html;' "$f"; then
+                echo "Patching try_files in $f"
+                sudo cp "$f" "$f.bak.$(date +%Y%m%d%H%M%S)"
+                sudo sed -i -E 's#try_files[[:space:]]+\$uri[[:space:]]+/index\.html;#try_files $uri $uri/ $uri/index.html /index.html;#' "$f"
+                CHANGED=1
+              fi
+            done
+
+            if [ "$CHANGED" -eq 0 ]; then
+              echo "No 'try_files \$uri /index.html;' pattern found — no change made. Current try_files lines:"
+              sudo nginx -T 2>&1 | grep -B2 -A2 try_files || true
+              exit 0
+            fi
+
+            echo "=== Validating nginx config ==="
+            if sudo nginx -t; then
+              echo "Config valid, reloading nginx"
+              sudo systemctl reload nginx
+              echo "nginx try_files patched and reloaded successfully."
+            else
+              echo "nginx -t FAILED — rolling back changed files"
+              for f in $FILES; do
+                LATEST_BAK=$(ls -t "$f".bak.* 2>/dev/null | head -1 || true)
+                if [ -n "$LATEST_BAK" ]; then
+                  sudo cp "$LATEST_BAK" "$f"
+                  echo "Restored $f from $LATEST_BAK"
+                fi
+              done
+              sudo nginx -t
+              exit 1
+            fi
 
       - name: Install dependencies
         run: npm ci
