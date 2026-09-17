@@ -117,6 +117,8 @@ jobs:
             --parameters 'commands=[
               "export HOME=/root",
               "set -e",
+              "mkdir -p /root/.ssh",
+              "ssh-keyscan -H github.com >> /root/.ssh/known_hosts 2>/dev/null || true",
               "SRC_DIR=/home/ec2-user/xammer-source",
               "if [ ! -d \"$SRC_DIR/.git\" ]; then git clone git@github.com:XamOps/Xammer.com.git \"$SRC_DIR\"; fi",
               "git config --global --add safe.directory $SRC_DIR",
