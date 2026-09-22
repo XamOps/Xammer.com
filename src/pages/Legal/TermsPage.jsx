@@ -12,7 +12,7 @@ const sections = [
   { title: '6. Confidentiality', body: 'Both parties agree to keep confidential all proprietary information, trade secrets, and business information disclosed during the course of engagement. This obligation survives the termination of any service agreement. Xammer implements strict access controls, NDA requirements, and data handling procedures to protect client confidentiality.' },
   { title: '7. Governing Law', body: 'These Terms of Service are governed by the laws of India. Any disputes arising from these terms or your use of our services shall be subject to the exclusive jurisdiction of the courts of Delhi, India. You agree to submit to the personal jurisdiction of the courts located in Delhi for the purpose of litigating any such dispute.' },
   { title: '8. Changes to Terms', body: 'We reserve the right to modify these Terms of Service at any time. We will post changes on this page with an updated date. Continued use of our website or services after changes are posted constitutes your acceptance of the modified terms.' },
-  { title: '9. Contact', body: 'For questions about these Terms of Service, contact us at:\n\nXammer IT Solutions Pvt Ltd\nEmail: legal@xammer.in\nPhone: +91 87692 54249\nAddress: Delhi, India\nGST: 07XXXXX0000X1ZX' },
+  { title: '9. Contact', body: 'For questions about these Terms of Service, contact us at:\n\nXammer IT Solutions Pvt Ltd\nEmail: legal@xammer.in\nPhone: +91 87692 54249\nAddress: Awfis 8 Square Zen, Sec-142, Noida (UP) 201304\nGST: 07XXXXX0000X1ZX' },
 ];
 
 const TermsPage = () => (

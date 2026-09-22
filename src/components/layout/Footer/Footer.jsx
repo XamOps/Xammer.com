@@ -88,7 +88,7 @@ const Footer = () => {
               </a>
               <div className="footer__contact-item">
                 <MapPin size={14} />
-                Delhi, India — Operations Mon–Sat, 9 AM to 7 PM IST
+                Awfis 8 Square Zen, Sec-142, Noida (UP) 201304
               </div>
             </div>
           </div>

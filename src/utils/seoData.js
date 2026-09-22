@@ -22,8 +22,10 @@ export const organizationSchema = {
     'Xammer is a Delhi NCR-based IT consulting and managed services company (serving Delhi, Noida & Gurgaon) specializing in cloud automation, DevOps, digital transformation, and enterprise IT solutions.',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Delhi',
-    addressRegion: 'Delhi',
+    streetAddress: 'Awfis 8 Square Zen, Sector 142',
+    addressLocality: 'Noida',
+    addressRegion: 'Uttar Pradesh',
+    postalCode: '201304',
     addressCountry: 'IN',
   },
   areaServed: [

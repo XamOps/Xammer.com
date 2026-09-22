@@ -12,7 +12,7 @@ const sections = [
   { title: '6. Your Rights (DPDPA 2023)', body: `Under India's Digital Personal Data Protection Act 2023, you have the right to access your personal data; request correction of inaccurate data; request erasure of your data in certain circumstances; withdraw consent to processing; and file a complaint with the Data Protection Board of India. To exercise any of these rights, contact us at privacy@xammer.in.` },
   { title: '7. Third-Party Services', body: `Our website may contain links to third-party websites. We are not responsible for the privacy practices of those websites. We use Google Analytics (analytics), HubSpot (CRM and email marketing), and cloud infrastructure providers for website hosting. Each of these providers has their own privacy policies.` },
   { title: '8. Changes to This Policy', body: `We may update this Privacy Policy from time to time. We will notify you of significant changes by posting a notice on our website or sending you an email. Your continued use of our website after changes are posted constitutes your acceptance of the updated policy.` },
-  { title: '9. Contact Us', body: `If you have questions about this Privacy Policy or our data practices, please contact us at:\n\nXammer IT Solutions Pvt Ltd\nEmail: privacy@xammer.in\nPhone: +91 87692 54249\nAddress: Delhi, India` },
+  { title: '9. Contact Us', body: `If you have questions about this Privacy Policy or our data practices, please contact us at:\n\nXammer IT Solutions Pvt Ltd\nEmail: privacy@xammer.in\nPhone: +91 87692 54249\nAddress: Awfis 8 Square Zen, Sec-142, Noida (UP) 201304` },
 ];
 
 const PrivacyPolicyPage = () => (

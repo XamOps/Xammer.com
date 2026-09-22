@@ -73,7 +73,7 @@ const ContactPage = () => {
                     <div className="contact__card-icon contact__card-icon--teal"><MapPin size={20} /></div>
                     <div>
                       <div className="contact__card-label">Office</div>
-                      <div className="contact__card-value">Delhi, India</div>
+                      <div className="contact__card-value">Awfis 8 Square Zen, Sec-142, Noida (UP) 201304</div>
                       <div className="contact__card-note">Serving enterprises across India & globally</div>
                     </div>
                   </div>
