@@ -5,73 +5,94 @@ on:
     branches:
       - main
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+permissions:
+  contents: read
+  id-token: write   # OIDC ke liye zaroori
 
+jobs:
+  # ─────────────────────────────────────────────
+  # JOB A: Security Check — deploy se pehle chalta hai
+  # ─────────────────────────────────────────────
+  security-check:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Harden runner - restrict outbound network
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: block
+          allowed-endpoints: >
+            github.com:443
+            api.github.com:443
+            *.githubusercontent.com:443
+            registry.npmjs.org:443
+            *.amazonaws.com:443
+            token.actions.githubusercontent.com:443
+
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Scan workflows for malicious exfiltration patterns
+        run: |
+          echo "Scanning .github/workflows/ for suspicious patterns..."
+          FOUND=0
+
+          if grep -rE "curl.*-[a-zA-Z]*d[a-zA-Z]*\s.*secrets\." .github/workflows/ 2>/dev/null; then
+            echo "::error::Secret exfiltration pattern detected (curl + secrets)"
+            FOUND=1
+          fi
+          if grep -rE "wget.*secrets\." .github/workflows/ 2>/dev/null; then
+            echo "::error::Secret exfiltration pattern detected (wget + secrets)"
+            FOUND=1
+          fi
+          if grep -rE "https?://[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" .github/workflows/ 2>/dev/null; then
+            echo "::error::Raw IP address reference detected in workflow"
+            FOUND=1
+          fi
+          if grep -rE "base64\s+(-d|--decode).*\|\s*(sh|bash)" .github/workflows/ 2>/dev/null; then
+            echo "::error::Obfuscated command execution detected"
+            FOUND=1
+          fi
+
+          if [ "$FOUND" -eq 1 ]; then
+            echo "::error::Malicious pattern found — blocking pipeline"
+            exit 1
+          fi
+
+          echo "Security scan passed — no suspicious patterns found"
+
+  # ─────────────────────────────────────────────
+  # JOB B: Build (early check) + Deploy — sirf security-check pass hone par
+  # ─────────────────────────────────────────────
+  deploy:
+    needs: security-check
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Harden runner - restrict outbound network
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: block
+          allowed-endpoints: >
+            github.com:443
+            api.github.com:443
+            *.githubusercontent.com:443
+            registry.npmjs.org:443
+            *.amazonaws.com:443
+            token.actions.githubusercontent.com:443
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: 'npm'
 
-      - name: Fix nginx try_files to serve per-route static HTML
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          script: |
-            set -e
-
-            FILES=$(sudo grep -rl "xammer" /etc/nginx 2>/dev/null || true)
-            if [ -z "$FILES" ]; then
-              echo "No nginx config file mentioning 'xammer' found under /etc/nginx. Skipping."
-              exit 0
-            fi
-
-            CHANGED=0
-            for f in $FILES; do
-              if sudo grep -qE 'try_files[[:space:]]+\$uri[[:space:]]+/index\.html;' "$f"; then
-                echo "Patching try_files in $f"
-                sudo cp "$f" "$f.bak.$(date +%Y%m%d%H%M%S)"
-                sudo sed -i -E 's#try_files[[:space:]]+\$uri[[:space:]]+/index\.html;#try_files $uri $uri/ $uri/index.html /index.html;#' "$f"
-                CHANGED=1
-              fi
-            done
-
-            if [ "$CHANGED" -eq 0 ]; then
-              echo "No 'try_files \$uri /index.html;' pattern found — no change made. Current try_files lines:"
-              sudo nginx -T 2>&1 | grep -B2 -A2 try_files || true
-              exit 0
-            fi
-
-            echo "=== Validating nginx config ==="
-            if sudo nginx -t; then
-              echo "Config valid, reloading nginx"
-              sudo systemctl reload nginx
-              echo "nginx try_files patched and reloaded successfully."
-            else
-              echo "nginx -t FAILED — rolling back changed files"
-              for f in $FILES; do
-                LATEST_BAK=$(ls -t "$f".bak.* 2>/dev/null | head -1 || true)
-                if [ -n "$LATEST_BAK" ]; then
-                  sudo cp "$LATEST_BAK" "$f"
-                  echo "Restored $f from $LATEST_BAK"
-                fi
-              done
-              sudo nginx -t
-              exit 1
-            fi
-
       - name: Install dependencies
         run: npm ci
 
-      - name: Build React app
+      - name: Build (early failure check)
         run: npm run build
 
       - name: Verify build folder
@@ -81,57 +102,75 @@ jobs:
             exit 1
           fi
 
-      - name: Prepare build_new directory on EC2
-        uses: appleboy/ssh-action@v1.0.3
+      - name: Configure AWS credentials via OIDC
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          script: |
-            rm -rf /home/ec2-user/xammer.in/build_new
-            mkdir -p /home/ec2-user/xammer.in/build_new
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ap-south-2
 
-      - name: Deploy build to EC2 via rsync
-        uses: burnett01/rsync-deployments@7.0.1
-        with:
-          switches: -avzr --delete
-          path: build/
-          remote_path: /home/ec2-user/xammer.in/build_new/
-          remote_host: ${{ secrets.SSH_HOST }}
-          remote_user: ${{ secrets.SSH_USER }}
-          remote_key: ${{ secrets.SSH_KEY }}
+      - name: Deploy on server via SSM (clone/pull + build + atomic swap + reload nginx)
+        run: |
+          COMMAND_ID=$(aws ssm send-command \
+            --instance-ids "${{ secrets.AWS_INSTANCE_ID }}" \
+            --document-name "AWS-RunShellScript" \
+            --comment "Xammer.com deploy from GitHub Actions" \
+            --parameters 'commands=[
+              "export HOME=/root",
+              "set -e",
+              "mkdir -p /root/.ssh",
+              "ssh-keyscan -H github.com >> /root/.ssh/known_hosts 2>/dev/null || true",
+              "SRC_DIR=/home/ec2-user/xammer-source",
+              "if [ ! -d \"$SRC_DIR/.git\" ]; then git clone git@github.com:XamOps/Xammer.com.git \"$SRC_DIR\"; fi",
+              "git config --global --add safe.directory $SRC_DIR",
+              "cd $SRC_DIR",
+              "git fetch origin main",
+              "git reset --hard origin/main",
+              "npm ci",
+              "npm run build",
+              "if [ ! -d \"$SRC_DIR/build\" ] || [ -z \"$(ls -A $SRC_DIR/build)\" ]; then echo Build folder empty or missing on server; exit 1; fi",
+              "FILES=$(grep -rl xammer /etc/nginx 2>/dev/null || true)",
+              "if [ -n \"$FILES\" ]; then for f in $FILES; do if grep -qE \"try_files[[:space:]]+\\$uri[[:space:]]+/index\\.html;\" \"$f\"; then cp \"$f\" \"$f.bak.$(date +%Y%m%d%H%M%S)\"; sed -i -E \"s#try_files[[:space:]]+\\$uri[[:space:]]+/index\\.html;#try_files \\$uri \\$uri/ \\$uri/index.html /index.html;#\" \"$f\"; fi; done; fi",
+              "nginx -t",
+              "rm -rf /home/ec2-user/xammer.in/build_backup",
+              "if [ -d /home/ec2-user/xammer.in/build ]; then mv /home/ec2-user/xammer.in/build /home/ec2-user/xammer.in/build_backup; fi",
+              "cp -r $SRC_DIR/build /home/ec2-user/xammer.in/build",
+              "systemctl reload nginx",
+              "echo Deployed at: $(date) > /home/ec2-user/xammer.in/deploy.log",
+              "echo Commit: $(cd $SRC_DIR && git rev-parse HEAD) >> /home/ec2-user/xammer.in/deploy.log",
+              "echo Deployment successful"
+            ]' \
+            --query "Command.CommandId" --output text)
 
-      - name: Atomic swap, backup & reload nginx on EC2
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          script: |
-            set -e
+          echo "SSM Command ID: $COMMAND_ID"
+          echo "COMMAND_ID=$COMMAND_ID" >> "$GITHUB_ENV"
 
-            # Remove old backup and backup current build
-            rm -rf /home/ec2-user/xammer.in/build_backup
-            if [ -d /home/ec2-user/xammer.in/build ]; then
-              mv /home/ec2-user/xammer.in/build /home/ec2-user/xammer.in/build_backup
-            fi
+          aws ssm wait command-executed \
+            --command-id "$COMMAND_ID" \
+            --instance-id "${{ secrets.AWS_INSTANCE_ID }}" || true
 
-            # Atomic swap
-            mv /home/ec2-user/xammer.in/build_new /home/ec2-user/xammer.in/build
+      - name: Show deployment output
+        run: |
+          echo "Using Command ID: $COMMAND_ID"
 
-            # Reload nginx with auto rollback if it fails
-            if ! sudo systemctl reload nginx; then
-              echo "Nginx reload failed! Rolling back..."
-              mv /home/ec2-user/xammer.in/build /home/ec2-user/xammer.in/build_new
-              mv /home/ec2-user/xammer.in/build_backup /home/ec2-user/xammer.in/build
-              sudo systemctl reload nginx
-              exit 1
-            fi
+          STATUS=$(aws ssm get-command-invocation \
+            --command-id "$COMMAND_ID" \
+            --instance-id "${{ secrets.AWS_INSTANCE_ID }}" \
+            --query "Status" --output text)
+          echo "Command Status: $STATUS"
 
-            # Save deploy info
-            echo "Deployed at: $(date)"                        > /home/ec2-user/xammer.in/deploy.log
-            echo "Commit: ${{ github.sha }}"                  >> /home/ec2-user/xammer.in/deploy.log
-            echo "Branch: ${{ github.ref_name }}"             >> /home/ec2-user/xammer.in/deploy.log
-            echo "By: ${{ github.actor }}"                    >> /home/ec2-user/xammer.in/deploy.log
+          echo "----- STDOUT -----"
+          aws ssm get-command-invocation \
+            --command-id "$COMMAND_ID" \
+            --instance-id "${{ secrets.AWS_INSTANCE_ID }}" \
+            --query "StandardOutputContent" --output text
 
-            echo "Deployment successful!"
+          echo "----- STDERR -----"
+          aws ssm get-command-invocation \
+            --command-id "$COMMAND_ID" \
+            --instance-id "${{ secrets.AWS_INSTANCE_ID }}" \
+            --query "StandardErrorContent" --output text
+
+          if [ "$STATUS" != "Success" ]; then
+            echo "::error::Deployment command did not succeed (status: $STATUS)"
+            exit 1
+          fi
