@@ -213,6 +213,20 @@ const routes = [
       ogImage: 'https://xammer.com/images/hero-img.jpg',
     },
   },
+  {
+    urlPath: '/authorized-google-partners-in-india',
+    data: {
+      title: 'Authorized Google Partners in India | 100% Technical Support',
+      description:
+        'Authorized Google Partners in India: Xammer offers 100% technical support, 180+ certified engineers, 1,000+ projects & 4.9★ rated Google Workspace & Cloud help.',
+      keywords:
+        'Authorized Google Partners in India, Certified Google Partner in India, Google Partner in India, Google Partners India, Google Partner Company in India',
+      canonical: 'https://xammer.com/authorized-google-partners-in-india',
+      ogImage: 'https://xammer.com/images/hero-img.jpg',
+      ogImageAlt: 'Authorized Google Partners in India - Xammer with 180+ certified engineers and 100% technical support',
+      ogType: 'article',
+    },
+  },
   ...caseStudies.map((cs) => ({ urlPath: `/case-studies/${cs.slug}`, data: cs.seo })),
 ];
 
@@ -244,6 +258,14 @@ const applyMeta = (html, data) => {
   if (data.ogImage) {
     html = html.replace(/<meta property="og:image" content=".*?">/s, `<meta property="og:image" content="${data.ogImage}">`);
     html = html.replace(/<meta name="twitter:image" content=".*?">/s, `<meta name="twitter:image" content="${data.ogImage}">`);
+  }
+  if (data.ogImageAlt) {
+    const ogImageAlt = escapeHtml(data.ogImageAlt);
+    html = html.replace(/<meta property="og:image:alt" content=".*?">/s, `<meta property="og:image:alt" content="${ogImageAlt}">`);
+    html = html.replace(/<meta name="twitter:image:alt" content=".*?">/s, `<meta name="twitter:image:alt" content="${ogImageAlt}">`);
+  }
+  if (data.ogType) {
+    html = html.replace(/<meta property="og:type" content=".*?">/s, `<meta property="og:type" content="${data.ogType}">`);
   }
   html = html.replace(/<meta name="twitter:title" content=".*?">/s, `<meta name="twitter:title" content="${title}">`);
   html = html.replace(/<meta name="twitter:description" content=".*?">/s, `<meta name="twitter:description" content="${description}">`);

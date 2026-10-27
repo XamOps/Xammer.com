@@ -69,6 +69,12 @@ const siteMap = [
     ],
   },
   {
+    heading: 'India-wide Pages',
+    links: [
+      { label: 'Authorized Google Partners in India', href: '/authorized-google-partners-in-india' },
+    ],
+  },
+  {
     heading: 'Ahmedabad Pages',
     links: [
       { label: 'Google Cloud Cost Optimization Services in Ahmedabad', href: '/google-cloud-cost-optimization-services-in-ahmedabad' },

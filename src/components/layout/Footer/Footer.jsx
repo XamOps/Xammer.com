@@ -29,6 +29,7 @@ const landingPageLinks = [
   { label: 'Google Cloud Cost Optimization Services in Ahmedabad', href: '/google-cloud-cost-optimization-services-in-ahmedabad' },
   { label: 'Google Cloud Managed Services Provider in Bangalore', href: '/google-cloud-managed-services-provider-in-bangalore' },
   { label: 'Google Cloud Transformation Services in Gurgaon', href: '/google-cloud-transformation-services-in-gurgaon' },
+  { label: 'Authorized Google Partners in India', href: '/authorized-google-partners-in-india' },
 ];
 
 const companyLinks = [

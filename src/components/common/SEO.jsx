@@ -12,6 +12,8 @@ const SEO = ({
   keywords,
   canonical,
   ogImage,
+  ogImageAlt,
+  ogType = 'website',
   schemas = [],
   noIndex = false,
 }) => {
@@ -29,7 +31,7 @@ const SEO = ({
       {canonical && <link rel="canonical" href={canonical} />}
 
       {/* ── Open Graph / Facebook ───────────────────────────── */}
-      <meta property="og:type"        content="website" />
+      <meta property="og:type"        content={ogType} />
       <meta property="og:site_name"   content={SITE_NAME} />
       <meta property="og:locale"      content="en_IN" />
       <meta property="og:title"       content={title} />
@@ -38,6 +40,7 @@ const SEO = ({
       {ogImage   && <meta property="og:image"        content={ogImage} />}
       {ogImage   && <meta property="og:image:width"  content={OG_W} />}
       {ogImage   && <meta property="og:image:height" content={OG_H} />}
+      {ogImage   && ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
 
       {/* ── Twitter Card ────────────────────────────────────── */}
       <meta name="twitter:card"        content="summary_large_image" />
@@ -45,6 +48,7 @@ const SEO = ({
       <meta name="twitter:title"       content={title} />
       <meta name="twitter:description" content={description} />
       {ogImage && <meta name="twitter:image" content={ogImage} />}
+      {ogImage && ogImageAlt && <meta name="twitter:image:alt" content={ogImageAlt} />}
 
       {/* ── JSON-LD Schemas ─────────────────────────────────── */}
       {schemas.map((schema, i) => (

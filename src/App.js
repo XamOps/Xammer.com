@@ -43,6 +43,7 @@ import GoogleCloudPartnerNoidaPage from './pages/Blog/GoogleCloudPartnerNoidaPag
 import GoogleCloudCostOptimizationAhmedabadPage from './pages/Blog/GoogleCloudCostOptimizationAhmedabadPage';
 import GoogleCloudManagedServicesBangalorePage from './pages/Blog/GoogleCloudManagedServicesBangalorePage';
 import GoogleCloudTransformationGurgaonPage from './pages/Blog/GoogleCloudTransformationGurgaonPage';
+import AuthorizedGooglePartnersIndiaPage from './pages/Blog/AuthorizedGooglePartnersIndiaPage';
 import PartnersPage              from './pages/Partners/PartnersPage';
 
 /* -- Legal -------------------------------------------- */
@@ -113,6 +114,7 @@ function App() {
           <Route path="/google-cloud-cost-optimization-services-in-ahmedabad" element={<GoogleCloudCostOptimizationAhmedabadPage />} />
           <Route path="/google-cloud-managed-services-provider-in-bangalore" element={<GoogleCloudManagedServicesBangalorePage />} />
           <Route path="/google-cloud-transformation-services-in-gurgaon" element={<GoogleCloudTransformationGurgaonPage />} />
+          <Route path="/authorized-google-partners-in-india" element={<AuthorizedGooglePartnersIndiaPage />} />
           <Route path="/partners"                      element={<PartnersPage />} />
 
           {/* Legal */}
