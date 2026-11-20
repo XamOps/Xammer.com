@@ -1,7 +1,7 @@
 import SEO from '../../components/common/SEO';
 import HeroSection from '../../components/home/HeroSection/HeroSection';
 import StatsBar from '../../components/home/StatsBar/StatsBar';
-import CertifiedBadges from '../../components/home/CertifiedBadges/CertifiedBadges';
+// import CertifiedBadges from '../../components/home/CertifiedBadges/CertifiedBadges';
 import USPSection from '../../components/home/USPSection/USPSection';
 import WhatWeOffer from '../../components/home/WhatWeOffer/WhatWeOffer';
 // import FounderMessage from '../../components/home/FounderMessage/FounderMessage';
@@ -31,7 +31,7 @@ const HomePage = () => (
     <main id="main-content">
       <HeroSection />
       <StatsBar />
-      <CertifiedBadges />
+      {/* <CertifiedBadges /> */}
       <USPSection />
       <WhatWeOffer />
       {/* <FounderMessage /> */}
