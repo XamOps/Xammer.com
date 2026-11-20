@@ -1,12 +1,27 @@
-/* Always white — badges are designed for a light background */
+/* Section follows the site theme (dark default / light toggle) */
 .badges {
-  background: #ffffff;
+  position: relative;
+  background: var(--bg-card);
   padding: 48px 0;
-  border-top: 1px solid #ececf1;
-  border-bottom: 1px solid #ececf1;
+  border-bottom: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+/* Soft brand glow behind the logos */
+.badges::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  width: 60%;
+  height: 220%;
+  transform: translateY(-50%);
+  background: radial-gradient(ellipse at center, rgba(187, 134, 252, 0.08), transparent 65%);
+  pointer-events: none;
 }
 
 .badges__inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,11 +34,18 @@
   gap: 6px;
   margin: 0;
   font-size: clamp(1.4rem, 2.4vw, 2rem);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.25;
   letter-spacing: -0.01em;
-  color: #0d0d12;
+  color: var(--text-primary);
   flex-shrink: 0;
+}
+
+.badges__heading span:last-child {
+  background: var(--gradient-violet);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .badges__list {
@@ -31,31 +53,35 @@
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+/* Logo tiles stay light so the brand marks remain legible on dark */
 .badges__item {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 84px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid transparent;
-  background: #ffffff;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-card);
+  background: #F7F8FB;
+  box-shadow: var(--shadow-card);
   transition:
     transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 0.35s ease;
+    border-color 0.35s ease,
+    background 0.35s ease;
 }
 
 .badges__item:hover {
-  transform: translateY(-4px);
-  border-color: #ececf1;
-  box-shadow: 0 10px 28px rgba(13, 13, 18, 0.08);
+  transform: translateY(-5px);
+  background: #FFFFFF;
+  border-color: rgba(187, 134, 252, 0.55);
+  box-shadow: var(--glow-violet);
 }
 
 .badges__img {
@@ -65,12 +91,12 @@
   object-fit: contain;
   pointer-events: none;
   user-select: none;
-  filter: grayscale(0.15);
+  filter: grayscale(0.2) opacity(0.9);
   transition: filter 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .badges__item:hover .badges__img {
-  filter: grayscale(0);
+  filter: grayscale(0) opacity(1);
   transform: scale(1.04);
 }
 
@@ -79,6 +105,19 @@
 .badges__item--aws    .badges__img { height: 60px; }
 .badges__item--gcp    .badges__img { height: 62px; }
 .badges__item--ms     .badges__img { height: 70px; }
+
+/* ── Light theme ────────────────────────────── */
+[data-theme="light"] .badges::before {
+  background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.07), transparent 65%);
+}
+[data-theme="light"] .badges__item {
+  background: #FFFFFF;
+  box-shadow: 0 2px 10px rgba(13, 17, 23, 0.05);
+}
+[data-theme="light"] .badges__item:hover {
+  border-color: rgba(139, 92, 246, 0.35);
+  box-shadow: 0 10px 28px rgba(139, 92, 246, 0.14);
+}
 
 @media (prefers-reduced-motion: reduce) {
   .badges__item,
@@ -95,6 +134,7 @@
     text-align: center;
     gap: 28px;
   }
+  .badges__heading { align-items: center; }
   .badges__list { justify-content: center; }
 }
 
@@ -103,7 +143,7 @@
   .badges__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    gap: 10px;
     width: 100%;
   }
   .badges__item { height: 72px; padding: 8px; }
