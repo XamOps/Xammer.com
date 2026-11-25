@@ -94,7 +94,7 @@ const PartnersPage = () => (
                 Apply Now <ArrowRight size={15} />
               </Link>
               <div className="partners-benefits__contact">
-                Or email us at <a href="mailto:partners@xammer.in">partners@xammer.in</a>
+                Or email us at <a href="mailto:partners@xammer.com">partners@xammer.com</a>
               </div>
             </div>
           </div>

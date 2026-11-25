@@ -104,7 +104,7 @@ const CareersPage = () => (
 
           <div className="careers-jobs__cta glass-card">
             <h3>Don't See a Perfect Fit?</h3>
-            <p>We're always looking for exceptional cloud engineers. Send your resume to <a href="mailto:careers@xammer.in">careers@xammer.in</a> with the role you'd want to build.</p>
+            <p>We're always looking for exceptional cloud engineers. Send your resume to <a href="mailto:careers@xammer.com">careers@xammer.com</a> with the role you'd want to build.</p>
           </div>
         </div>
       </section>
